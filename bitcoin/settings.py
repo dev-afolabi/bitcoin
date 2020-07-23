@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bitcoin_pages'
+    'bitcoin_pages',
+
+    'django_static_ionicons'
 ]
 
 MIDDLEWARE = [

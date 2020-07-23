@@ -1,6 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
+
+def dashboard(request):        
+    return render(request, 'bitcoin_pages/dashboard.html')
+
 def index(request):        
     return render(request, 'bitcoin_pages/index.html')
 
