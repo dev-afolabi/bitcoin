@@ -1,0 +1,15 @@
+{% autoescape off %}
+Hello {{ user.get_full_name }} from Bifonix
+
+We've received a request to create an account for this email.
+
+To activate your account, please navigate to:
+
+{{ protocol }}://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+if clicking the link above doesn't work, please copy the URL in a new browser window instead.
+
+
+Sincerly,
+Bitfonix management
+{% endautoescape %}

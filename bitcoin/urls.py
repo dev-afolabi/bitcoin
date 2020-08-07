@@ -25,9 +25,15 @@ from django.conf.urls.static import static
 from django.views.static import serve
 from bitcoin_pages import views
 
+from users import urls as users_url
+from dashboard import urls as dashboard_url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include(pages_url)),
+    url(r'^', include(users_url)),
+    url(r'^', include(dashboard_url)),
+    url(r'^user/', include('django.contrib.auth.urls')),
     # path('i18n/', include('django.conf.urls.i18n')),
 ]
 
@@ -36,4 +42,8 @@ if settings.DEBUG:
     urlpatterns += static(
         settings.STATIC_URL,
         document_root=settings.STATIC_ROOT
+        )
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
         )

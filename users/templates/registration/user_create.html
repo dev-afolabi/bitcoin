@@ -1,0 +1,193 @@
+{% extends "base_layout.html" %}
+{% block title %}{{ block.super }} - Create Account{% endblock title %}
+
+{% block content %}
+<div>
+    <!-- <form action="{% url 'create' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create New Account</button>
+    </form> -->
+  <!-- <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2>Sign up</h2>
+      <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+          <p>
+            {{ field.label_tag }}<br>
+            {{ field }}
+            {% if field.help_text %}
+              <small style="color: grey">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+              <p style="color: red">{{ error }}</p>
+            {% endfor %}
+          </p>
+        {% endfor %}
+        <button type="submit">Sign up</button>
+      </form> -->
+
+
+    <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Registeration Form</h3>
+          <h6 class="box-subtitle">Please provide accurate credentials</h6>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="row">
+            <div class="col">
+            	<form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+					      <div class="form-group">
+						      <h5>{{ form.first_name.label }}<span class="text-danger">*</span></h5>
+						      <div class="controls">
+                    {{ form.first_name }}
+                  </div>
+                    {% if form.first_name.errors %}
+                  <ul>
+                    {% for error in form.first_name.errors %}
+                    <li><em>{{ error }}</em> </li>
+                    {% endfor %}
+                  </ul>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+						    <h5>{{ form.last_name.label }} <span class="text-danger">*</span></h5>
+						    <div class="controls">
+                  {{ form.last_name }}
+                </div>
+                  {% if form.last_name.errors %}
+                <ul>
+                  {% for error in form.last_name.errors %}
+                  <li><em>{{ error }}</em> </li>
+                  {% endfor %}
+                </ul>
+                  {% endif %}
+                </div>
+                
+					      <div class="form-group">
+						      <h5>{{ form.email.label }} <span class="text-danger">*</span></h5>
+						      <div class="controls">
+                    {{ form.email }}
+                  </div>
+                  {% if form.first_name.errors %}
+                  <ul>
+                    {% for error in form.first_name.errors %}
+                    <li><em>{{ error }}</em> </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>    
+
+                <div class="form-group">
+						      <h5>Date of Birth <span class="text-danger">*</span></h5>
+						      <div class="controls">
+                    {{ form.birth_date }} 
+                  </div>
+                  {% if form.birth_date.errors %}
+                  <ul>
+                    {% for error in form.birth_date.errors %}
+                    <li><em>{{ error }}</em> </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>
+
+                <div class="form-group">
+                  <h5>Select Gender <span class="text-danger">*</span></h5>
+                  <div class="controls">
+                    {{ form.gender }}
+                  </div>
+                  {% if form.gender.errors %}
+                  <ul>
+                    {% for error in form.gender.errors %}
+                    <li><em>{{ error }}</em> </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>
+                
+					      <div class="form-group">
+                  <h5>Password <span class="text-danger">*</span></h5>
+                  <div class="controls">
+                    {{ form.password1 }}
+                  </div>
+                  {% if form.password1.errors %}
+                  <ul>
+                    {% for error in form.password1.errors %}
+                    <li><em>{{ error }}</em> </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>
+                
+					      <div class="form-group">
+						      <h5>Confirm Password <span class="text-danger">*</span></h5>
+						      <div class="controls">
+                    {{ form.password2 }}
+                  </div>
+                  {% if form.password2.errors %}
+                  <ul>
+                    {% for error in form.password2.errors %}
+                    <li><em>{{ error }}</em> </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>
+                
+					      <!-- <div class="form-group">
+						      <h5>Picture upload <span class="text-danger">*</span></h5>
+						      <div class="controls">
+                    {{ form.picture }} 
+                  </div>
+                  {% if form.picture.errors %}
+                  <ul>
+                    {% for error in form.picture.errors %}
+                    <li><em>{{ error }}</em> </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+					      </div> -->
+					      <div class="text-xs-right">
+						      <button type="submit" class="btn btn-info">Create Account</button>
+					      </div>
+				  </form>
+            	
+            </div>
+           <!--/.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.box-body-->
+      </div>
+</div>
+{% endblock %}

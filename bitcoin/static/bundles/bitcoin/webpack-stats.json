@@ -1,0 +1,1 @@
+{"status":"error","chunks":{},"error":"EntryModuleNotFoundError","message":"Entry module not found: Error: Can't resolve './bitcoin/static/js/index' in 'C:\\bitcoin\\bitcoin'"}

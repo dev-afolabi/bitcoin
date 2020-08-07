@@ -1,0 +1,12 @@
+{% extends "base_layout.html" %}
+{% block title %}{{ block.super }} Login{% endblock title %}
+
+{% block content %}
+<div>
+    <div class="row">
+        <div>
+            {% include "registration/login_form.html" %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

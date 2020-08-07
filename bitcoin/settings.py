@@ -18,6 +18,8 @@ import dotenv
 from os.path import join, dirname
 from dotenv import load_dotenv
 from django.utils.translation import ugettext_lazy as _
+from django.urls import reverse_lazy
+from .log_filters import ManagementFilter
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,9 +34,47 @@ load_dotenv(dotenv_path)
 SECRET_KEY = 'xk^0x+8fhzi1(sv@v811*z2#d@n#)0x=)av9txfup0=2vma)pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com']
+
+AUTH_USER_MODEL = 'users.User'
+
+# verbose = (
+#     "[%(asctime)s]  %(levelname)s "
+#     "[%(name)s: %(lineno)s] %(message)s"
+# )
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+
+#     'filters': {
+#         'remove_migration_sql' : {
+#             '()': ManagementFilter,
+#         },
+#     },
+
+#     'handlers': {
+#         'console': {
+#             'filters':['remove_migration_sql'],
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'formatters':{
+#         'verbose': {
+#             'format': verbose,
+#             'datefmt': "%Y-%b-%d %H:%M:%S"
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#             'formatter': 'verbose'
+#         }
+#     }
+# }
 
 
 # Application definition
@@ -47,8 +87,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bitcoin_pages',
+    'users',
+    'dashboard',
 
-    'django_static_ionicons'
+    'django_static_ionicons',
+    'webpack_loader'
 ]
 
 MIDDLEWARE = [
@@ -63,6 +106,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'bitcoin.urls'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 TEMPLATES = [
     {
@@ -137,3 +183,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
     ]
+
+MEDIA_URL = '/media-root/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media-root')
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',  # end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
+
+
+
+LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
+LOGIN_URL = reverse_lazy('login')
+LOGOUT_URL = reverse_lazy('logout')

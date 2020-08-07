@@ -1,0 +1,1363 @@
+{% load static %}
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="http://html-templates.multipurposethemes.com/bootstrap-4/admin/unique/02/unique-dark-admin/images/favicon.ico"> -->
+    <title>Unique Admin - Dashboard</title>
+
+    {% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ionicons/css/ionicons.css' %}">
+    {% endblock %}
+
+
+    
+	<!-- Bootstrap 4.0-->
+	<link rel="stylesheet" href="{% static 'dashboard/assets/vendor_components/bootstrap/dist/css/bootstrap.css' %}">
+	
+	<!-- Bootstrap extend-->
+	<link rel="stylesheet" href="{% static 'dashboard/css/bootstrap-extend.css' %}">
+    
+	<!--amcharts -->
+	<link href="{% static 'dashboard/www.amcharts.com/lib/3/plugins/export/export.css' %}" rel="stylesheet" type="text/css" />
+	
+	<!-- theme style -->
+	<link rel="stylesheet" href="{% static 'dashboard/css/master_style.css' %}">
+	
+	<!-- Unique_admin skins -->
+    <link rel="stylesheet" href="{% static 'dashboard/css/skins/_all-skins.css' %}">
+    <script src="https://use.fontawesome.com/f6a1c36cc9.js"></script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+     
+  </head>
+
+<body class="hold-transition skin-yellow sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index-2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+	  <b class="logo-mini">
+		  <span class="light-logo"><img src="{% static 'dashboard/images/logo-light.png' %}" alt="logo"></span>
+		  <span class="dark-logo"><img src="{% static 'dashboard/images/logo-dark.png' %}" alt="logo"></span>
+	  </b>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">
+		  <img src="{% static 'dashboard/images/logo-light-text.png' %}" alt="logo" class="light-logo">
+	  	  <img src="{% static 'dashboard/images/logo-dark-text.png' %}" alt="logo" class="dark-logo">
+	  </span>
+    </a>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+		  
+		  <li class="search-box">
+            <a class="nav-link hidden-sm-down" href="javascript:void(0)"><i class="fa fa-search"></i></a>
+            <form class="app-search" style="display: none;">
+                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+			</form>
+          </li>			
+		  
+          <!-- Messages -->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope"></i>
+            </a>
+            <ul class="dropdown-menu scale-up">
+              <li class="header">You have 5 messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu inner-content-div">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{% static 'dashboard/images/user2-160x160.jpg' %}" class="rounded-circle" alt="User Image">
+                      </div>
+                      <div class="mail-contnet">
+                         <h4>
+                          Lorem Ipsum
+                          <small><i class="fa fa-clock-o"></i> 15 mins</small>
+                         </h4>
+                         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{% static 'dashboard/images/user3-128x128.jpg' %}" class="rounded-circle" alt="User Image">
+                      </div>
+                      <div class="mail-contnet">
+                         <h4>
+                          Nullam tempor
+                          <small><i class="fa fa-clock-o"></i> 4 hours</small>
+                         </h4>
+                         <span>Curabitur facilisis erat quis metus congue viverra.</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{% static 'dashboard/images/user4-128x128.jpg' %}" class="rounded-circle" alt="User Image">
+                      </div>
+                      <div class="mail-contnet">
+                         <h4>
+                          Proin venenatis
+                          <small><i class="fa fa-clock-o"></i> Today</small>
+                         </h4>
+                         <span>Vestibulum nec ligula nec quam sodales rutrum sed luctus.</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{% static 'dashboard/images/user3-128x128.jpg' %}" class="rounded-circle" alt="User Image">
+                      </div>
+                      <div class="mail-contnet">
+                         <h4>
+                          Praesent suscipit
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                         </h4>
+                         <span>Curabitur quis risus aliquet, luctus arcu nec, venenatis neque.</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="{% static 'dashboard/images/user4-128x128.jpg' %}" class="rounded-circle" alt="User Image">
+                      </div>
+                      <div class="mail-contnet">
+                         <h4>
+                          Donec tempor
+                          <small><i class="fa fa-clock-o"></i> 2 days</small>
+                         </h4>
+                         <span>Praesent vitae tellus eget nibh lacinia pretium.</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See all e-Mails</a></li>
+            </ul>
+          </li>
+          <!-- Notifications -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell"></i>
+            </a>
+            <ul class="dropdown-menu scale-up">
+              <li class="header">You have 7 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu inner-content-div">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> Curabitur id eros quis nunc suscipit blandit.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-red"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green"></i> In gravida mauris et nisi
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> Praesent eu lacus in libero dictum fermentum.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> Nunc fringilla lorem 
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-tasks"></i>
+            </a>
+            <ul class="dropdown-menu scale-up">
+              <li class="header">You have 6 tasks</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu inner-content-div">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Lorem ipsum dolor sit amet
+                        <small class="pull-right">30%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 30%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">30% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Vestibulum nec ligula
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-danger" style="width: 20%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Donec id leo ut ipsum
+                        <small class="pull-right">70%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-light-blue" style="width: 70%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">70% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Praesent vitae tellus
+                        <small class="pull-right">40%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 40%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">40% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Nam varius sapien
+                        <small class="pull-right">80%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-red" style="width: 80%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">80% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Nunc fringilla
+                        <small class="pull-right">90%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-primary" style="width: 90%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">90% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+		  <!-- User Account -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="{% static 'dashboard/images/user5-128x128.jpg' %}" class="user-image rounded-circle" alt="User Image">
+            </a>
+            <ul class="dropdown-menu scale-up">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="{% static 'dashboard/images/user5-128x128.jpg' %}" class="float-left rounded-circle" alt="User Image">
+
+                <p>
+                  Juliya Brus
+                  <small class="mb-5">jb@gmail.com</small>
+                  <a href="#" class="btn btn-danger btn-sm btn-rounded">View Profile</a>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row no-gutters">
+                  <div class="col-12 text-left">
+                    <a href="#"><i class="ion ion-person"></i> My Profile</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#"><i class="ion ion-email-unread"></i> Inbox</a>
+                  </div>
+                  <div class="col-12 text-left">
+                    <a href="#"><i class="ion ion-settings"></i> Setting</a>
+                  </div>
+				<div role="separator" class="divider col-12"></div>
+				  <div class="col-12 text-left">
+                    <a href="#"><i class="ti-settings"></i> Account Setting</a>
+                  </div>
+				<div role="separator" class="divider col-12"></div>
+				  <div class="col-12 text-left">
+                    <a href="{% url 'logout' %}"><i class="fa fa-power-off"></i> Logout</a>
+                  </div>				
+                </div>
+                <!-- /.row -->
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog fa-spin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+		 <div class="ulogo">
+			 <a href="index-2.html">
+			  <!-- logo for regular state and mobile devices -->
+			  <span><b>Unique </b>Admin</span>
+			</a>
+		</div>
+        <div class="image">
+          <img src="{% static 'dashboard/images/user5-128x128.jpg' %}" class="rounded-circle" alt="User Image">
+        </div>
+        <div class="info">
+          <p>Admin Template</p>
+			<a href="#" class="link" data-toggle="tooltip" title="" data-original-title="Settings"><i class="ion ion-gear-b"></i></a>
+            <a href="#" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i class="ion ion-android-mail"></i></a>
+            <a href="{% url 'logout' %}" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i class="ion ion-power"></i></a>
+        </div>
+      </div>
+      <!-- sidebar menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+		<li class="nav-devider"></li>
+        <li class="header nav-small-cap">PERSONAL</li>
+        <li class="active">
+          <a href="index-2.html">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-th"></i>
+            <span>App</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/app/app-chat.html">Chat app</a></li>
+            <li><a href="pages/app/project-table.html">Project</a></li>
+            <li><a href="pages/app/app-contact.html">Contact / Employee</a></li>
+            <li><a href="pages/app/app-ticket.html">Support Ticket</a></li>
+			<li><a href="pages/app/calendar.html">Calendar</a></li>
+            <li><a href="pages/app/profile.html">Profile</a></li>
+            <li><a href="pages/app/userlist-grid.html">Userlist Grid</a></li>
+			<li><a href="pages/app/userlist.html">Userlist</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/mailbox/mailbox.html">Inbox</a></li>
+            <li><a href="pages/mailbox/compose.html">Compose</a></li>
+            <li><a href="pages/mailbox/read-mail.html">Read</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>UI Elements</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/UI/badges.html">Badges</a></li>
+            <li><a href="pages/UI/border-utilities.html">Border</a></li>
+            <li><a href="pages/UI/buttons.html">Buttons</a></li>
+            <li><a href="pages/UI/bootstrap-switch.html">Bootstrap Switch</a></li>
+            <li><a href="pages/UI/cards.html">User Card</a></li>
+            <li><a href="pages/UI/color-utilities.html">Color</a></li>
+			<li><a href="pages/UI/date-paginator.html">Date Paginator</a></li>
+            <li><a href="pages/UI/dropdown.html">Dropdown</a></li>
+            <li><a href="pages/UI/dropdown-grid.html">Dropdown Grid</a></li>
+            <li><a href="pages/UI/general.html">General</a></li>
+            <li><a href="pages/UI/icons.html">Icons</a></li>
+            <li><a href="pages/UI/media-advanced.html">Advanced Medias</a></li>
+			<li><a href="pages/UI/modals.html">Modals</a></li>
+            <li><a href="pages/UI/nestable.html">Nestable</a></li>
+            <li><a href="pages/UI/notification.html">Notification</a></li>
+            <li><a href="pages/UI/portlet-draggable.html">Draggable Portlets</a></li>
+            <li><a href="pages/UI/ribbons.html">Ribbons</a></li>
+            <li><a href="pages/UI/sliders.html">Sliders</a></li>
+            <li><a href="pages/UI/sweatalert.html">Sweet Alert</a></li>
+            <li><a href="pages/UI/tab.html">Tabs</a></li>
+            <li><a href="pages/UI/timeline.html">Timeline</a></li>
+            <li><a href="pages/UI/timeline-horizontal.html">Horizontal Timeline</a></li>			  
+          </ul>
+        </li>
+        <li class="header nav-small-cap">FORMS, TABLE & LAYOUTS</li>
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-bars"></i>
+            <span>Widgets</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/widgets/blog.html">Blog</a></li>
+            <li><a href="pages/widgets/chart.html">Chart</a></li>
+            <li><a href="pages/widgets/list.html">List</a></li>
+            <li><a href="pages/widgets/social.html">Social</a></li>
+            <li><a href="pages/widgets/statistic.html">Statistic</a></li>
+            <li><a href="pages/widgets/tiles.html">Tiles</a></li>
+            <li><a href="pages/widgets/weather.html">Weather</a></li>
+            <li><a href="pages/widgets/widgets.html">Widgets</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Layout Options</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/layout/boxed.html">Boxed</a></li>
+            <li><a href="pages/layout/fixed.html">Fixed</a></li>
+            <li><a href="pages/layout/collapsed-sidebar.html">Collapsed Sidebar</a></li>
+          </ul>
+        </li>		
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-square-o"></i>
+            <span>Box</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/box/advanced.html">Advanced</a></li>
+            <li><a href="pages/box/basic.html">Boxed</a></li>
+            <li><a href="pages/box/color.html">Color</a></li>
+			<li><a href="pages/box/group.html">Group</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Charts</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/charts/chartjs.html">ChartJS</a></li>
+            <li><a href="pages/charts/flot.html">Flot</a></li>
+            <li><a href="pages/charts/inline.html">Inline charts</a></li>
+            <li><a href="pages/charts/morris.html">Morris</a></li>
+            <li><a href="pages/charts/peity.html">Peity</a></li>
+            <li><a href="pages/charts/chartist.html">Chartist</a></li>
+            <li><a href="pages/charts/rickshaw-charts.html">Rickshaw Charts</a></li>
+            <li><a href="pages/charts/nvd3-charts.html">NVD3 Charts</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Forms</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/advanced.html">Advanced Elements</a></li>
+            <li><a href="pages/forms/code-editor.html">Code Editor</a></li>
+            <li><a href="pages/forms/editor-markdown.html">Markdown</a></li>
+            <li><a href="pages/forms/editors.html">Editors</a></li>
+            <li><a href="pages/forms/form-validation.html">Form Validation</a></li>
+            <li><a href="pages/forms/form-wizard.html">Form Wizard</a></li>
+            <li><a href="pages/forms/general.html">General Elements</a></li>
+            <li><a href="pages/forms/mask.html">Formatter</a></li>
+            <li><a href="pages/forms/premade.html">Pre-made Forms</a></li>
+            <li><a href="pages/forms/xeditable.html">Xeditable Editor</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>Tables</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/simple.html">Simple tables</a></li>
+            <li><a href="pages/tables/data.html">Data tables</a></li>
+            <li><a href="pages/tables/editable-tables.html">Editable Tables</a></li>
+            <li><a href="pages/tables/table-color.html">Table Color</a></li>
+          </ul>
+        </li>
+		<li>
+          <a href="pages/email/index.html">
+            <i class="fa fa-envelope-open-o"></i> <span>Emails</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+        </li>
+		<li class="header nav-small-cap">EXTRA COMPONENTS</li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-map"></i> <span>Map</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/map/map-google.html">Google Map</a></li>
+            <li><a href="pages/map/map-vector.html">Vector Map</a></li>
+          </ul>
+        </li>
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-plug"></i> <span>Extension</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/extension/fullscreen.html">Fullscreen</a></li>
+          </ul>
+        </li>        
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-file"></i> <span>Sample Pages</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/samplepage/blank.html">Blank</a></li>
+            <li><a href="pages/samplepage/coming-soon.html">Coming Soon</a></li>
+            <li><a href="pages/samplepage/custom-scroll.html">Custom Scrolls</a></li>
+			<li><a href="pages/samplepage/faq.html">FAQ</a></li>
+			<li><a href="pages/samplepage/gallery.html">Gallery</a></li>
+			<li><a href="pages/samplepage/invoice.html">Invoice</a></li>
+			<li><a href="pages/samplepage/lightbox.html">Lightbox Popup</a></li>
+			<li><a href="pages/samplepage/pace.html">Pace</a></li>
+			<li><a href="pages/samplepage/pricing.html">Pricing</a></li>
+            <li class="treeview">
+              <a href="#">Authentication 
+                <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                <!-- <li><a href="pages/samplepage/register.html">Register</a></li>
+                <li><a href="pages/samplepage/lockscreen.html">Lockscreen</a></li>
+                <li><a href="pages/samplepage/user-pass.html">Recover password</a></li>				   -->
+              </ul>
+            </li>            
+			<li class="treeview">
+              <a href="#">Error Pages 
+                <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="pages/samplepage/404.html">404</a></li>
+                <li><a href="pages/samplepage/500.html">500</a></li>
+                <li><a href="pages/samplepage/maintenance.html">Maintenance</a></li>		  
+              </ul>
+            </li> 
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i> <span>Multilevel</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">Level One</a></li>
+            <li class="treeview">
+              <a href="#">Level One
+                <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#">Level Two</a></li>
+                <li class="treeview">
+                  <a href="#">Level Two
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="#">Level Three</a></li>
+                    <li><a href="#">Level Three</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Level One</a></li>
+          </ul>
+        </li>        
+        
+      </ul>
+    </section>
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Control panel</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+		<div class="row">
+			<div class="col-xl-8 col-12">
+				<div class="box no-shadow">
+					<div class="box-body">
+						<div class="d-md-flex justify-content-between align-items-center d-inline-block">
+							<h2 class="my-0 text-white">BTC/USD</h2>
+							<div>
+								<p class="mb-5">Last Price (USD)</p>
+								<h4 class="mb-0 text-white">7136.0 <span class="text-success ml-10">7.55% <i class="fa fa-arrow-up"></i></span></h4>
+							</div>
+							<div class="d-lg-block d-none">
+								<p class="mb-5">24h Vol.</p>
+								<h4 class="mb-0 text-white">1943558 USD</h4>
+							</div>
+							<div class="d-lg-block d-none">
+								<p class="mb-5"><span class="text-success mr-10"><i class="fa fa-line-chart"></i></span>Funding / 8h</p>
+								<h4 class="mb-0 text-white">0.0111 %</h4>
+							</div>
+							<div>
+								<p class="mb-5">24h High</p>
+								<h4 class="mb-0 text-white"><i class="cc BTC font-size-16 mr-10"></i>7443</h4>
+							</div>
+							<div>
+								<p class="mb-5">24h Low</p>
+								<h4 class="mb-0 text-white"><i class="cc BTC font-size-16 mr-10"></i>6430.5</h4>
+							</div>
+						</div>
+					</div>
+				</div>					
+				<div class="box">
+					<div class="box-body">
+						<div class="chart">
+              <div id="btcdash" style="height: 515px;"></div>
+              {% render_bundle 'main'%}
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box-body">
+						<div class="table-responsive">
+							<table class="table table-hover mb-0">
+								<tbody>
+									<tr class="bg-dark">
+									  <th>Contract</th>
+									  <th>24h Chart</th>
+									  <th>Last Price & 24h Change</th>
+									  <th>24h Vol</th>
+									  <th>Premium</th>
+									  <th>Funding</th>
+									  <th>Time to exp.</th>
+									  <th>Action</th>
+									</tr>
+								<tr>
+								  <td><div><p class="symbol">BTCUSD</p><p class="name">Bitcoin</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">7157</span><span class="text-success">8.05%</span> </td>
+								  <td>1.9M USD</td>
+								  <td>-</td>
+								  <td><span class="text-success">0.0086%</span></td>
+								  <td>-</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+								<tr>
+								  <td><div><p class="symbol">BTCUSD_27DEC</p><p class="name">Bitcoin</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">7157</span><span class="text-success">8.05%</span> </td>
+								  <td>328.8K USD</td>
+								  <td><span class="text-success">0.1694%</span></td>
+								  <td>-</td>
+								  <td>7d:13h:23m</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+								<tr>
+								  <td><div><p class="symbol">BTCUSD_27MAR</p><p class="name">Bitcoin</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">7157</span><span class="text-success">9.39%</span> </td>
+								  <td>517.3K USD</td>
+								  <td><span class="text-success">1.3328%</span></td>
+								  <td>-</td>
+								  <td>98d:13h:23m</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+								<tr>
+								  <td><div><p class="symbol">ETHUSDQ</p><p class="name">Ethereum</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">126.75</span><span class="text-success">4.02%</span> </td>
+								  <td>224.3K USDC</td>
+								  <td>-</td>
+								  <td><span class="text-success">0.0098%</span></td>
+								  <td>-</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+								<tr>
+								  <td><div><p class="symbol">XRPUSDQ</p><p class="name">Ripple</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">0.1875</span><span class="text-success">3.71%</span> </td>
+								  <td>89224 USDC</td>
+								  <td>-</td>
+								  <td><span class="text-success">0.0061%</span></td>
+								  <td>-</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+								<tr>
+								  <td><div><p class="symbol">LTCUSDQ</p><p class="name">Litecoin</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">39.91</span><span class="text-success">7.43%</span> </td>
+								  <td>90349 USDC</td>
+								  <td>-</td>
+								  <td><span class="text-danger">-0.0176%</span></td>
+								  <td>-</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+								<tr>
+								  <td><div><p class="symbol">BNBUSDQ</p><p class="name">Binance Coin</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">13.315</span><span class="text-success">5.26%</span> </td>
+								  <td>16.59 BTC</td>
+								  <td>-</td>
+								  <td><span class="text-success">0.0476%</span></td>
+								  <td>-</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+								<tr>
+								  <td><div><p class="symbol">BNBBTC</p><p class="name">Binance Coin</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">0.0018558</span><span class="text-danger">-2.94%</span> </td>
+								  <td>12.58 BTC</td>
+								  <td>-</td>
+								  <td><span class="text-danger">-0.0071%</span></td>
+								  <td>-</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+								<tr>
+								  <td><div><p class="symbol">XLMBTC</p><p class="name">Stellar Lumen</p></div></td>
+								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
+								  <td><span class="text-muted mr-10">0.00000635</span><span class="text-danger">-4.37%</span> </td>
+								  <td>5.49 BTC</td>
+								  <td>-</td>
+								  <td><span class="text-danger">-0.0367%</span></td>
+								  <td>-</td>
+								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
+								</tr>
+							  </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+					
+				<div class="box">
+					<div class="box-header with-border">
+					  <h4 class="box-title">Market Depth</h4>
+					</div>
+					<div class="box-body">
+						<div class="chart">
+							<div id="market-depth" style="height: 500px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-12">				
+				<div class="box">
+					<div class="box-header with-border">
+					  <h4 class="box-title">Buy Order</h4>
+						<div class="box-controls pull-right">
+							Total 512 8549 ETC
+						</div>
+					</div>
+					<div class="box-body">
+						<div class="table-responsive buyorder">
+							<table class="table no-margin no-border">
+								<thead>
+									<tr class="bg-dark">
+										<th>Amount</th>
+										<th>Price</th>
+										<th>Total BPL</th>
+									</tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<td>1.845126523</td>
+									<td>17800.00</td>
+									<td>23000.00</td>
+								  </tr>
+								  <tr>
+									<td>2.21548756</td>
+									<td>13950.00</td>
+									<td>77201.00</td>
+								  </tr>
+								  <tr>
+									<td>8.00200000</td>
+									<td>19555.22</td>
+									<td>35000.00</td>
+								  </tr>
+								  <tr>
+									<td>8.00200000</td>
+									<td>19555.22</td>
+									<td>35000.00</td>
+								  </tr>
+								  <tr>
+									<td>8.00200000</td>
+									<td>19555.22</td>
+									<td>35000.00</td>
+								  </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box-header with-border">
+					  <h4 class="box-title">Sell Order</h4>
+						<div class="box-controls pull-right">
+							Total 485 8549 BTL
+						</div>
+					</div>
+					<div class="box-body">
+						<div class="table-responsive sellorder">
+							<table class="table no-margin no-border">
+								<thead>
+									<tr class="bg-dark">
+										<th>Amount</th>
+										<th>Price</th>
+										<th>Total BPL</th>
+									</tr>
+								</thead>
+								<tbody>		
+								  <tr>
+									<td>1.845126523</td>
+									<td>17800.00</td>
+									<td>23000.00</td>
+								  </tr>
+								  <tr>
+									<td>2.21548756</td>
+									<td>13950.00</td>
+									<td>77201.00</td>
+								  </tr>
+								  <tr>
+									<td>8.00200000</td>
+									<td>19555.22</td>
+									<td>35000.00</td>
+								  </tr>
+								  <tr>
+									<td>5.2000000</td>
+									<td>18445.00</td>
+									<td>44521.11</td>
+								  </tr>
+								  <tr>
+									<td>8.00200000</td>
+									<td>19555.22</td>
+									<td>35000.00</td>
+								  </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box-header with-border">
+					  <h4 class="box-title">Wallet Balance</h4>
+					</div>
+					<div class="box-body">
+						<div class="d-flex justify-content-between bb-1 pb-5">
+							<h5 class="text-fade">Asset</h5>
+							<h5 class="text-fade">Amount</h5>
+						</div>
+						<div class="d-flex justify-content-between pb-5 pt-10">
+							<h4 class="text-white">USDC</h4>
+							<h4 class="text-white">0.00</h4>
+						</div>
+						<div class="d-flex justify-content-between pb-10">
+							<h4 class="text-white">BTC</h4>
+							<h4 class="text-white">0.0000000</h4>
+						</div>
+						<div class="d-flex justify-content-between">
+							<button type="button" class="btn btn-outline btn-danger btn-lg"><i class="fa fa-arrow-circle-down"></i> DEPOSIT</button>
+							<button type="button" class="btn btn-outline btn-success btn-lg mt-0"><i class="fa fa-arrow-circle-up"></i> WITHDRAW</button>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+				  <ul class="nav nav-tabs nav-tabs-danger" role="tablist">
+					<li class="nav-item">
+					  <a class="nav-link active font-size-18" data-toggle="tab" href="#market" role="tab">Market</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link font-size-18" data-toggle="tab" href="#limit" role="tab">Limit</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link font-size-18" data-toggle="tab" href="#stop" role="tab">Stop</a>
+					</li>
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="box-body tab-content">
+					<div class="tab-pane fade active show" id="market">
+					  <form>
+						<div class="input-group mt-15 mb-20">
+							<input type="text" class="form-control" placeholder="2.500002121">
+							<span class="input-group-addon">Amount BTC</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="27800.00">
+							<span class="input-group-addon">Price BPL</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="2.500002121">
+							<span class="input-group-addon">Fee (0.5%)</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="27800.00">
+							<span class="input-group-addon">Total BPL</span>
+						</div>
+
+						<div class="d-flex justify-content-between pt-5">
+							<button type="button" class="btn btn-success">BUY</button>
+							<button type="button" class="btn btn-danger mt-0">SELL</button>
+						</div>
+					  </form>
+					</div>
+					<div class="tab-pane fade" id="limit">
+					  <form>
+						<div class="input-group mt-15 mb-20">
+							<input type="text" class="form-control" placeholder="2.500002121">
+							<span class="input-group-addon">Amount BTC</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="27800.00">
+							<span class="input-group-addon">Price BPL</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="2.500002121">
+							<span class="input-group-addon">Fee (0.5%)</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="27800.00">
+							<span class="input-group-addon">Total BPL</span>
+						</div>
+
+						<div class="d-flex justify-content-between pt-5">
+							<button type="button" class="btn btn-success">BUY</button>
+							<button type="button" class="btn btn-danger mt-0">SELL</button>
+						</div>
+					  </form>
+					</div>
+					<div class="tab-pane fade" id="stop">
+					  <form>
+						<div class="input-group mt-15 mb-20">
+							<input type="text" class="form-control" placeholder="2.500002121">
+							<span class="input-group-addon">Amount BTC</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="27800.00">
+							<span class="input-group-addon">Price BPL</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="2.500002121">
+							<span class="input-group-addon">Fee (0.5%)</span>
+						</div>
+						<div class="input-group mb-20">
+							<input type="text" class="form-control" placeholder="27800.00">
+							<span class="input-group-addon">Total BPL</span>
+						</div>
+
+						<div class="d-flex justify-content-between pt-5">
+							<button type="button" class="btn btn-success">BUY</button>
+							<button type="button" class="btn btn-danger mt-0">SELL</button>
+						</div>
+					  </form>
+					</div>
+				  </div>
+				</div>
+				<div class="box">
+					<div class="box-header with-border">
+					  <h4 class="box-title">Trafic Flow</h4>
+					  <ul class="box-controls pull-right">
+						  <li><a class="box-btn-close" href="#"></a></li>
+						  <li><a class="box-btn-slide" href="#"></a></li>	
+						  <li><a class="box-btn-fullscreen" href="#"></a></li>
+						</ul>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body">
+						<div id="interactive" class="h-250"></div>						
+					</div>
+					<!-- /.box-body -->
+				  </div>
+				  <div class="row">
+					<div class="col-lg-6 col-12">
+					  <div class="box">
+						<div class="box-body">
+						  <div class="chart">
+							<div id="chartdiv3" class="h-200"></div>	
+						  </div>
+						</div>
+					  </div>			
+					</div>
+					<div class="col-lg-6 col-12">
+					  <a class="box box-link-pop text-center" href="javascript:void(0)">
+						<div class="box-body">
+							<p class="font-size-40 text-pink">
+								<i class="fa fa-money text-muted mr-5 mb-20"></i><br>
+								<strong>987€</strong>
+							</p>
+						</div>
+						<div class="box-body py-20 bg-dark">
+							<h3 class="font-weight-600 mt-0">
+								Balance
+							</h3>
+						</div>
+					 </a>			
+				   </div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
+  <footer class="main-footer">
+    <div class="pull-right d-none d-sm-inline-block">
+        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+		  <li class="nav-item">
+			<a class="nav-link" href="javascript:void(0)">FAQ</a>
+		  </li>
+		</ul>
+    </div>
+	  &copy; 2020 <a href="https://www.multipurposethemes.com/">Multi-Purpose Themes</a>. All Rights Reserved. 
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="nav-item"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li class="nav-item"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-cog fa-spin"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Admin Birthday</h4>
+
+                <p>Will be July 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Jhone Updated His Profile</h4>
+
+                <p>New Email : jhone_doe@demo.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Disha Joined Mailing List</h4>
+
+                <p>disha@demo.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Code Change</h4>
+
+                <p>Execution time 15 Days</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Web Design
+                <span class="label label-danger pull-right">40%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 40%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Update Data
+                <span class="label label-success pull-right">75%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 75%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Order Process
+                <span class="label label-warning pull-right">89%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 89%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Development 
+                <span class="label label-primary pull-right">72%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 72%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <input type="checkbox" id="report_panel" class="chk-col-grey" >
+			<label for="report_panel" class="control-sidebar-subheading ">Report panel usage</label>
+
+            <p>
+              general settings information
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <input type="checkbox" id="allow_mail" class="chk-col-grey" >
+			<label for="allow_mail" class="control-sidebar-subheading ">Mail redirect</label>
+
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <input type="checkbox" id="expose_author" class="chk-col-grey" >
+			<label for="expose_author" class="control-sidebar-subheading ">Expose author name</label>
+
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+          <div class="form-group">
+            <input type="checkbox" id="show_me_online" class="chk-col-grey" >
+			<label for="show_me_online" class="control-sidebar-subheading ">Show me as online</label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <input type="checkbox" id="off_notifications" class="chk-col-grey" >
+			<label for="off_notifications" class="control-sidebar-subheading ">Turn off notifications</label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">              
+              <a href="javascript:void(0)" class="text-red margin-r-5"><i class="fa fa-trash-o"></i></a>
+              Delete chat history
+            </label>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+  
+</div>
+<!-- ./wrapper -->
+  	
+	 
+	  
+	<!-- jQuery 3 -->
+	<script src="{% static 'dashboard/assets/vendor_components/jquery/dist/jquery.js' %}"></script>
+	<script src="{% static 'dashboard/assets/vendor_components/popper/dist/popper.min.js' %}"></script>
+	<script src="{% static 'dashboard/assets/vendor_components/bootstrap/dist/js/bootstrap.js' %}"></script>	
+	<script src="{% static 'dashboard/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+	<script src="{% static 'dashboard/assets/vendor_components/fastclick/lib/fastclick.js' %}"></script>
+	
+    <!--amcharts charts -->
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/amcharts.js' %}" type="text/javascript"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/gauge.js' %}" type="text/javascript"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/serial.js' %}" type="text/javascript"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/amstock.js' %}" type="text/javascript"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/pie.js' %}" type="text/javascript"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/plugins/dataloader/dataloader.min.js' %}"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/plugins/animate/animate.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/plugins/export/export.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/themes/patterns.js' %}" type="text/javascript"></script>
+	<script src="{% static 'dashboard/www.amcharts.com/lib/3/themes/dark.js' %}" type="text/javascript"></script>	
+	
+		
+	
+	<script src="{% static 'dashboard/assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js' %}"></script>
+	
+	<!-- FLOT CHARTS -->
+	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.js' %}"></script>
+	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.resize.js' %}"></script>
+	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.pie.js' %}"></script>
+	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.categories.js' %}"></script>
+	
+	<!-- Unique_admin App -->
+	<script src="{% static 'dashboard/js/template.js' %}"></script>
+	
+	<!-- Unique_admin dashboard demo (This is only for demo purposes) -->
+	<script src="{% static 'dashboard/js/pages/dashboard.js' %}"></script>
+	
+	<!-- Unique_admin for demo purposes -->
+	<script src="{% static 'dashboard/js/demo.js' %}"></script>
+
+	
+</body>
+</html>
