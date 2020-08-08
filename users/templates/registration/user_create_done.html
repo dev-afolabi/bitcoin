@@ -1,11 +1,52 @@
 {% extends "base_layout.html" %}
-{% block title %}{{ block.super }} - Account Created{% endblock title %}
+{% load static %}
+{% block title %}{{ block.super }} - Activate{% endblock title %}
 
 {% block content %}
-<div>
-    <div class="row">
-        <p>Your account has been created!</p>
-        <p>Please check your email for the activation link.</p>
-    </div>
-</div>
-{% endblock content %}
+	<!-- START PAGE BANNER AND BREADCRUMBS -->
+	<section id="page-banner">
+		<div class="single-page-title-area overlay" data-background="{% static 'assets/img/bg/slide1.jpg' %}">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="single-page-title">
+							<h2>Create Your Account</h2>
+							<p>Confirmation Email Sent</p>
+						</div>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+		<div class="single-page-title-area-bottom">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+							<li class="breadcrumb-item active">registration</li>
+						</ol>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+	</section>
+	<!-- END PAGE BANNER AND BREADCRUMBS -->
+	
+	<!-- START CONTACT SECTION -->
+    <section id="contactpage" class="section-padding">
+        <div class="container">
+			<!-- end section title -->
+			<div class="row">
+                <div class="col-lg-7 mx-auto">
+                    <p>Your Bitfonix account has been successfully created</p></br>
+                    <p>Please check your email for Confirmation link to activate your account</p>
+                </div>
+			</div>
+			<!-- end row -->
+        </div>
+        <!--- END CONTAINER -->
+    </section>
+    <!-- END CONTACT SECTION -->
+{% endblock %}

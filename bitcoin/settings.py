@@ -80,7 +80,7 @@ EMAIL_HOST_USER = 'opensociety28@gmail.com'
 EMAIL_HOST_PASSWORD = 'nxssjyzvlnuixzei'
 EMAIL_PORT = 587
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-DEFAULT_FROM_EMAIL = 'Open Society Foundation  <noreply@opensocietyfoundation.com>'
+DEFAULT_FROM_EMAIL = 'Bitfonix Trade Center <noreply@bitfonix.com>'
 
 TEMPLATES = [
     {
@@ -110,6 +110,12 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
 
 
 # Password validation
@@ -128,6 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+    
 ]
 
 
