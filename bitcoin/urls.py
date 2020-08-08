@@ -27,10 +27,12 @@ from bitcoin_pages import views
 
 from users import urls as users_url
 from dashboard import urls as dashboard_url
+from transactions import urls as transactions_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include(pages_url)),
+    url(r'^transactions', include(transactions_url)),
     url(r'^', include(users_url)),
     url(r'^', include(dashboard_url)),
     url(r'^user/', include('django.contrib.auth.urls')),

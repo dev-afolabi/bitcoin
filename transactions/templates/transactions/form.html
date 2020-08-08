@@ -1,0 +1,92 @@
+{% extends 'base_dash.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Deposit Funds
+      </h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li class="breadcrumb-item active"></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+     
+     <!-- Basic Forms -->
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Deposit Fund</h3>
+          <h6 class="box-subtitle">Please select required options</h6>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="row">
+            <div class="col">
+            	<form novalidate>
+					<div class="form-group">
+						<h5>Fullname <span class="text-danger">*</span></h5>
+						<div class="controls">
+							<input type="text" name="text" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.get_full_name }}"> </div>
+					</div>
+					<div class="form-group">
+						<h5>Email<span class="text-danger">*</span></h5>
+						<div class="controls">
+							<input type="email" name="email" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.email }}"> </div>
+					</div>
+					<div class="form-group">
+						<h5>Select Amount <span class="text-danger">*</span></h5>
+						<div class="controls">
+							<select name="select" id="select" required class="form-control">
+								<option value="">Select Your starting price</option>
+								<option value="1">500$</option>
+								<option value="2">750$</option>
+								<option value="3">1,000$</option>
+								<option value="4">2,000$</option>
+                                <option value="5">5,000$</option>
+                                <option value="5">7,000$</option>
+                                <option value="5">10,000$</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<h5>Select payment method <span class="text-danger">*</span></h5>
+								<fieldset class="controls">
+									<input name="group1" type="radio" id="radio_1" value="1" required>
+									<label for="radio_1">Bitcoin</label>
+								</fieldset>
+								<fieldset>
+									<input name="group1" type="radio" id="radio_2" value="2">
+									<label for="radio_2">Bank Deposit</label>									
+								</fieldset>
+							</div>
+						</div>
+					</div>
+					<div class="text-xs-right">
+						<button type="submit" class="btn btn-info">Deposit Fund</button>
+					</div>
+				</form>
+            	
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+      
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% endblock %}
