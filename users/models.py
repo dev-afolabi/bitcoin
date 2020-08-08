@@ -45,7 +45,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     gender = models.CharField(max_length=25, choices=GENDER_CHOICE,help_text="Select gender")
     date_joined = models.DateTimeField(auto_now_add=True)
-    birth_date = models.DateField(null=True, blank=True)
     balance = models.DecimalField(
         default=0,
         max_digits=12,

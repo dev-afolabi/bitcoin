@@ -19,7 +19,6 @@ from os.path import join, dirname
 from dotenv import load_dotenv
 from django.utils.translation import ugettext_lazy as _
 from django.urls import reverse_lazy
-from .log_filters import ManagementFilter
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -34,47 +33,12 @@ load_dotenv(dotenv_path)
 SECRET_KEY = 'xk^0x+8fhzi1(sv@v811*z2#d@n#)0x=)av9txfup0=2vma)pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com']
 
 AUTH_USER_MODEL = 'users.User'
 
-# verbose = (
-#     "[%(asctime)s]  %(levelname)s "
-#     "[%(name)s: %(lineno)s] %(message)s"
-# )
-
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-
-#     'filters': {
-#         'remove_migration_sql' : {
-#             '()': ManagementFilter,
-#         },
-#     },
-
-#     'handlers': {
-#         'console': {
-#             'filters':['remove_migration_sql'],
-#             'class': 'logging.StreamHandler',
-#         },
-#     },
-#     'formatters':{
-#         'verbose': {
-#             'format': verbose,
-#             'datefmt': "%Y-%b-%d %H:%M:%S"
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['console'],
-#             'level': 'DEBUG',
-#             'formatter': 'verbose'
-#         }
-#     }
-# }
 
 
 # Application definition
@@ -108,7 +72,15 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'bitcoin.urls'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS =True
+EMAIL_HOST_USER = 'opensociety28@gmail.com'
+EMAIL_HOST_PASSWORD = 'nxssjyzvlnuixzei'
+EMAIL_PORT = 587
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+DEFAULT_FROM_EMAIL = 'Open Society Foundation  <noreply@opensocietyfoundation.com>'
 
 TEMPLATES = [
     {
@@ -198,4 +170,4 @@ WEBPACK_LOADER = {
 
 LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
 LOGIN_URL = reverse_lazy('login')
-LOGOUT_URL = reverse_lazy('logout')
+LOGOUT_REDIRECT_URL = 'index'

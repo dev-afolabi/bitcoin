@@ -14,7 +14,6 @@ class UserCreationForm(BaseUserCreationForm):
         fields = ["first_name",
                   "last_name",
                   "gender",
-                  "birth_date",
                   "email",
                   "password1",
                   "password2",
@@ -23,9 +22,8 @@ class UserCreationForm(BaseUserCreationForm):
             'first_name': forms.TextInput(attrs={'class':'form-control'}),
             'last_name' : forms.TextInput(attrs={'class': 'form-control'}),
             'email' : forms.EmailInput(attrs={'class': 'form-control'}),
-            'birth_date' : forms.DateInput(attrs={'class': 'form-control'}),
             'gender' : Select(attrs={'class': 'form-control'}),
-            'password1' : forms.TextInput(attrs={'class': 'form-control'}),
+            'password1' : forms.PasswordInput(attrs={'class': 'form-control'}),
             'password2' : forms.PasswordInput(attrs={'class': 'form-control'}),
         }
 
@@ -39,7 +37,7 @@ class UserCreationForm(BaseUserCreationForm):
             return user
 
 class UserLoginForm(forms.Form):
-    account_no = forms.EmailField(label="Email")
+    email = forms.EmailField(label="Email")
     password = forms.CharField(widget=forms.PasswordInput)
 
     def clean(self, *args, **kwargs):
