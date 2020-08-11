@@ -32,7 +32,7 @@ from transactions import urls as transactions_url
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include(pages_url)),
-    url(r'^transactions', include(transactions_url)),
+    url(r'^transactions/', include(transactions_url)),
     url(r'^', include(users_url)),
     url(r'^', include(dashboard_url)),
     url(r'^user/', include('django.contrib.auth.urls')),

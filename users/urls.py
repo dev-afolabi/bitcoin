@@ -1,12 +1,14 @@
 from django.conf.urls import url,include
 from django.urls import path
 from django.contrib.auth import views as auth_views
+from django.contrib.auth import login
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.generic import (RedirectView, TemplateView)
+from .forms import UserLoginForm
 
 from .views import *
 
-
+app_name = "my-auth"
 
 password_urls = [
     url(r'^change/$', auth_views.PasswordChangeView.as_view(), 
@@ -28,11 +30,8 @@ password_urls = [
     name="password_change_complete"),
 ]
 
-
 urlpatterns = [
-    path('users/login/', 
-    auth_views.LoginView.as_view(),
-    name="login"),
+    url(r'^login/$', login_view, name='login'),
 
     path('logout/', 
     auth_views.LogoutView.as_view(),

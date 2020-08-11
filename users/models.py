@@ -50,16 +50,17 @@ class User(AbstractBaseUser, PermissionsMixin):
         max_digits=12,
         decimal_places=2
         )
-    # picture = models.ImageField(
-    #     upload_to="media-root/",
-    #     null=True,
-    #     blank=False,
-    #     height_field="height_field",
-    #     width_field="width_field",
-    #     )
+    picture = models.ImageField(
+        upload_to="media-root/",
+        null=True,
+        blank=False,
+        height_field="height_field",
+        width_field="width_field",
+        )
 
-    # height_field = models.IntegerField(default=600, null=True)
-    # width_field = models.IntegerField(default=600, null=True)
+    height_field = models.IntegerField(default=600, null=True)
+    width_field = models.IntegerField(default=600, null=True)
+
     is_staff = models.BooleanField(_("active"), default=False)
     email_confirmed = models.BooleanField(default=False)
 

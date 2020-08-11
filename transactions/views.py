@@ -4,10 +4,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import render, redirect
+from django.core.exceptions import ObjectDoesNotExist
 
 from .forms import DepositForm, WithdrawalForm
 # from formtools.wizard.views import SessionWizardView
 from .models import Withdrawal,User,Deposit
+from payment_details.models import BTCTransfer, BankTransfer
 
 
 @login_required()
@@ -21,13 +23,17 @@ def deposit_view(request):
         if form.is_valid():
             deposit = form.save(commit=False)
             deposit.user = request.user
+
             # adds users deposit to balance.
             # deposit.user.balance += deposit.amount
-            deposit.user.save()
+            # deposit.user.save()
             deposit.save()
             messages.success(request, 'Your deposit will be proccesed when funds have been posted'
                              .format(deposit.amount))
-            return redirect("dashboard")
+            if deposit.payment_option == "Bank Transfer":
+                return redirect("bank-details")
+            else:
+                return redirect("bitcoin-details")
 
         context = {
                     "title": title,
@@ -69,97 +75,18 @@ def withdrawal_view(request):
                     "form": form
                   }
         return render(request, "transactions/form.html", context)
+@login_required
+def bank_payment_details(request):
+    try:
+        details = BankTransfer.objects.get(name='account')
+    except ObjectDoesNotExist:
+        pass
+    return render(request, "transactions/bank_details.html", {'details':details})
 
-
-# class FormWizard(SessionWizardView):
-#     template_name = "transactions/form.html"
-#     # def dispatch(self, request, *args, **kwargs):
-#     #     return super(FormWizard,self).dispatch(request, *args, **kwargs)
-    
-
-#     def get_form_instance(self,step):
-#         return self.instance_dict.get(step,None)
-
-#     def done(self, form_list, **kwargs):
-#         withdrawal = Withdrawal()
-#         otp = Otp()
-#         withdrawal.user = self.request.user
-#         otp.user = self.request.user
-#         for form in form_list:
-#             for k,v in form.cleaned_data.items():
-#                 setattr(withdrawal,k,v)
-        
-#         for form in form_list:
-#             for k,v in form.cleaned_data.items():
-#                 setattr(otp,k,v)
-
-#         otp.save()
-
-#         allowed = True
-#         while allowed:
-
-#             #otp for 3 day transaction
-#             if otp.one_time_password in withdrawal.user.otp_value1:
-
-#                 if withdrawal.user.balance >= withdrawal.amount:
-
-
-#                     withdrawal.user.balance -= withdrawal.amount
-#                     withdrawal.user.save()
-#                     withdrawal.save()
-#                     messages.error(self.request, 'You have Transfered {} €.'
-#                                     .format(withdrawal.amount))
-#                     allowed = False
-#                     return redirect("dashboard")
-
-#                 else:
-#                     messages.error(self.request,
-#                     'You Can Not Transfer More Than Your Balance.')
-#                     allowed = False
-#                     return super(FormWizard, self).render(form, **kwargs)
-
-#             #otp for 7 days transactions
-#             elif otp.one_time_password in withdrawal.user.otp_value2:
-
-#                 if withdrawal.user.balance >= withdrawal.amount:
-
-
-#                     withdrawal.user.balance -= withdrawal.amount
-#                     withdrawal.user.save()
-#                     withdrawal.save()
-#                     messages.error(self.request, 'You Have Transfered {} €.'
-#                                     .format(withdrawal.amount))
-#                     allowed = False
-#                     return redirect("dashboard")
-
-#                 else:
-#                     messages.error(self.request,
-#                     'You Can Not Transfer More Than Your Balance.')
-#                     allowed = False
-#                     return super(FormWizard, self).render(form, **kwargs)
-
-#             #otp for 14 days transaction
-#             elif otp.one_time_password in withdrawal.user.otp_value3:
-
-#                 if withdrawal.user.balance >= withdrawal.amount:
-
-#                     withdrawal.user.balance -= withdrawal.amount
-#                     withdrawal.user.save()
-#                     withdrawal.save()
-#                     messages.error(self.request, 'You Have Transfered {} €.'
-#                                     .format(withdrawal.amount))
-#                     allowed = False
-#                     return redirect("dashboard")
-
-#                 else:
-#                     messages.error(self.request,
-#                     'You Can Not Transfer More Than Your Balance.')
-#                     allowed = False
-#                     return super(FormWizard, self).render(form, **kwargs)
-                    
-                    
-
-#             else:
-#                 messages.error(self.request, 'You have entered a wrong otp'
-#                                 .format(withdrawal.amount))
-#                 return super(FormWizard, self).render(form, **kwargs)
+@login_required
+def bitcoin_payment_details(request):
+    try:
+        details = BTCTransfer.objects.get(name='my wallet')
+    except ObjectDoesNotExist:
+        pass
+    return render(request, "transactions/bitcoin_details.html", {'details':details})

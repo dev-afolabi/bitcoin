@@ -54,9 +54,11 @@ INSTALLED_APPS = [
     'users',
     'transactions',
     'dashboard',
+    'payment_details',
 
     'django_static_ionicons',
-    'webpack_loader'
+    'webpack_loader',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -73,7 +75,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'bitcoin.urls'
 
 
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS =True

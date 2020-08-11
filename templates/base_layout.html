@@ -60,8 +60,8 @@
 								<li><a href="{% url 'dashboard' %}"><i class="icofont icofont-dashboard"></i> Dashboard </a></li>
 								<li><a href="{% url 'logout' %}"><i class="icofont icofont-login"></i> Logout </a></li>
 								{% else %}
-								<li><a href="{% url 'login' %}"><i class="icofont icofont-login"></i> Login </a></li>
-								<li><a href="{% url 'create' %}"><i class="icofont icofont-user-alt-5"></i> Register </a></li>
+								<li><a href="{% url 'my-auth:login' %}"><i class="icofont icofont-login"></i> Login </a></li>
+								<li><a href="{% url 'my-auth:create' %}"><i class="icofont icofont-user-alt-5"></i> Register </a></li>
 								<li><a href="#"><i class="icofont icofont-hand-drag2"></i> Help </a></li>
 								{% endif %}
 								

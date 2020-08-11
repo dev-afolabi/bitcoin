@@ -1,16 +1,28 @@
-<form method="post">
-    {% csrf_token %}
-    {% for field in form %}
-      <p>
-        {{ field.label_tag }}<br>
-        {{ field }}
-        {% if field.help_text %}
-          <small style="color: grey">{{ field.help_text }}</small>
-        {% endif %}
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      </p>
-    {% endfor %}
-    <button type="submit">Login</button>
-</form>
+  <div class="container-fluid">
+    <form action="" method="POST">
+      {% csrf_token %}
+      
+      <div class="limiter">
+          <h2 class="login-header">Login to Continue</h2>
+          <div class="form-group">
+            {{ form }}
+          </div>      
+      <div class="flex-sb-m w-full p-t-3 p-b-32">
+          <div class="contact100-form-checkbox">
+              <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+              <label class="label-checkbox100" for="ckb1">
+                  Remember me
+              </label>
+          </div>
+
+          <div>
+              <a href="#" class="txt1">
+                  Forgot Password?
+              </a>
+          </div>
+      </div>
+      <div class="form-group">
+              <input type="submit" name="submit" id="submit" class="form-submit" value="LOGIN"/>
+          </div>
+        </div>
+  </div>

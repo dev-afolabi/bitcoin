@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth import (get_user, get_user_model, logout)
+from django.contrib.auth import (get_user, get_user_model, logout, login, authenticate)
 from django.contrib.auth.tokens import default_token_generator as token_generator
 from django.urls import reverse_lazy
 from django.utils.encoding import force_bytes, force_text
@@ -7,7 +7,6 @@ from django.utils.decorators import method_decorator
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from .forms import UserCreationForm
 from django.contrib.auth.models import User
-from django.contrib.auth import get_user_model
 from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
@@ -18,6 +17,7 @@ from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import EmailMessage
 from django.contrib import messages
+from .forms import UserLoginForm
 
 # Create your views here.
 
@@ -26,7 +26,8 @@ User = get_user_model()
 @sensitive_post_parameters('password1','password2')
 def signup(request):
     if request.method == 'POST':
-        bound_form = UserCreationForm(request.POST)
+        bound_form = UserCreationForm(request.POST or None,
+                                    request.FILES or None)
         if bound_form.is_valid():
             user = bound_form.save(commit=False)
             user.is_active = False
@@ -48,7 +49,7 @@ def signup(request):
             to_email = bound_form.cleaned_data.get('email')
             email = EmailMessage(subject,message, to=[to_email])
             email.send()
-            return redirect('create_done')
+            return redirect('my-auth:create_done')
     else:
         bound_form = UserCreationForm()
     return render(request, 'registration/user_create.html', {'form':bound_form})
@@ -65,9 +66,32 @@ def activate(request, uidb64, token):
         user.email_confirmed = True
         user.Save()
         messages.success(request, 'You Account has been successfully activated, please login')
-        return redirect('login')
+        return redirect('my-auth:login')
     else:
         return render(request, 'registration/user_activate_failed.html')
 
 def account_activation_sent(request):
     return render(request, 'registration/user_create_done.html')
+
+def login_view(request):  # users will login with their Email & Password
+    if request.user.is_authenticated:
+        return redirect("dashboard")
+    else:
+        title = "Load Account Details"
+        form = UserLoginForm(
+            request.POST or None)
+
+        if form.is_valid():
+            email = form.cleaned_data.get("email")
+            user_obj = User.objects.filter(email=email).first()
+            password = form.cleaned_data.get("password")
+            # authenticates Email & Password
+            user = authenticate(email=user_obj.email, password=password)
+            login(request, user)
+            return redirect("dashboard")
+
+        context = {"form": form,
+                   "title": title
+                   }
+
+        return render(request, "registration/login.html", context)
