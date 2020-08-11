@@ -1,4 +1,5 @@
 {% load static %}
+{% load cropping %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -88,7 +89,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ user.picture.url }}" class="rounded-circle" alt="User Image">
+                        <img src="{% cropped_thumbnail user 'cropping' %}" class="rounded-circle" alt="User Image">
                       </div>
                       <div class="mail-contnet">
                          <h4>
@@ -117,7 +118,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{% static 'dashboard/images/user4-128x128.jpg' %}" class="rounded-circle" alt="User Image">
+                        <img src="{% cropped_thumbnail user 'cropping' %}" class="rounded-circle" alt="User Image">
                       </div>
                       <div class="mail-contnet">
                          <h4>
@@ -321,12 +322,12 @@
 		  <!-- User Account -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ user.picture.url }}" class="user-image rounded-circle" alt="User Image">
+              <img src="{% cropped_thumbnail user 'cropping' %}" class="user-image rounded-circle" alt="User Image">
             </a>
             <ul class="dropdown-menu scale-up">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{ user.picture.url }}" class="float-left rounded-circle" alt="User Image">
+                <img src="{% cropped_thumbnail user 'cropping' %}" class="float-left rounded-circle" alt="User Image">
 
                 <p>
                   {{ user.get_full_name }}
@@ -377,7 +378,7 @@
 			</a>
 		</div>
         <div class="image">
-          <img src="{{ user.picture.url }}" class="rounded-circle" alt="User Image">
+          <img src="{% cropped_thumbnail user 'cropping' %}" class="rounded-circle" alt="User Image">
         </div>
         <div class="info">
           <p>Admin Template</p>

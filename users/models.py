@@ -8,6 +8,7 @@ from django.urls import reverse
 from django.conf import settings
 from .managers import UserManager
 from django.utils.translation import ugettext_lazy as _
+from image_cropping import ImageRatioField
 
 NAME_REGEX = '^[a-zA-Z ]*$'
 
@@ -54,12 +55,8 @@ class User(AbstractBaseUser, PermissionsMixin):
         upload_to="media-root/",
         null=True,
         blank=False,
-        height_field="height_field",
-        width_field="width_field",
         )
-
-    height_field = models.IntegerField(default=600, null=True)
-    width_field = models.IntegerField(default=600, null=True)
+    cropping = ImageRatioField('picture', '128x128')
 
     is_staff = models.BooleanField(_("active"), default=False)
     email_confirmed = models.BooleanField(default=False)

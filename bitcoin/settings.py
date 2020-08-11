@@ -19,6 +19,12 @@ from os.path import join, dirname
 from dotenv import load_dotenv
 from django.utils.translation import ugettext_lazy as _
 from django.urls import reverse_lazy
+from easy_thumbnails.conf import Settings as thumbnail_settings
+
+
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -58,7 +64,11 @@ INSTALLED_APPS = [
 
     'django_static_ionicons',
     'webpack_loader',
-    'crispy_forms'
+    'crispy_forms',
+    'easy_thumbnails',
+    'image_cropping',
+    'storages',
+
 ]
 
 MIDDLEWARE = [
@@ -176,6 +186,20 @@ WEBPACK_LOADER = {
     }
 }
 
+AWS_ACCESS_KEY_ID= "AKIAU3Z7F3G5DQEBLZVD"
+AWS_SECRET_ACCESS_KEY= "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"
+AWS_STORAGE_BUCKET_NAME="my-ing-bucket"
+
+AWS_S3_REGION_NAME = 'us-east-2'
+
+AWS_S3_SIGNATURE_VERSION = 's3v4'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+staticfiles_storage = 'whitenoise.storage.compressedmanifeststaticfilesstorage'
 
 
 LOGIN_REDIRECT_URL = reverse_lazy('dashboard')

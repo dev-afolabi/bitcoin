@@ -24,4 +24,5 @@ class DepositForm(forms.ModelForm):
 class WithdrawalForm(forms.ModelForm):
     class Meta:
         model = Withdrawal
-        fields = []
+        fields = ["bank_name","account_number","IBAN_number","amount","swift_code"]
+
