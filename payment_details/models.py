@@ -19,5 +19,5 @@ class BTCTransfer(models.Model):
 
 class Notification(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
-    message = models.CharField(max_length=50)
+    message = models.CharField(max_length=70)
     timestamp = models.DateTimeField(auto_now_add=True)

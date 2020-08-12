@@ -21,7 +21,7 @@ from .forms import UserLoginForm
 from payment_details.models import Notification
 
 # Create your views here.
-user_creation_message = "Welcome to Bitfonix!!! we're happy to have you here"
+user_creation_message = "Welcome to Bitfonix,we're happy to have you here"
 
 User = get_user_model()
 
