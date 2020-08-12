@@ -1,6 +1,6 @@
 {% extends "base_layout.html" %}
 {% load static %}
-{% block title %}{{ block.super }} - Activate{% endblock title %}
+{% block title %}{{ block.super }} - Activated{% endblock title %}
 
 {% block content %}
 	<!-- START PAGE BANNER AND BREADCRUMBS -->
@@ -10,8 +10,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>Create Your Account</h2>
-							<p>Confirmation Email Sent</p>
+							<h2>Activate Your Account</h2>
+							<p>Account successfully activated</p>
 						</div>
 					</div>
 				</div>
@@ -24,7 +24,7 @@
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">registration</li>
+							<li class="breadcrumb-item active">Activated</li>
 						</ol>
 					</div>
 				</div>
@@ -40,8 +40,8 @@
 			<!-- end section title -->
 			<div class="row">
                 <div class="col-lg-7 mx-auto">
-                    <p>Your Bitfonix account activation failed</p></br>
-                    <p>Activation link not valid or expired, please retry your registiration</p>
+                    <p>Your Bitfonix account has been successfully activated</p></br>
+                    <p>Please login <a href="{% url 'my-auth:login' %}">HERE</a></p>
                 </div>
 			</div>
 			<!-- end row -->

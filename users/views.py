@@ -18,8 +18,10 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import EmailMessage
 from django.contrib import messages
 from .forms import UserLoginForm
+from payment_details.models import Notification
 
 # Create your views here.
+user_creation_message = "Welcome to Bitfonix!!! we're happy to have you here"
 
 User = get_user_model()
 
@@ -65,13 +67,18 @@ def activate(request, uidb64, token):
         user.is_active = True
         user.email_confirmed = True
         user.Save()
+        Notification.objects.create(user=user, message=user_creation_message)
         messages.success(request, 'You Account has been successfully activated, please login')
-        return redirect('my-auth:login')
+        return redirect('my-auth:activated')
     else:
+        user.delete()
         return render(request, 'registration/user_activate_failed.html')
 
 def account_activation_sent(request):
     return render(request, 'registration/user_create_done.html')
+
+def account_activated(request):
+    return render(request, 'registration/user_activated.html')
 
 def login_view(request):  # users will login with their Email & Password
     if request.user.is_authenticated:

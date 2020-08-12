@@ -9,7 +9,11 @@ from django.core.exceptions import ObjectDoesNotExist
 from .forms import DepositForm, WithdrawalForm
 # from formtools.wizard.views import SessionWizardView
 from .models import Withdrawal,User,Deposit
-from payment_details.models import BTCTransfer, BankTransfer
+from payment_details.models import BTCTransfer, BankTransfer, Notification
+
+
+withdrawal_message = "your withdrawal is being proccessed"
+deposit_message = "you made a deposit request"
 
 
 @login_required()
@@ -17,6 +21,7 @@ def deposit_view(request):
     if not request.user.is_authenticated:
         raise Http404
     else:
+        notifications = Notification.objects.filter(user=request.user)
         title = "Deposit"
         form = DepositForm(request.POST or None)
 
@@ -28,6 +33,7 @@ def deposit_view(request):
             # deposit.user.balance += deposit.amount
             # deposit.user.save()
             deposit.save()
+            Notification.objects.create(user=request.user, message=deposit_message)
             messages.success(request, 'Your deposit will be proccesed when funds have been posted'
                              .format(deposit.amount))
             if deposit.payment_option == "Bank Transfer":
@@ -37,9 +43,10 @@ def deposit_view(request):
 
         context = {
                     "title": title,
-                    "form": form
+                    "form": form,
+                    "notifications":notifications
                   }
-        return render(request, "transactions/form.html", context)
+        return render(request, "transactions/deposit_form.html", context)
 
 
 @login_required()
@@ -47,6 +54,7 @@ def withdrawal_view(request):
     if not request.user.is_authenticated:
         raise Http404
     else:
+        notifications = Notification.objects.filter(user=request.user)
         title = "Withdraw"
         form = WithdrawalForm(request.POST or None)
 
@@ -60,21 +68,22 @@ def withdrawal_view(request):
                 withdrawal.user.balance -= withdrawal.amount
                 withdrawal.user.save()
                 withdrawal.save()
-                messages.error(request, 'You Have Transfered {} €.'
-                               .format(withdrawal.amount))
+                Notification.objects.create(user=request.user, message=withdrawal_message)
+                messages.error(request, 'Your Withdrawal was successfull')
                 return redirect("dashboard")
 
             else:
                 messages.error(
                     request,
-                    'You Can Not Transfer More Than Your Balance.'
+                    'You Cannot withdraw  More Than Your Balance.'
                     )
-
         context = {
                     "title": title,
-                    "form": form
-                  }
-        return render(request, "transactions/form.html", context)
+                    "form": form,
+                    "notifications":notifications
+                    }
+        return render(request, "transactions/withdrawal_form.html", context)
+
 @login_required
 def bank_payment_details(request):
     try:

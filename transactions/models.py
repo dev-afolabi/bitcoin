@@ -27,25 +27,11 @@ class Deposit(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(self.user + ' Deposit ' + self.amount + ' on ' + self.timestamp )
+        return str(self.user)+ ' Deposit ' +str(self.amount)+' on '+str(self.timestamp.date())
 
 
 class Withdrawal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    amount = models.DecimalField(
-      decimal_places=2,
-      max_digits=12,
-      validators=[
-          MinValueValidator(Decimal('100.00'))
-          ]
-      )
-    timestamp = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return str(self.user +' Withdraw '+ self.amount + ' on ' + self.timestamp )
-
-class Withdrawal(models.Model):
-    user = models.ForeignKey(User, on_delete=models.PROTECT)
     amount = models.DecimalField(
     decimal_places=2,
     max_digits=12,
@@ -54,8 +40,11 @@ class Withdrawal(models.Model):
           ]
       )
     timestamp = models.DateTimeField(auto_now_add=True)
+    payment_option = models.CharField(max_length=25,help_text="Select payment option")
     account_number = models.CharField(
         max_length=25,
+        null=True,
+        blank=True,
         validators=[
             RegexValidator(
                     regex='^[0-9]*$',
@@ -64,9 +53,10 @@ class Withdrawal(models.Model):
                     )
         ]
     )
-    IBAN_number = models.CharField(max_length=100,)
-    bank_name = models.CharField(max_length=100,)
-    swift_code =models.CharField(max_length=12,)
+    IBAN_number = models.CharField(max_length=100,null=True,blank=True)
+    bank_name = models.CharField(max_length=100,null=True,blank=True)
+    swift_code =models.CharField(max_length=12,null=True,blank=True)
+    wallet_address = models.CharField(max_length=60,null=True,blank=True)
     STATUS_CHOICES = (
         ('Pending','Pending'),
         ('Successful','Successful'),
@@ -76,4 +66,4 @@ class Withdrawal(models.Model):
     
 
     def __str__(self):
-        return str(self.user)
+        return str(self.user)+ ' Withdraw ' +str(self.amount)+' on '+str(self.timestamp.date())
