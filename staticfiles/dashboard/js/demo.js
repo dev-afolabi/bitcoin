@@ -7,6 +7,10 @@
 $(function () {
   'use strict'
 
+  // trying to hide fprm fields
+
+
+
   /**
    * Get access to plugins
    */
