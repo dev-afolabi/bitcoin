@@ -39,7 +39,7 @@ load_dotenv(dotenv_path)
 SECRET_KEY = 'xk^0x+8fhzi1(sv@v811*z2#d@n#)0x=)av9txfup0=2vma)pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com']
 
@@ -168,16 +168,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-    ]
-
-MEDIA_URL = '/media-root/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media-root')
 
 WEBPACK_LOADER = {
     'DEFAULT': {
@@ -195,12 +186,24 @@ AWS_S3_REGION_NAME = 'us-east-2'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 
 AWS_S3_FILE_OVERWRITE = False
+AWS_QUERYSTRING_AUTH = False
 AWS_DEFAULT_ACL = None
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 staticfiles_storage = 'whitenoise.storage.compressedmanifeststaticfilesstorage'
 
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+    ]
+
+# MEDIA_URL = 'https://'+AWS_STORAGE_BUCKET_NAME+'.s3.amazonaws.com/media-root/'
+MEDIA_URL = '/media-root/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media-root')
 
 LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
 LOGIN_URL = reverse_lazy('login')

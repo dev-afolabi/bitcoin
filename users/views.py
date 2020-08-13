@@ -71,7 +71,8 @@ def activate(request, uidb64, token):
         messages.success(request, 'You Account has been successfully activated, please login')
         return redirect('my-auth:activated')
     else:
-        user.delete()
+        if user is not None:
+            user.delete()
         return render(request, 'registration/user_activate_failed.html')
 
 def account_activation_sent(request):
