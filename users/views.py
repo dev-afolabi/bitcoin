@@ -36,14 +36,9 @@ def signup(request):
             user.save()
             current_site = get_current_site(request)
             subject = "Activate your Bitfonix Account"
-            if request.is_secure():
-                protocol = 'https'
-            else:
-                protocol = 'http'
             message = render_to_string('registration/email_create.html',{
                 'user':user,
                 'site_name':current_site,
-                'protocol':protocol,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token':account_activation_token.make_token(user)
