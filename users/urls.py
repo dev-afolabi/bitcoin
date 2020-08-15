@@ -45,7 +45,7 @@ urlpatterns = [
     url(r'^create/done/$', account_activation_sent, name='create_done'),
     url(r'^activation/successfull/$', account_activated, name='activated'),
 
-    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})$', activate, 
+    path('activate/<uidb64>/<token>/', activate, 
     name='activate'),
     
 ]
