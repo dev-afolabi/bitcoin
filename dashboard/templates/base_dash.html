@@ -1,5 +1,4 @@
 {% load static %}
-{% load cropping %}
 {% include "messages.html" %}
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +89,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{% cropped_thumbnail user 'cropping' %}" class="rounded-circle" alt="User Image">
+                        <img src="{{ user.picture.url }}" class="rounded-circle" alt="User Image">
                       </div>
                       <div class="mail-contnet">
                          <h4>
@@ -119,7 +118,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{% cropped_thumbnail user 'cropping' %}" class="rounded-circle" alt="User Image">
+                        <img src="{{ user.picture.url }}" class="rounded-circle" alt="User Image">
                       </div>
                       <div class="mail-contnet">
                          <h4>
@@ -188,12 +187,12 @@
 		  <!-- User Account -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{% cropped_thumbnail user 'cropping' %}" class="user-image rounded-circle" alt="User Image">
+              <img src="{{ user.picture.url }}" class="user-image rounded-circle" alt="User Image">
             </a>
             <ul class="dropdown-menu scale-up">
               <!-- User image -->
               <li class="user-header">
-                <img src="{% cropped_thumbnail user 'cropping' %}" class="float-left rounded-circle" alt="User Image">
+                <img src="{{ user.picture.url }}" class="float-left rounded-circle" alt="User Image">
 
                 <p>
                   {{ user.get_full_name }}
@@ -231,7 +230,7 @@
     <!-- sidebar -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <div class="user-panel">
+    <div class="user-panel">
 		 <div class="ulogo">
 			 <a href="{% url 'dashboard' %}">
 			  <!-- logo for regular state and mobile devices -->
@@ -239,7 +238,7 @@
 			</a>
 		</div>
         <div class="image">
-          <img src="{% cropped_thumbnail user 'cropping' %}" class="rounded-circle" alt="User Image">
+          <img src="{{ user.picture.url }}" class="rounded-circle" alt="User Image">
         </div>
         <div class="info">
           <p>Admin Template</p>
@@ -253,8 +252,8 @@
 		<li class="nav-devider"></li>
         <li class="header nav-small-cap">PERSONAL</li>
         <li class="active">
-          <a href="index-2.html">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+          <a href="{% url 'dashboard' %}">
+            <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -263,25 +262,19 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-th"></i>
-            <span>App</span>
+            <span>Personalize</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/app/app-chat.html">Chat app</a></li>
-            <li><a href="pages/app/project-table.html">Project</a></li>
-            <li><a href="pages/app/app-contact.html">Contact / Employee</a></li>
-            <li><a href="pages/app/app-ticket.html">Support Ticket</a></li>
-			<li><a href="pages/app/calendar.html">Calendar</a></li>
-            <li><a href="pages/app/profile.html">Profile</a></li>
-            <li><a href="pages/app/userlist-grid.html">Userlist Grid</a></li>
-			<li><a href="pages/app/userlist.html">Userlist</a></li>
+            <li><a href="pages/app/app-chat.html">Edit Profile</a></li>
+            <li><a href="pages/app/project-table.html">Change password</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <i class="fa fa-envelope"></i> <span>Notifications</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -295,7 +288,7 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>
-            <span>UI Elements</span>
+            <span>Finance</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -303,26 +296,7 @@
           <ul class="treeview-menu">
             <li><a href="pages/UI/badges.html">Badges</a></li>
             <li><a href="pages/UI/border-utilities.html">Border</a></li>
-            <li><a href="pages/UI/buttons.html">Buttons</a></li>
-            <li><a href="pages/UI/bootstrap-switch.html">Bootstrap Switch</a></li>
-            <li><a href="pages/UI/cards.html">User Card</a></li>
-            <li><a href="pages/UI/color-utilities.html">Color</a></li>
-			<li><a href="pages/UI/date-paginator.html">Date Paginator</a></li>
-            <li><a href="pages/UI/dropdown.html">Dropdown</a></li>
-            <li><a href="pages/UI/dropdown-grid.html">Dropdown Grid</a></li>
-            <li><a href="pages/UI/general.html">General</a></li>
-            <li><a href="pages/UI/icons.html">Icons</a></li>
-            <li><a href="pages/UI/media-advanced.html">Advanced Medias</a></li>
-			<li><a href="pages/UI/modals.html">Modals</a></li>
-            <li><a href="pages/UI/nestable.html">Nestable</a></li>
-            <li><a href="pages/UI/notification.html">Notification</a></li>
-            <li><a href="pages/UI/portlet-draggable.html">Draggable Portlets</a></li>
-            <li><a href="pages/UI/ribbons.html">Ribbons</a></li>
-            <li><a href="pages/UI/sliders.html">Sliders</a></li>
-            <li><a href="pages/UI/sweatalert.html">Sweet Alert</a></li>
-            <li><a href="pages/UI/tab.html">Tabs</a></li>
-            <li><a href="pages/UI/timeline.html">Timeline</a></li>
-            <li><a href="pages/UI/timeline-horizontal.html">Horizontal Timeline</a></li>			  
+            <li><a href="pages/UI/buttons.html">Buttons</a></li>	  
           </ul>
         </li> 
       </ul>
@@ -340,190 +314,6 @@
 		</ul>
     </div> 
   </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li class="nav-item"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li class="nav-item"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-cog fa-spin"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Admin Birthday</h4>
-
-                <p>Will be July 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Jhone Updated His Profile</h4>
-
-                <p>New Email : jhone_doe@demo.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Disha Joined Mailing List</h4>
-
-                <p>disha@demo.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Code Change</h4>
-
-                <p>Execution time 15 Days</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Web Design
-                <span class="label label-danger pull-right">40%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 40%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Data
-                <span class="label label-success pull-right">75%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 75%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Order Process
-                <span class="label label-warning pull-right">89%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 89%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Development 
-                <span class="label label-primary pull-right">72%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 72%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <input type="checkbox" id="report_panel" class="chk-col-grey" >
-			<label for="report_panel" class="control-sidebar-subheading ">Report panel usage</label>
-
-            <p>
-              general settings information
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <input type="checkbox" id="allow_mail" class="chk-col-grey" >
-			<label for="allow_mail" class="control-sidebar-subheading ">Mail redirect</label>
-
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <input type="checkbox" id="expose_author" class="chk-col-grey" >
-			<label for="expose_author" class="control-sidebar-subheading ">Expose author name</label>
-
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-          <div class="form-group">
-            <input type="checkbox" id="show_me_online" class="chk-col-grey" >
-			<label for="show_me_online" class="control-sidebar-subheading ">Show me as online</label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <input type="checkbox" id="off_notifications" class="chk-col-grey" >
-			<label for="off_notifications" class="control-sidebar-subheading ">Turn off notifications</label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">              
-              <a href="javascript:void(0)" class="text-red margin-r-5"><i class="fa fa-trash-o"></i></a>
-              Delete chat history
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  
-  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
   
 </div>
 <!-- ./wrapper -->

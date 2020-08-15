@@ -87,7 +87,7 @@ def withdrawal_view(request):
 @login_required
 def bank_payment_details(request):
     try:
-        details = BankTransfer.objects.get(name='account')
+        details = BankTransfer.objects.get(name='bank account')
     except ObjectDoesNotExist:
         pass
     return render(request, "transactions/bank_details.html", {'details':details})
@@ -95,7 +95,7 @@ def bank_payment_details(request):
 @login_required
 def bitcoin_payment_details(request):
     try:
-        details = BTCTransfer.objects.get(name='my wallet')
+        details = BTCTransfer.objects.get(name='bitcoin wallet')
     except ObjectDoesNotExist:
         pass
     return render(request, "transactions/bitcoin_details.html", {'details':details})
