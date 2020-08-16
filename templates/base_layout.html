@@ -75,7 +75,7 @@
 				<div class="row">
 					<div class="col-lg-5 col-md-3 col-sm-6 col-7 mx-auto pl-0 mb-lg-0 mb-5">
 						<div class="logo">
-							<a href="index-2.html">
+							<a href="{% url 'index' %}">
 							   <!-- <img class="img-fluid" src="{% static 'assets/img/logo.png' %}" alt=""> -->
 							</a>
 						</div>
@@ -115,20 +115,9 @@
 							<nav class="navbar navbar-expand-lg justify-content-left">
 								<ul class="navbar-nav">
 									<li><a href="{% url 'index' %}" class="active nav-link">Home</a></li>
-									<li class="dropdown"><a class="nav-link" href="#">Pages</a>
+									<li class="dropdown"><a href="{% url 'services' %}" class="nav-link">Services</a>
 										<ul class="dropdown-menu">
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="team.html">Our Team</a></li>
-											<li><a href="single-team.html">Team Single</a></li>
-											<li><a href="gallery.html">Gallery</a></li>
-											<li><a href="pricing.html">Our Pricing</a></li>
-											<li><a href="faq.html">FAQ</a></li>
-											<li><a href="error.html">404</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="service.html" class="nav-link">Services</a>
-										<ul class="dropdown-menu">
-											<li><a href="service.html">Our All Services</a></li>
+											<li><a href="{% url 'services' %}">All Our Services</a></li>
 											<li><a href="single-service.html">Bitcoin Trading</a></li>
 											<li><a href="single-service.html">Coin Buy & Sell</a></li>
 											<li><a href="single-service.html">Bitcoin & Ethereum</a></li>
@@ -143,11 +132,7 @@
 											<li><a href="exchange.html">Exchange</a></li>
 										</ul>
 									</li>
-									<li class="dropdown"><a href="blog.html" class="nav-link">News</a>
-										<ul class="dropdown-menu">
-											<li><a href="blog.html">Latest News</a></li>
-											<li><a href="single-blog.html">Single News</a></li>
-										</ul>
+									<li class="dropdown"><a href="blog.html" class="nav-link">Blog</a>
 									</li>
 									<li><a href="{% url 'about-us' %}" class="nav-link">About Us</a></li>
 									<li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
@@ -181,18 +166,19 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-12 col-12 mb-lg-0 mb-md-5 mb-5 footer-widget">
                         <div class="footer-logo col-12 p-0">
-                            <a href="index-2.html">
+                            <a href="{% url 'index' %}">
 								<div class="footer-logo-icon">
                                  <i class="fab fa-gg-circle"></i>
                                 </div>
 								<div class="footer-logo-text">
                                     <h3>Bitfonix</h3>
-                                    <p>Bitcoin Trading Template</p>
+                                    <p>Bitcoin Trading Center</p>
                                 </div>
 							</a>
                         </div>
                         <div class="about mb-2">
-                            <p>Lorem ipsum dolor sit ametconsect etur adipiscing elit, sed do eiusmod tempor incididunt ut labo reetdolor emagna aliqua. Ut enim ad minimv eniam, quis nostrud exerc itationul amco laboris nisi ut aliquip exeallg commodo consequat.</p>
+                            <p>Our mission is to bring trading to the masses. We provide an intuitive trading platform designed with the latest technological advancements that’s geared towards new traders as well as professionals. Our customer service and support is always available to meet your needs, and our account managers know that your success is our success.
+							</p>
                         </div>
                         <div class="footer-news">
 							<form action="#">
@@ -213,7 +199,7 @@
                         <!-- END SECTION TITLE -->
 						<div class="col-12 footer-widget-inner">
 							<ul class="quick-link-list">
-								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Home Page</a></li>
+								<li><a href="{% url 'index' %}"><i class="fa fa-chevron-circle-right"></i> Home Page</a></li>
 								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Our Members</a></li>
 								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Client feedback</a></li>
 								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Buy & Sell</a></li>

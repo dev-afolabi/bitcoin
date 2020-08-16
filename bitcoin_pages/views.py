@@ -12,3 +12,6 @@ def contact(request):
 
 def faq(request):        
     return render(request, 'bitcoin_pages/faq.html')
+
+def services(request):        
+    return render(request, 'bitcoin_pages/services.html')

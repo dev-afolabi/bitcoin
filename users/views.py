@@ -63,7 +63,6 @@ def activate(request, uidb64, token):
         user.email_confirmed = True
         user.Save()
         Notification.objects.create(user=user, message=user_creation_message)
-        messages.success(request, 'You Account has been successfully activated, please login')
         return redirect('my-auth:activated')
     else:
         if user is not None:
