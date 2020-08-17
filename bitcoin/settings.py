@@ -34,7 +34,7 @@ load_dotenv(dotenv_path)
 SECRET_KEY = 'xk^0x+8fhzi1(sv@v811*z2#d@n#)0x=)av9txfup0=2vma)pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com']
 
@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'blog',
 
     'django_static_ionicons',
-    'webpack_loader',
     'storages',
 
 ]
@@ -116,11 +115,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-DATABASE_URL = os.environ['DATABASE_URL']
+# DATABASE_URL = os.environ['DATABASE_URL']
 
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 
@@ -163,12 +162,6 @@ USE_TZ = True
 
 
 
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'bundles/',  # end with slash
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
-    }
-}
 
 AWS_ACCESS_KEY_ID= "AKIAU3Z7F3G5DQEBLZVD"
 AWS_SECRET_ACCESS_KEY= "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"

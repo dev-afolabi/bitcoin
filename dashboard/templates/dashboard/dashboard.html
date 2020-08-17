@@ -1,6 +1,5 @@
 {% extends 'base_dash.html' %}
 {% load static %}
-{% load render_bundle from webpack_loader %}
 {% block content %}
   
   <!-- Content Wrapper. Contains page content -->
@@ -51,8 +50,7 @@
 				<div class="box">
 					<div class="box-body">
 						<div class="chart">
-							<div id="btcdash" style="height: 515px;"></div>
-							{% render_bundle 'main'%}
+							<div id="chartdiv1" style="height: 515px;"></div>
 						</div>
 					</div>
 				</div>

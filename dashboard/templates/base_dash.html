@@ -172,7 +172,7 @@
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu inner-content-div">
-                  {% for notification in notifications %}
+                  {% for notification in notifications reversed %}
                   <li>
                     <a href="#">
                       <i class="fa fa-users text-aqua"></i> {{ notification.message }}.
@@ -321,7 +321,8 @@
 	 
 	  
 	<!-- jQuery 3 -->
-	<script src="{% static 'dashboard/assets/vendor_components/jquery/dist/jquery.js' %}"></script>
+  <script src="{% static 'dashboard/assets/vendor_components/jquery/dist/jquery.js' %}"></script>
+  <script src="{% static 'dashboard/assets/vendor_components/jquery/dist/hidefield.js' %}"></script>
 	<script src="{% static 'dashboard/assets/vendor_components/popper/dist/popper.min.js' %}"></script>
 	<script src="{% static 'dashboard/assets/vendor_components/bootstrap/dist/js/bootstrap.js' %}"></script>	
 	<script src="{% static 'dashboard/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
@@ -348,14 +349,16 @@
 	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.resize.js' %}"></script>
 	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.pie.js' %}"></script>
 	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.categories.js' %}"></script>
-	
+  
+
+
+
+
 	<!-- Unique_admin App -->
 	<script src="{% static 'dashboard/js/template.js' %}"></script>
-	
-	<!-- Unique_admin dashboard demo (This is only for demo purposes) -->
-  <script src="{% static 'dashboard/js/pages/dashboard.js' %}"></script>
-  <script src="{% static 'dashboard/js/jquery-3.5.1.min.js' %}"></script>
-  <script src="{% static 'dashboard/js/hidefield.js' %}"></script>
+  
+  <!-- Unique_admin dashboard demo (This is only for demo purposes) -->
+	<script src="{% static 'dashboard/js/pages/dashboard.js' %}"></script>
 	
 	<!-- Unique_admin for demo purposes -->
 	<script src="{% static 'dashboard/js/demo.js' %}"></script>
