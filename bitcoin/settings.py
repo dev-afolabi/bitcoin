@@ -34,7 +34,7 @@ load_dotenv(dotenv_path)
 SECRET_KEY = 'xk^0x+8fhzi1(sv@v811*z2#d@n#)0x=)av9txfup0=2vma)pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com']
 
@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'blog',
 
     # 'django_react_templatetags'
+    'webpack_loader',
     'django_static_ionicons',
     'storages',
 
@@ -188,6 +189,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'assets')
     ]
+
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME':'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR,'webpack-stats.json',)
+    }
+}
 
 MEDIA_URL = 'https://'+AWS_STORAGE_BUCKET_NAME+'.s3.amazonaws.com/media-root/'
 #MEDIA_URL = '/media-root/'
