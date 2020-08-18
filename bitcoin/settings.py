@@ -58,8 +58,6 @@ INSTALLED_APPS = [
     'payment_details',
     'blog',
 
-    # 'django_react_templatetags'
-    'webpack_loader',
     'django_static_ionicons',
     'storages',
 
@@ -100,7 +98,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # 'django_react_templatetags.context_processors.react_context_processor',
             ],
         },
     },
@@ -118,11 +115,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-DATABASE_URL = os.environ['DATABASE_URL']
+# DATABASE_URL = os.environ['DATABASE_URL']
 
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 
@@ -187,16 +184,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets')
+    os.path.join(BASE_DIR, 'static')
     ]
 
-
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME':'dist/',
-        'STATS_FILE': os.path.join(BASE_DIR,'webpack-stats.json',)
-    }
-}
 
 MEDIA_URL = 'https://'+AWS_STORAGE_BUCKET_NAME+'.s3.amazonaws.com/media-root/'
 #MEDIA_URL = '/media-root/'

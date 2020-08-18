@@ -1,4 +1,3 @@
-{% load render_bundle from webpack_loader %}
 {% load static %}
 {% include "messages.html" %}
 <!DOCTYPE html>
@@ -14,8 +13,6 @@
     {% block style %}
     <link rel="stylesheet" type="text/css" href="{% static 'ionicons/css/ionicons.css' %}">
     {% endblock %}
-
-    {% render_bundle 'main' 'css' %}
 
     
 	<!-- Bootstrap 4.0-->
