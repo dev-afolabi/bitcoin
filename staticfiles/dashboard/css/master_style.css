@@ -13668,6 +13668,7 @@ a.text-danger:hover, a.text-danger:focus {
     filter: alpha(opacity=100);
 }
 .chart {
+    height:650px;
     position: relative;
     overflow: hidden;
     width: 100%}
