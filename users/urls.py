@@ -11,8 +11,8 @@ from .views import *
 app_name = "my-auth"
 
 password_urls = [
-    url(r'^change/$', auth_views.PasswordChangeView.as_view(), 
-    name="password_change"),
+    # url(r'^change/$', auth_views.PasswordChangeView.as_view(template_name ='registration/password_change.html'), 
+    # name="password_change"),
 
     url(r'^change/done/$', auth_views.PasswordChangeDoneView.as_view(), 
     name="password_change_done"),
@@ -44,6 +44,8 @@ urlpatterns = [
     url(r'create/$', signup, name='create'),
     url(r'^create/done/$', account_activation_sent, name='create_done'),
     url(r'^activation/successfull/$', account_activated, name='activated'),
+    url(r'^change-password/$', change_password, name='change_password'),
+
 
     path('activate/<uidb64>/<token>/', activate, 
     name='activate'),

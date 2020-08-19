@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth import (get_user, get_user_model, logout, login, authenticate)
+from django.contrib.auth import (get_user, get_user_model, logout, login, authenticate, update_session_auth_hash)
 from django.contrib.auth.tokens import default_token_generator as token_generator
 from django.urls import reverse_lazy
 from django.utils.encoding import force_bytes, force_text
@@ -7,6 +7,7 @@ from django.utils.decorators import method_decorator
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from .forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import PasswordChangeForm
 from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
@@ -97,3 +98,15 @@ def login_view(request):  # users will login with their Email & Password
                    }
 
         return render(request, "registration/login.html", context)
+
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            return redirect('password_change_done')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'registration/password_change.html', {'form':form})

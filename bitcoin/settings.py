@@ -34,7 +34,7 @@ load_dotenv(dotenv_path)
 SECRET_KEY = 'xk^0x+8fhzi1(sv@v811*z2#d@n#)0x=)av9txfup0=2vma)pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com']
 
@@ -186,7 +186,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
     ]
-
 
 MEDIA_URL = 'https://'+AWS_STORAGE_BUCKET_NAME+'.s3.amazonaws.com/media-root/'
 #MEDIA_URL = '/media-root/'

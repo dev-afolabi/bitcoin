@@ -22,28 +22,22 @@
 			<div class="col-xl-8 col-12">
 				<div class="box no-shadow">
 					<div class="box-body">
-						<div class="d-md-flex justify-content-between align-items-center d-inline-block">
-							<h2 class="my-0 text-white">BTC/USD</h2>
-							<div>
-								<p class="mb-5">Last Price (USD)</p>
-								<h4 class="mb-0 text-white">7136.0 <span class="text-success ml-10">7.55% <i class="fa fa-arrow-up"></i></span></h4>
-							</div>
-							<div class="d-lg-block d-none">
-								<p class="mb-5">24h Vol.</p>
-								<h4 class="mb-0 text-white">1943558 USD</h4>
-							</div>
-							<div class="d-lg-block d-none">
-								<p class="mb-5"><span class="text-success mr-10"><i class="fa fa-line-chart"></i></span>Funding / 8h</p>
-								<h4 class="mb-0 text-white">0.0111 %</h4>
-							</div>
-							<div>
-								<p class="mb-5">24h High</p>
-								<h4 class="mb-0 text-white"><i class="cc BTC font-size-16 mr-10"></i>7443</h4>
-							</div>
-							<div>
-								<p class="mb-5">24h Low</p>
-								<h4 class="mb-0 text-white"><i class="cc BTC font-size-16 mr-10"></i>6430.5</h4>
-							</div>
+						<div class="col-12 d-md-flex justify-content-between align-items-center d-inline-block">
+					<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+	<div class="tradingview-widget-container__widget"></div>
+
+	<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+	{
+	"symbol": "COINBASE:BTCUSD",
+	"width": "100%",
+	"colorTheme": "dark",
+	"isTransparent": false,
+	"locale": "en"
+  }
+	</script>
+  </div>
+  <!-- TradingView Widget END -->
 						</div>
 					</div>
 				</div>					
@@ -85,219 +79,49 @@
 				<div class="box">
 					<div class="box-body">
 						<div class="table-responsive">
-							<table class="table table-hover mb-0">
-								<tbody>
-									<tr class="bg-dark">
-									  <th>Contract</th>
-									  <th>24h Chart</th>
-									  <th>Last Price & 24h Change</th>
-									  <th>24h Vol</th>
-									  <th>Premium</th>
-									  <th>Funding</th>
-									  <th>Time to exp.</th>
-									  <th>Action</th>
-									</tr>
-								<tr>
-								  <td><div><p class="symbol">BTCUSD</p><p class="name">Bitcoin</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">7157</span><span class="text-success">8.05%</span> </td>
-								  <td>1.9M USD</td>
-								  <td>-</td>
-								  <td><span class="text-success">0.0086%</span></td>
-								  <td>-</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-								<tr>
-								  <td><div><p class="symbol">BTCUSD_27DEC</p><p class="name">Bitcoin</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">7157</span><span class="text-success">8.05%</span> </td>
-								  <td>328.8K USD</td>
-								  <td><span class="text-success">0.1694%</span></td>
-								  <td>-</td>
-								  <td>7d:13h:23m</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-								<tr>
-								  <td><div><p class="symbol">BTCUSD_27MAR</p><p class="name">Bitcoin</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">7157</span><span class="text-success">9.39%</span> </td>
-								  <td>517.3K USD</td>
-								  <td><span class="text-success">1.3328%</span></td>
-								  <td>-</td>
-								  <td>98d:13h:23m</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-								<tr>
-								  <td><div><p class="symbol">ETHUSDQ</p><p class="name">Ethereum</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">126.75</span><span class="text-success">4.02%</span> </td>
-								  <td>224.3K USDC</td>
-								  <td>-</td>
-								  <td><span class="text-success">0.0098%</span></td>
-								  <td>-</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-								<tr>
-								  <td><div><p class="symbol">XRPUSDQ</p><p class="name">Ripple</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">0.1875</span><span class="text-success">3.71%</span> </td>
-								  <td>89224 USDC</td>
-								  <td>-</td>
-								  <td><span class="text-success">0.0061%</span></td>
-								  <td>-</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-								<tr>
-								  <td><div><p class="symbol">LTCUSDQ</p><p class="name">Litecoin</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">39.91</span><span class="text-success">7.43%</span> </td>
-								  <td>90349 USDC</td>
-								  <td>-</td>
-								  <td><span class="text-danger">-0.0176%</span></td>
-								  <td>-</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-								<tr>
-								  <td><div><p class="symbol">BNBUSDQ</p><p class="name">Binance Coin</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">13.315</span><span class="text-success">5.26%</span> </td>
-								  <td>16.59 BTC</td>
-								  <td>-</td>
-								  <td><span class="text-success">0.0476%</span></td>
-								  <td>-</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-								<tr>
-								  <td><div><p class="symbol">BNBBTC</p><p class="name">Binance Coin</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">0.0018558</span><span class="text-danger">-2.94%</span> </td>
-								  <td>12.58 BTC</td>
-								  <td>-</td>
-								  <td><span class="text-danger">-0.0071%</span></td>
-								  <td>-</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-								<tr>
-								  <td><div><p class="symbol">XLMBTC</p><p class="name">Stellar Lumen</p></div></td>
-								  <td><span class="sparklines">8,4,0,0,1,4,4,10,10,0,0,4,6,5,9,10</span></td>
-								  <td><span class="text-muted mr-10">0.00000635</span><span class="text-danger">-4.37%</span> </td>
-								  <td>5.49 BTC</td>
-								  <td>-</td>
-								  <td><span class="text-danger">-0.0367%</span></td>
-								  <td>-</td>
-								  <td><button type="button" class="btn btn-outline btn-primary mb-5">Trade</button></td>
-								</tr>
-							  </tbody>
-							</table>
+								<!-- TradingView Widget BEGIN -->
+						<div class="tradingview-widget-container">
+							<div class="tradingview-widget-container__widget"></div>
+							<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a></div>
+							<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+							{
+							"width": "600",
+							"height": "500",
+							"defaultColumn": "overview",
+							"screener_type": "crypto_mkt",
+							"displayCurrency": "USD",
+							"colorTheme": "dark",
+							"locale": "en"
+						}
+							</script>
 						</div>
-					</div>
-				</div>
-					
-				<div class="box">
-					<div class="box-header with-border">
-					  <h4 class="box-title">Market Depth</h4>
-					</div>
-					<div class="box-body">
-						<div class="chart">
-							<div id="market-depth" style="height: 500px;"></div>
+  <!-- TradingView Widget END -->
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-xl-4 col-12">				
 				<div class="box">
-					<div class="box-header with-border">
-					  <h4 class="box-title">Buy Order</h4>
-						<div class="box-controls pull-right">
-							Total 512 8549 ETC
-						</div>
-					</div>
 					<div class="box-body">
-						<div class="table-responsive buyorder">
-							<table class="table no-margin no-border">
-								<thead>
-									<tr class="bg-dark">
-										<th>Amount</th>
-										<th>Price</th>
-										<th>Total BPL</th>
-									</tr>
-								</thead>
-								<tbody>
-								  <tr>
-									<td>1.845126523</td>
-									<td>17800.00</td>
-									<td>23000.00</td>
-								  </tr>
-								  <tr>
-									<td>2.21548756</td>
-									<td>13950.00</td>
-									<td>77201.00</td>
-								  </tr>
-								  <tr>
-									<td>8.00200000</td>
-									<td>19555.22</td>
-									<td>35000.00</td>
-								  </tr>
-								  <tr>
-									<td>8.00200000</td>
-									<td>19555.22</td>
-									<td>35000.00</td>
-								  </tr>
-								  <tr>
-									<td>8.00200000</td>
-									<td>19555.22</td>
-									<td>35000.00</td>
-								  </tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div class="box">
-					<div class="box-header with-border">
-					  <h4 class="box-title">Sell Order</h4>
-						<div class="box-controls pull-right">
-							Total 485 8549 BTL
-						</div>
-					</div>
-					<div class="box-body">
-						<div class="table-responsive sellorder">
-							<table class="table no-margin no-border">
-								<thead>
-									<tr class="bg-dark">
-										<th>Amount</th>
-										<th>Price</th>
-										<th>Total BPL</th>
-									</tr>
-								</thead>
-								<tbody>		
-								  <tr>
-									<td>1.845126523</td>
-									<td>17800.00</td>
-									<td>23000.00</td>
-								  </tr>
-								  <tr>
-									<td>2.21548756</td>
-									<td>13950.00</td>
-									<td>77201.00</td>
-								  </tr>
-								  <tr>
-									<td>8.00200000</td>
-									<td>19555.22</td>
-									<td>35000.00</td>
-								  </tr>
-								  <tr>
-									<td>5.2000000</td>
-									<td>18445.00</td>
-									<td>44521.11</td>
-								  </tr>
-								  <tr>
-									<td>8.00200000</td>
-									<td>19555.22</td>
-									<td>35000.00</td>
-								  </tr>
-								</tbody>
-							</table>
+						<div class="col-lg-12 col-12">
+							<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+	<div class="tradingview-widget-container__widget"></div>
+	<div class="tradingview-widget-copyright"><a href="" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis for BTCUSD</span></a></div>
+	<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+	{
+	"interval": "1m",
+	"width": 260,
+	"isTransparent": false,
+	"height": 415,
+	"symbol": "COINBASE:BTCUSD",
+	"showIntervalTabs": true,
+	"locale": "en",
+	"colorTheme": "dark"
+  }
+	</script>
+  </div>
+  <!-- TradingView Widget END -->
 						</div>
 					</div>
 				</div>
@@ -342,98 +166,98 @@
 					<div class="tab-pane fade active show" id="market">
 					  <form>
 						<div class="input-group mt-15 mb-20">
-							<input type="text" class="form-control" placeholder="2.500002121">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Amount BTC</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="27800.00">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Price BPL</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="2.500002121">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Fee (0.5%)</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="27800.00">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Total BPL</span>
 						</div>
 
 						<div class="d-flex justify-content-between pt-5">
-							<button type="button" class="btn btn-success">BUY</button>
-							<button type="button" class="btn btn-danger mt-0">SELL</button>
+							<button type="button" class="btn btn-success" disabled>BUY</button>
+							<button type="button" class="btn btn-danger mt-0" disabled>SELL</button>
 						</div>
 					  </form>
 					</div>
 					<div class="tab-pane fade" id="limit">
 					  <form>
 						<div class="input-group mt-15 mb-20">
-							<input type="text" class="form-control" placeholder="2.500002121">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Amount BTC</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="27800.00">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Price BPL</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="2.500002121">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Fee (0.5%)</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="27800.00">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Total BPL</span>
 						</div>
 
 						<div class="d-flex justify-content-between pt-5">
-							<button type="button" class="btn btn-success">BUY</button>
-							<button type="button" class="btn btn-danger mt-0">SELL</button>
+							<button type="button" class="btn btn-success" disabled>BUY</button>
+							<button type="button" class="btn btn-danger mt-0" disabled>SELL</button>
 						</div>
 					  </form>
 					</div>
 					<div class="tab-pane fade" id="stop">
 					  <form>
 						<div class="input-group mt-15 mb-20">
-							<input type="text" class="form-control" placeholder="2.500002121">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Amount BTC</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="27800.00">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Price BPL</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="2.500002121">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Fee (0.5%)</span>
 						</div>
 						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="27800.00">
+							<input type="text" class="form-control" placeholder="">
 							<span class="input-group-addon">Total BPL</span>
 						</div>
 
 						<div class="d-flex justify-content-between pt-5">
-							<button type="button" class="btn btn-success">BUY</button>
-							<button type="button" class="btn btn-danger mt-0">SELL</button>
+							<button type="button" class="btn btn-success" disabled>BUY</button>
+							<button type="button" class="btn btn-danger mt-0" disabled>SELL</button>
 						</div>
 					  </form>
 					</div>
 				  </div>
 				</div>
 				<div class="box">
-				  </div>
-				  <div class="row">
-					<div class="col-lg-6 col-12">
-					  <a class="box box-link-pop text-center" href="javascript:void(0)">
-						<div class="box-body">
-							<p class="font-size-30 text-pink">
-								<i class="fa fa-money text-muted mr-5 mb-20"></i><br>
-								<strong>{{ user.balance }}$</strong>
-							</p>
+					<div class="row">
+						<div class="col-lg-12 col-12">
+					  		<a class="box box-link-pop text-center" href="javascript:void(0)">
+								<div class="box-body">
+									<p class="font-size-30 text-pink">
+										<i class="fa fa-money text-muted mr-5 mb-20"></i><br>
+										<strong>{{ user.balance }}$</strong>
+									</p>
+								</div>
+								<div class="box-body py-20 bg-dark">
+									<h3 class="font-weight-600 mt-0">
+									Balance
+									</h3>
+								</div>
+					 		</a>			
 						</div>
-						<div class="box-body py-20 bg-dark">
-							<h3 class="font-weight-600 mt-0">
-								Balance
-							</h3>
-						</div>
-					 </a>			
-				   </div>
+					</div>
 				</div>
 			</div>
 		</div>

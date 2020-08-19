@@ -35,6 +35,41 @@
 
 <body class="hold-transition skin-yellow sidebar-mini">
 <div class="wrapper">
+  			<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+	<div class="tradingview-widget-container__widget"></div>
+	<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+	{
+	"symbols": [
+	  {
+		"proName": "FOREXCOM:SPXUSD",
+		"title": "S&P 500"
+	  },
+	  {
+		"proName": "FOREXCOM:NSXUSD",
+		"title": "Nasdaq 100"
+	  },
+	  {
+		"proName": "FX_IDC:EURUSD",
+		"title": "EUR/USD"
+	  },
+	  {
+		"proName": "BITSTAMP:BTCUSD",
+		"title": "BTC/USD"
+	  },
+	  {
+		"proName": "BITSTAMP:ETHUSD",
+		"title": "ETH/USD"
+	  }
+	],
+	"colorTheme": "dark",
+	"isTransparent": false,
+	"displayMode": "adaptive",
+	"locale": "en"
+  }
+	</script>
+  </div>
+  <!-- TradingView Widget END -->
 
   <header class="main-header">
     <!-- Logo -->
@@ -259,7 +294,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="pages/app/app-chat.html">Edit Profile</a></li>
-            <li><a href="pages/app/project-table.html">Change password</a></li>
+            <li><a href="{% url 'my-auth:change_password' %}">Change password</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -318,27 +353,10 @@
 	<script src="{% static 'dashboard/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
 	<script src="{% static 'dashboard/assets/vendor_components/fastclick/lib/fastclick.js' %}"></script>
 	
-    <!--amcharts charts -->
-	<script src="{% static 'dashboard/www.amcharts.com/lib/3/amcharts.js' %}" type="text/javascript"></script>
-	<script src="{% static 'dashboard/www.amcharts.com/lib/3/gauge.js' %}" type="text/javascript"></script>
-	<script src="{% static 'dashboard/www.amcharts.com/lib/3/serial.js' %}" type="text/javascript"></script>
-	<!-- <script src="{% static 'dashboard/www.amcharts.com/lib/3/amstock.js' %}" type="text/javascript"></script> -->
-	<script src="{% static 'dashboard/www.amcharts.com/lib/3/pie.js' %}" type="text/javascript"></script>
-	<!-- <script src="{% static 'dashboard/www.amcharts.com/lib/3/plugins/dataloader/dataloader.min.js' %}"></script> -->
-	<script src="{% static 'dashboard/www.amcharts.com/lib/3/plugins/animate/animate.min.js' %}" type="text/javascript"></script>
-	<script src="{% static 'dashboard/www.amcharts.com/lib/3/plugins/export/export.min.js' %}" type="text/javascript"></script>
-	<script src="{% static 'dashboard/www.amcharts.com/lib/3/themes/patterns.js' %}" type="text/javascript"></script>
-	<script src="{% static 'dashboard/www.amcharts.com/lib/3/themes/dark.js' %}" type="text/javascript"></script>	
-	
 		
 	
 	<script src="{% static 'dashboard/assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js' %}"></script>
 	
-	<!-- FLOT CHARTS -->
-	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.js' %}"></script>
-	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.resize.js' %}"></script>
-	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.pie.js' %}"></script>
-	<script src="{% static 'dashboard/assets/vendor_components/Flot/jquery.flot.categories.js' %}"></script>
   
 
 
