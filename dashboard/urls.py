@@ -1,7 +1,10 @@
 from django.conf.urls import url
 
-from . import views
+from .views import *
 
 urlpatterns = [
-    url(r'^dashboard$', views.dashboard, name='dashboard'),
+    url(r'^dashboard$', dashboard, name='dashboard'),
+    url(r'^inbox$', inbox, name='inbox'),
+    url(r'^message$', read_mail, name='read_mail'),
+    url(r'^compose$', compose, name='compose'),
 ]

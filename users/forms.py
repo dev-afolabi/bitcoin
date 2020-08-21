@@ -1,10 +1,10 @@
-from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm as BaseUserCreationForm
+from django.contrib.auth import get_user_model 
 import datetime
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm as BaseUserCreationForm, AuthenticationForm
 from django import forms
 from django.contrib.auth import authenticate
 from django.forms.widgets import Select
+from django.forms import ModelForm
 
 from .models import User
 
@@ -64,3 +64,24 @@ class UserLoginForm(forms.Form):
                 raise forms.ValidationError("Account Does Not Exist.")
 
         return super(UserLoginForm, self).clean(*args, **kwargs)
+
+class EditUserForm(ModelForm):
+
+    class Meta:
+        model = get_user_model()
+        fields = ["first_name",
+                  "last_name",
+                  "gender",
+                  "email",
+                  "picture"
+                  ]
+
+        widgets = {
+            'first_name' : forms.TextInput(attrs={'class': 'form-control'}),
+            'last_name' : forms.TextInput(attrs={'class': 'form-control'}),
+            'email' : forms.TextInput(attrs={'class': 'form-control'}),
+            'gender' : Select(attrs={'class': 'form-control'}),
+        }
+
+
+    

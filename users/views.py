@@ -5,7 +5,6 @@ from django.urls import reverse_lazy
 from django.utils.encoding import force_bytes, force_text
 from django.utils.decorators import method_decorator
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from .forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import PasswordChangeForm
 from django.views.decorators.cache import never_cache
@@ -18,8 +17,9 @@ from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import EmailMessage
 from django.contrib import messages
-from .forms import UserLoginForm
+from .forms import UserLoginForm, UserCreationForm,EditUserForm
 from payment_details.models import Notification
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 user_creation_message = "Welcome to Bitfonix,we're happy to have you here"
@@ -99,14 +99,39 @@ def login_view(request):  # users will login with their Email & Password
 
         return render(request, "registration/login.html", context)
 
-
+@login_required
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request, user)
-            return redirect('password_change_done')
+            return redirect('my-auth:change_password_success')
     else:
         form = PasswordChangeForm(request.user)
     return render(request, 'registration/password_change.html', {'form':form})
+@login_required
+def change_password_done(request):
+    return render(request, 'registration/password_change_success.html')
+
+
+@login_required
+def edit_user(request):
+    if request.method == 'POST':
+        form = EditUserForm(request.POST, request.FILES, instance=request.user)
+
+        if form.is_valid():
+            user_form = form.save(True)
+            return redirect('my-auth:view_profile')
+    else:
+        form = EditUserForm(instance=request.user)
+        return render(request, 'registration/edit_user.html', {'form':form})
+
+@login_required
+def view_profile(request):
+    if not request.user.is_authenticated:
+        return render(request, 'registration/login.html',{})
+
+    else:
+        user = request.user
+        return render(request, 'registration/view_profile.html', {'user':user})

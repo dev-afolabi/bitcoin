@@ -7,7 +7,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Password
+        View Profile
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -22,59 +22,33 @@
      <!-- Basic Forms -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Change Password</h3>
-          <h6 class="box-subtitle">Please input your new Password</h6>
+          <h3 class="box-title">Profile Details</h3>
+          <h6 class="box-subtitle">Update your profile</h6>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
           <div class="row">
-            
             <div class="col">
-            	<form id="my-form" action="" method="POST">
-					{% csrf_token %}
+    
 					<div class="form-group">
-						<h5>Old Password <span class="text-danger">*</span></h5>
+						<h5>Fullname <span class="text-danger">*</span></h5>
 						<div class="controls">
-							{{ form.old_password }}
-						</div>
-						{% if form.old_password.errors %}
-						<ul>
-							{% for error in form.old_password.errors %}
-							<li><em>{{ error }}</em> </li>
-							{% endfor %}
-						</ul>
-						{% endif %}
+							<input type="text" name="text" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.get_full_name }}"> </div>
 					</div>
 					<div class="form-group">
-						<h5>New Password <span class="text-danger">*</span></h5>
+						<h5>Email<span class="text-danger">*</span></h5>
 						<div class="controls">
-							{{ form.new_password1 }}
-						</div>
-						{% if form.new_password1.errors %}
-						<ul>
-							{% for error in form.new_password1.errors %}
-							<li><em>{{ error }}</em> </li>
-							{% endfor %}
-						</ul>
-						{% endif %}
-					</div>
-					<div class="form-group">
-						<h5>Confirm New Password <span class="text-danger">*</span></h5>
+							<input type="email" name="email" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.email }}"> </div>
+                    </div>
+                    <div class="form-group">
+						<h5>Gender<span class="text-danger">*</span></h5>
 						<div class="controls">
-							{{ form.new_password2 }}
-						</div>
-						{% if form.new_password2.errors %}
-						<ul>
-							{% for error in form.new_password2.errors %}
-							<li><em>{{ error }}</em> </li>
-							{% endfor %}
-						</ul>
-						{% endif %}
-					</div>
+							<input type="email" name="email" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.gender }}"> </div>
+                    </div>
+					
 					<div class="text-xs-right">
-						<button type="submit" class="btn btn-info">Change Password</button>
+						<a href="{% url 'my-auth:edit_user' %}"><button type="submit" class="btn btn-info">Edit Profile</button></a>
 					</div>
-				</form>
             	
             </div>
             <!-- /.col -->

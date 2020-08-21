@@ -1,5 +1,4 @@
 {% load static %}
-{% include "messages.html" %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -111,77 +110,23 @@
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu inner-content-div">
+                  {% for message in messages %}
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ user.picture.url }}" class="rounded-circle" alt="User Image">
+                        <img src="{{ message.image.url }}" class="rounded-circle" alt="User Image">
                       </div>
                       <div class="mail-contnet">
                          <h4>
-                          Lorem Ipsum
-                          <small><i class="fa fa-clock-o"></i> 15 mins</small>
+                          {{ message.subject }}
+                          <small><i class="fa fa-clock-o"></i></small>
                          </h4>
                          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
                       </div>
                     </a>
                   </li>
                   <!-- end message -->
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="{% static 'dashboard/images/user3-128x128.jpg' %}" class="rounded-circle" alt="User Image">
-                      </div>
-                      <div class="mail-contnet">
-                         <h4>
-                          Nullam tempor
-                          <small><i class="fa fa-clock-o"></i> 4 hours</small>
-                         </h4>
-                         <span>Curabitur facilisis erat quis metus congue viverra.</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="{{ user.picture.url }}" class="rounded-circle" alt="User Image">
-                      </div>
-                      <div class="mail-contnet">
-                         <h4>
-                          Proin venenatis
-                          <small><i class="fa fa-clock-o"></i> Today</small>
-                         </h4>
-                         <span>Vestibulum nec ligula nec quam sodales rutrum sed luctus.</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="{% static 'dashboard/images/user3-128x128.jpg' %}" class="rounded-circle" alt="User Image">
-                      </div>
-                      <div class="mail-contnet">
-                         <h4>
-                          Praesent suscipit
-                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                         </h4>
-                         <span>Curabitur quis risus aliquet, luctus arcu nec, venenatis neque.</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="{% static 'dashboard/images/user4-128x128.jpg' %}" class="rounded-circle" alt="User Image">
-                      </div>
-                      <div class="mail-contnet">
-                         <h4>
-                          Donec tempor
-                          <small><i class="fa fa-clock-o"></i> 2 days</small>
-                         </h4>
-                         <span>Praesent vitae tellus eget nibh lacinia pretium.</span>
-                      </div>
-                    </a>
-                  </li>
+                  {% endfor %}
                 </ul>
               </li>
               <li class="footer"><a href="#">See all e-Mails</a></li>
@@ -221,18 +166,17 @@
 
                 <p>
                   {{ user.get_full_name }}
-                  <small class="mb-5">{{ user.email }}</small>
-                  <a href="#" class="btn btn-danger btn-sm btn-rounded">View Profile</a>
+                  <small class="mb-5">{{ user.email }}</small>        
                 </p>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="#"><i class="ion ion-person"></i> My Profile</a>
+                    <a href="{% url 'my-auth:view_profile' %}"><i class="ion ion-person"></i> My Profile</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="#"><i class="ion ion-email-unread"></i> Inbox</a>
+                    <a href="{% url 'inbox' %}"><i class="ion ion-email-unread"></i> Inbox</a>
                   </div>
 
 
@@ -266,9 +210,9 @@
           <img src="{{ user.picture.url }}" class="rounded-circle" alt="User Image">
         </div>
         <div class="info">
-          <p>Admin Template</p>
+          <p>{{ user.get_full_name }}</p>
 			<a href="#" class="link" data-toggle="tooltip" title="" data-original-title="Settings"><i class="ion ion-gear-b"></i></a>
-            <a href="#" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i class="ion ion-android-mail"></i></a>
+            <a href="{% url 'inbox' %}" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i class="ion ion-android-mail"></i></a>
             <a href="{% url 'logout' %}" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i class="ion ion-power"></i></a>
         </div>
       </div>
@@ -293,21 +237,20 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/app/app-chat.html">Edit Profile</a></li>
+            <li><a href="{% url 'my-auth:edit_user' %}">Edit Profile</a></li>
             <li><a href="{% url 'my-auth:change_password' %}">Change password</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-envelope"></i> <span>Notifications</span>
+            <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/mailbox/mailbox.html">Inbox</a></li>
-            <li><a href="pages/mailbox/compose.html">Compose</a></li>
-            <li><a href="pages/mailbox/read-mail.html">Read</a></li>
+            <li><a href="{% url 'inbox' %}">Inbox</a></li>
+            <li><a href="{% url 'compose' %}">Compose</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -319,9 +262,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/badges.html">Badges</a></li>
-            <li><a href="pages/UI/border-utilities.html">Border</a></li>
-            <li><a href="pages/UI/buttons.html">Buttons</a></li>	  
+            <li><a href="{% url 'deposit' %}">Deposit</a></li>
+            <li><a href="{% url 'withdraw' %}">Withdraw</a></li>	  
           </ul>
         </li> 
       </ul>

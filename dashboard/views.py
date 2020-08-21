@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from transactions.models import Deposit, Withdrawal
-from payment_details.models import Notification
+from payment_details.models import Notification, Message
 
 # Create your views here.
 @login_required
@@ -15,12 +15,34 @@ def dashboard(request):
         withdrawal = Withdrawal.objects.filter(user=user)
         # withdrawal_sum = withdrawal.aggregate(Sum('amount'))['amount__sum']
         notifications = Notification.objects.filter(user=user)
+        messages = Message.objects.filter(user=user)
 
         context = {
                     "user": user,
                     "deposit": deposit,
                     "withdrawal": withdrawal,
-                    "notifications":notifications
+                    "notifications":notifications,
+                    "messages":messages
                   }
 
         return render(request, "dashboard/dashboard.html", context)
+
+@login_required
+def inbox(request):
+    if not request.user.is_authenticated:
+        return render(request, "registration/login.html", {})
+    else:
+        user = request.user
+        messages = Message.objects.filter(user=user)
+        context = {
+                    "messages":messages
+                  }
+        return render(request, 'dashboard/inbox.html', context)
+
+@login_required
+def read_mail(request):
+    return render(request, 'dashboard/read.html')
+
+@login_required
+def compose(request):
+    return render(request, 'dashboard/compose.html')
