@@ -9,7 +9,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from .forms import DepositForm, WithdrawalForm
 # from formtools.wizard.views import SessionWizardView
 from .models import Withdrawal,User,Deposit
-from payment_details.models import BTCTransfer, BankTransfer, Notification
+from payment_details.models import BTCTransfer, BankTransfer, Notification, Message
 
 
 withdrawal_message = "your withdrawal is being proccessed"
@@ -24,6 +24,8 @@ def deposit_view(request):
         notifications = Notification.objects.filter(user=request.user)
         title = "Deposit"
         form = DepositForm(request.POST or None)
+        messages = Message.objects.filter(user=request.user)
+        
 
         if form.is_valid():
             deposit = form.save(commit=False)
@@ -34,8 +36,7 @@ def deposit_view(request):
             # deposit.user.save()
             deposit.save()
             Notification.objects.create(user=request.user, message=deposit_message)
-            messages.success(request, 'Your deposit will be proccesed when funds have been posted'
-                             .format(deposit.amount))
+            
             if deposit.payment_option == "Bank Transfer":
                 return redirect("bank-details")
             else:
@@ -44,7 +45,8 @@ def deposit_view(request):
         context = {
                     "title": title,
                     "form": form,
-                    "notifications":notifications
+                    "notifications":notifications,
+                    "messages":messages
                   }
         return render(request, "transactions/deposit_form.html", context)
 
@@ -69,7 +71,7 @@ def withdrawal_view(request):
                 withdrawal.user.save()
                 withdrawal.save()
                 Notification.objects.create(user=request.user, message=withdrawal_message)
-                messages.error(request, 'Your Withdrawal was successfull')
+        
                 return redirect("dashboard")
 
             else:

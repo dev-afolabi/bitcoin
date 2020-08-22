@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from transactions.models import User
 from django_resized import ResizedImageField
 # Create your models here.
@@ -25,6 +26,7 @@ class Notification(models.Model):
 
 class Message(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
+    sender_name = models.CharField(max_length=50)
     subject = models.CharField(max_length=50)
     message = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
@@ -39,3 +41,9 @@ class Message(models.Model):
 
     def __str__(self):
         return 'Message sent to ' + str(self.user.get_full_name()) + ' on ' +str(self.timestamp.date())
+
+    def get_snippet(self):
+        return str(self.message)[0:43]+'...'
+
+    def get_absolute_url(self):
+        return reverse('read_mail', args=[str(self.id)])

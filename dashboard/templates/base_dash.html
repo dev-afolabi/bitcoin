@@ -1,4 +1,5 @@
 {% load static %}
+{% include 'transactions/messages.html' %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,10 +19,8 @@
 	<link rel="stylesheet" href="{% static 'dashboard/assets/vendor_components/bootstrap/dist/css/bootstrap.css' %}">
 	
 	<!-- Bootstrap extend-->
-	<link rel="stylesheet" href="{% static 'dashboard/css/bootstrap-extend.css' %}">
-    
-	<!--amcharts -->
-	<link href="{% static 'dashboard/www.amcharts.com/lib/3/plugins/export/export.css' %}" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{% static 'dashboard/css/bootstrap-extend.css' %}">
+  <link rel="stylesheet" href="{% static 'dashboard/css/font-awesome.min.css' %}">
 	
 	<!-- theme style -->
 	<link rel="stylesheet" href="{% static 'dashboard/css/master_style.css' %}">
@@ -106,11 +105,11 @@
               <i class="fa fa-envelope"></i>
             </a>
             <ul class="dropdown-menu scale-up">
-              <li class="header">You have 5 messages</li>
+              <li class="header">You have {{ messages_count }} message(s)</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu inner-content-div">
-                  {% for message in messages %}
+                  {% for message in messagess %}
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
@@ -121,7 +120,7 @@
                           {{ message.subject }}
                           <small><i class="fa fa-clock-o"></i></small>
                          </h4>
-                         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                         <span>{{ message.get_snippet }}</span>
                       </div>
                     </a>
                   </li>
@@ -129,7 +128,7 @@
                   {% endfor %}
                 </ul>
               </li>
-              <li class="footer"><a href="#">See all e-Mails</a></li>
+              <li class="footer"><a href="{% url 'inbox' %}">See all e-Mails</a></li>
             </ul>
           </li>
           <!-- Notifications -->
@@ -151,7 +150,7 @@
                   {% endfor %}
                 </ul>
               </li>
-              <li class="footer"><a href="#">View all</a></li>
+              <li class="footer"><a href="{% url 'inbox' %}">View all</a></li>
             </ul>
           </li>
 		  <!-- User Account -->
@@ -295,14 +294,6 @@
 	<script src="{% static 'dashboard/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
 	<script src="{% static 'dashboard/assets/vendor_components/fastclick/lib/fastclick.js' %}"></script>
 	
-		
-	
-	<script src="{% static 'dashboard/assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js' %}"></script>
-	
-  
-
-
-
 
 	<!-- Unique_admin App -->
 	<script src="{% static 'dashboard/js/template.js' %}"></script>

@@ -33,10 +33,10 @@
             <div class="box-body no-padding mailbox-nav">
               <ul class="nav nav-pills flex-column">
                 <li class="nav-item"><a class="nav-link active" href="javascript:void(0)"><i class="ion ion-ios-email-outline"></i> Inbox
-                  <span class="label label-success pull-right">12</span></a></li>
+                  <span class="label label-success pull-right"></span></a></li>
                 
                 <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="ion ion-email-unread"></i> Drafts</a></li>
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="ion ion-star"></i>  Starred <span class="label label-warning pull-right">14</span></a>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="ion ion-star"></i>  Starred </a>
                 </li>
               </ul>
             </div>
@@ -50,11 +50,7 @@
             <div class="box-header with-border">
               <h3 class="box-title">Inbox</h3>
 
-              <div class="box-tools pull-right">
-                <div class="has-feedback">
-                  <input type="text" class="form-control input-sm" placeholder="Search Mail">
-                </div>
-              </div>
+              
               <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
@@ -69,22 +65,24 @@
             	<div class="table-responsive">
 					<table class="table table-hover table-striped">
 					  <tbody>
-                        {% if messages %}
-					  <tr>
-						<td><input type="checkbox"></td>
-						<td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-						<td class="mailbox-name">Hritik Roshan</td>
-						<td class="mailbox-subject"><a href="read-mail.html"><b>Lorem Ipsum</b> - There are many variations of Ipsum available...</a>
-						</td>
-						<td class="mailbox-attachment"></td>
-						<td class="mailbox-date">3 mins ago</td>
-                      </tr>
-                      {% else %}
-					  <tr>
-						<td class="mailbox-subject"><a href="read-mail.html"><b>Lorem Ipsum</b> - There are many variations of Ipsum available...</a>
-						</td>
-                      </tr>
-                      {% endif %}
+            {% if messages %}
+            
+            {% for message in messages %}
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+              <td class="mailbox-name">{{ message.sender_name }}</td>
+              <td class="mailbox-subject"><a href="{{ message.get_absolute_url }}"><b>{{ message.subject }}</b> - {{ message.get_snippet }}</a>
+              </td>
+              <td class="mailbox-attachment"></td>
+              <td class="mailbox-date">3 mins ago</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <p class="text-center"> You do not have any new message </p>
+            {% endif %}
+              
+					  
 
 					  </tbody>
 					</table>

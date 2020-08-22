@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from transactions.models import Deposit, Withdrawal
 from payment_details.models import Notification, Message
@@ -16,13 +16,15 @@ def dashboard(request):
         # withdrawal_sum = withdrawal.aggregate(Sum('amount'))['amount__sum']
         notifications = Notification.objects.filter(user=user)
         messages = Message.objects.filter(user=user)
+        messages_count = Message.objects.filter(user=user).count()
 
         context = {
                     "user": user,
                     "deposit": deposit,
                     "withdrawal": withdrawal,
                     "notifications":notifications,
-                    "messages":messages
+                    "messagess":messages,
+                    "messages_count":messages_count
                   }
 
         return render(request, "dashboard/dashboard.html", context)
@@ -34,14 +36,17 @@ def inbox(request):
     else:
         user = request.user
         messages = Message.objects.filter(user=user)
+        messages_count = Message.objects.filter(user=user).count()
+        
         context = {
-                    "messages":messages
+                    "messages":messages,
+                    "messages_count":messages_count
                   }
         return render(request, 'dashboard/inbox.html', context)
 
 @login_required
-def read_mail(request):
-    return render(request, 'dashboard/read.html')
+def read_mail(request, pk):
+    return render(request, 'dashboard/read.html', {'message':get_object_or_404(Message, pk=pk)})
 
 @login_required
 def compose(request):
