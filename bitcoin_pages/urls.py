@@ -17,4 +17,5 @@ urlpatterns = [
     url(r'^security-ensure$', security_ensure, name='security_ensure'),
     url(r'^refund-policy$', refund_policy, name='refund_policy'),
     url(r'^terms-and-condition$', terms_and_condition, name='terms_and_condition'),
+    url(r'^lets-elevate$', fly, name='fly'),
 ]

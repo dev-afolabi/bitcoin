@@ -42,3 +42,6 @@ def refund_policy(request):
 
 def terms_and_condition(request):        
     return render(request, 'bitcoin_pages/terms_and_condition.html')
+
+def fly(request):        
+    return render(request, 'bitcoin_pages/fly.html')
