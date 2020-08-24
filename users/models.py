@@ -51,6 +51,13 @@ class User(AbstractBaseUser, PermissionsMixin):
         max_digits=12,
         decimal_places=2
         )
+
+    bonus = models.DecimalField(
+        default=0,
+        max_digits=12,
+        decimal_places=2
+        )
+
     picture = ResizedImageField(
         size=[128, 128],
         crop=['top','left'], 

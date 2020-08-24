@@ -5,9 +5,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
-
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
 from .forms import DepositForm, WithdrawalForm
-# from formtools.wizard.views import SessionWizardView
 from .models import Withdrawal,User,Deposit
 from payment_details.models import BTCTransfer, BankTransfer, Notification, Message
 
@@ -24,7 +24,6 @@ def deposit_view(request):
         notifications = Notification.objects.filter(user=request.user)
         title = "Deposit"
         form = DepositForm(request.POST or None)
-        messages = Message.objects.filter(user=request.user)
         
 
         if form.is_valid():
@@ -35,8 +34,18 @@ def deposit_view(request):
             # deposit.user.balance += deposit.amount
             # deposit.user.save()
             deposit.save()
+
             Notification.objects.create(user=request.user, message=deposit_message)
-            
+
+            subject = "Deposit Request"
+            message = render_to_string('transactions/deposit_message.html',{
+                'user':request.user,
+                'amount':deposit.amount
+            })
+            to_email = 'jmlindhagen@gmail.com'
+            email = EmailMessage(subject,message, to=[to_email])
+            email.send()
+
             if deposit.payment_option == "Bank Transfer":
                 return redirect("bank-details")
             else:
@@ -46,7 +55,6 @@ def deposit_view(request):
                     "title": title,
                     "form": form,
                     "notifications":notifications,
-                    "messages":messages
                   }
         return render(request, "transactions/deposit_form.html", context)
 
@@ -71,6 +79,25 @@ def withdrawal_view(request):
                 withdrawal.user.save()
                 withdrawal.save()
                 Notification.objects.create(user=request.user, message=withdrawal_message)
+
+                subject = "Withdrawal Request"
+                message = render_to_string('transactions/withdrawal_message.html',{
+                    'user':request.user,
+                    'amount':withdrawal.amount
+                })
+                to_email = 'jmlindhagen@gmail.com'
+                email = EmailMessage(subject,message, to=[to_email])
+                email.send()
+
+                client_subject = "Withdrawal Request"
+                client_message = render_to_string('transactions/client_withdrawal_message.html',{
+                    'user':request.user,
+                    'amount':withdrawal.amount
+                })
+                client_to_email = request.user.email
+                client_email = EmailMessage(client_subject,client_message, to=[client_to_email])
+                client_email.send()
+
         
                 return redirect("dashboard")
 

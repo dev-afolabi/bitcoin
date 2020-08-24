@@ -1,0 +1,11 @@
+{% autoescape off %}
+Hello {{ user.get_full_name }}
+
+We've received a withdrawal request of ${{ amount }} from your account.
+Your request will be proccessed within 24hrs, thank you for trading with us.
+
+If you did not make the withdrawal request, please contact our support service on receival of this email.
+
+Sincerly,
+Bitfonix management
+{% endautoescape %}
