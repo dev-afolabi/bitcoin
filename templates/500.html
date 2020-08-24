@@ -29,56 +29,25 @@
     <!-- Style CSS --> 
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!-- Responsive  CSS -->
-	<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
 </head>
 
-<body>	
+<body>
+
+	<!-- START PRELOADER -->
+	<div id="page-preloader">
+		<div class="theme-loader">No Name</div>
+	</div>
+	<!-- END PRELOADER --> 
+	
 	<!-- START HEADER SECTION -->
 	<header class="main-header header-1">
 		<!-- START TOP AREA -->
 		<div class="top-area">
-			<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-	<div class="tradingview-widget-container__widget"></div>
-	<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-	{
-	"symbols": [
-	  {
-		"proName": "FOREXCOM:SPXUSD",
-		"title": "S&P 500"
-	  },
-	  {
-		"proName": "FOREXCOM:NSXUSD",
-		"title": "Nasdaq 100"
-	  },
-	  {
-		"proName": "FX_IDC:EURUSD",
-		"title": "EUR/USD"
-	  },
-	  {
-		"proName": "BITSTAMP:BTCUSD",
-		"title": "BTC/USD"
-	  },
-	  {
-		"proName": "BITSTAMP:ETHUSD",
-		"title": "ETH/USD"
-	  }
-	],
-	"colorTheme": "light",
-	"isTransparent": false,
-	"displayMode": "adaptive",
-	"locale": "en"
-  }
-	</script>
-  </div>
-  <!-- TradingView Widget END -->
 			<div class="auto-container">
-				
 				<div class="row">
 					<div class="col-lg-8 col-md-12 col-sm-12 col-12">
-						
 						<div class="info-menu">
-							
 							<ul>
 								<li><a href="#"><i class="icofont icofont-time"></i> Opening Hours - Mon to Sat: 9AM to 5PM</a></li>
 							</ul>
@@ -87,17 +56,11 @@
 					<!-- end col -->
 					<div class="col-lg-4 col-md-12 col-sm-12 col-12">
 						<div class="info-menu">
-							<ul>{% if user.is_authenticated %}
-								<li><a href="{% url 'dashboard' %}"><i class="icofont icofont-dashboard"></i> Dashboard </a></li>
-								<li><a href="{% url 'logout' %}"><i class="icofont icofont-login"></i> Logout </a></li>
-								{% else %}
-								<li><a href="{% url 'my-auth:login' %}"><i class="icofont icofont-login"></i> Login </a></li>
-								<li><a href="{% url 'my-auth:create' %}"><i class="icofont icofont-user-alt-5"></i> Register </a></li>
+							<ul>
+								<li><a href="#"><i class="icofont icofont-login"></i> Login </a></li>
+								<li><a href="#"><i class="icofont icofont-user-alt-5"></i> Register </a></li>
 								<li><a href="#"><i class="icofont icofont-hand-drag2"></i> Help </a></li>
-								{% endif %}
-								
 								<li><a href="#"><i class="icofont icofont-live-support"></i> Support </a></li>
-								
 							</ul>
 						</div>
 					</div> 
@@ -142,51 +105,60 @@
 				</div>
 			</div>
 		</div>
-		<!-- END LOGO AREA -->
-
-		<!-- START NAVIGATION AREA -->
-		<div class="sticky-menu">
-			<div class="mainmenu-area">
-				<div class="auto-container">
-					<div class="row">
-						<div class="col-lg-9 d-none d-lg-block d-md-none">
-							<nav class="navbar navbar-expand-lg justify-content-left">
-								<ul class="navbar-nav">
-									<li><a href="{% url 'index' %}" class="active nav-link">Home</a></li>
-									<li class="dropdown"><a href="{% url 'services' %}" class="nav-link">Services</a>
-										<ul class="dropdown-menu">
-											<li><a href="{% url 'services' %}">All Our Services</a></li>
-											<li><a href="{% url 'bitcoin_trading' %}">Bitcoin Trading</a></li>
-											<li><a href="{% url 'coin_buy' %}">Coin Buy & Sell</a></li>
-											<li><a href="{% url 'bitcoin_ethereum' %}">Bitcoin & Ethereum</a></li>
-											<li><a href="{% url 'crypto_trading' %}">Cryptocurrency</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="blog.html" class="nav-link">Blog</a>
-									</li>
-									<li><a href="{% url 'about-us' %}" class="nav-link">About Us</a></li>
-									<li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
-								</ul>
-							</nav>
-						</div>
-						<div class="col-lg-3 d-none d-lg-block d-md-none text-right pr-0">
-							<form class="navbar-form">
-								<div class="form-group">
-									<input class="form-control" name="search" value="Search here..." type="text">
-									<button type="submit" class="btn"><i class="fa fa-search-plus"></i></button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END NAVIGATION AREA -->	
+		<!-- END LOGO AREA -->	
 	</header>
 	<!-- END HEADER SECTION -->
 	
-    {% block content %}
-    {% endblock %}
+    	<!-- START PAGE BANNER AND BREADCRUMBS -->
+	<section id="page-banner">
+		<div class="single-page-title-area overlay" data-background="{% static 'assets/img/bg/slide1.jpg' %}">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<div class="single-page-title">
+							<h2>500 Error page</h2>
+							<p>Server error</p>
+						</div>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+		<div class="single-page-title-area-bottom">
+			<div class="auto-container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+							<li class="breadcrumb-item active">500</li>
+						</ol>
+					</div>
+				</div>
+				<!-- end row-->
+			</div>
+		</div>
+	</section>
+	<!-- END PAGE BANNER AND BREADCRUMBS -->
+	
+	<!-- START 404 SECTION -->
+    <section id="team" class="section-padding">
+        <div class="container">	 
+			<div class="row text-center">
+				<div class="col-lg-8 col-md-8 col-8 mx-auto">
+					<div class="error-page-wrap">
+					    <h3>5<i class="icofont icofont-optic"></i><i class="icofont icofont-optic"></i></h3>
+						<h4>Internal server error</h4>
+						<p>Something went wrong on the server. We are working on it at light speed.</p>
+						<a href="{% url 'index' %}" class="btn-style btn-filled btn-filled-2"><i class="icofont icofont-ui-home"></i>Back to home</a>
+					</div>
+				</div>
+				<!-- end col -->
+			</div>
+			<!-- end row -->
+        </div>
+        <!--- END CONTAINER -->
+    </section>
+    <!-- END 404 SECTION -->
 	
     <!-- START FOOTER -->
     <footer>
@@ -202,13 +174,12 @@
                                 </div>
 								<div class="footer-logo-text">
                                     <h3>Bitfonix</h3>
-                                    <p>Bitcoin Trading Center</p>
+                                    <p>Bitcoin Trading Template</p>
                                 </div>
 							</a>
                         </div>
                         <div class="about mb-2">
-                            <p>Our mission is to bring trading to the masses. We provide an intuitive trading platform designed with the latest technological advancements that’s geared towards new traders as well as professionals. Our customer service and support is always available to meet your needs, and our account managers know that your success is our success.
-							</p>
+                            <p>Lorem ipsum dolor sit ametconsect etur adipiscing elit, sed do eiusmod tempor incididunt ut labo reetdolor emagna aliqua. Ut enim ad minimv eniam, quis nostrud exerc itationul amco laboris nisi ut aliquip exeallg commodo consequat.</p>
                         </div>
                         <div class="footer-news">
 							<form action="#">
@@ -229,12 +200,12 @@
                         <!-- END SECTION TITLE -->
 						<div class="col-12 footer-widget-inner">
 							<ul class="quick-link-list">
-								<li><a href="{% url 'index' %}"><i class="fa fa-chevron-circle-right"></i> Home Page</a></li>
+								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Home Page</a></li>
 								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Our Members</a></li>
 								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Client feedback</a></li>
 								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Buy & Sell</a></li>
 								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Bitcoin Trade</a></li>
-								<li><a href="{% url 'faq' %}"><i class="fa fa-chevron-circle-right"></i> Faq </a></li>
+								<li><a href="{% url 'faq' %}"><i class="fa fa-chevron-circle-right"></i> Market Price </a></li>
 							</ul>
 						</div>	
                     </div>
@@ -325,9 +296,9 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-4 footer-menu text-center text-lg-left text-md-left">
                         <ul>
-                            <li><a href="{% url 'profile' %}">Company Profile</a> </li>
-                            <li><a href="{% url 'terms_and_condition' %}">Terms & Condition</a> </li>
-                            <li><a href="{% url 'refund_policy' %}">Refund Policy</a> </li>
+                            <li><a href="#">Company Profile</a> </li>
+                            <li><a href="#">Terms & Condition</a> </li>
+                            <li><a href="#">Refund Policy</a> </li>
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 copyright-text text-center text-lg-right text-md-right">

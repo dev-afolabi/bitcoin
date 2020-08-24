@@ -3,13 +3,9 @@ Hello {{ user.get_full_name }} from Bifonix
 
 We've received a request to create an account for this email.
 
-To activate your account, please navigate to:
+Please click on the link to activate your account:
 
-<div class="home-single-slide-button">
-    <a href="http://{{ domain }}{% url 'my-auth:activate' uidb64=uid token=token %}" class="btn-style btn-filled">Learn More</a>
-</div>
-
-http://{{ domain }}{% url 'my-auth:activate' uidb64=uid token=token %}
+https://{{ domain }}{% url 'my-auth:activate' uidb64=uid token=token %}
 
 
 Sincerly,
