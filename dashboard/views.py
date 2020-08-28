@@ -39,7 +39,7 @@ def inbox(request):
         messages_count = Message.objects.filter(user=user).count()
         
         context = {
-                    "messages":messages,
+                    "messagess":messages,
                     "messages_count":messages_count
                   }
         return render(request, 'dashboard/inbox.html', context)

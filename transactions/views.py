@@ -75,10 +75,16 @@ def withdrawal_view(request):
             # checks if user is tring Withdraw more than his balance.
             if withdrawal.user.balance >= withdrawal.amount:
                 # substracts users withdrawal from balance
-                withdrawal.user.balance -= withdrawal.amount
-                withdrawal.user.save()
-                withdrawal.save()
-                Notification.objects.create(user=request.user, message=withdrawal_message)
+                if withdrawal.user.bonus >= withdrawal.amount:
+                    withdrawal.user.bonus -= withdrawal.amount
+                    withdrawal.user.save()
+                    withdrawal.save()
+                    Notification.objects.create(user=request.user, message=withdrawal_message)
+                else:
+                    withdrawal.user.balance -= withdrawal.amount
+                    withdrawal.user.save()
+                    withdrawal.save()
+                    Notification.objects.create(user=request.user, message=withdrawal_message)
 
                 subject = "Withdrawal Request"
                 message = render_to_string('transactions/withdrawal_message.html',{
