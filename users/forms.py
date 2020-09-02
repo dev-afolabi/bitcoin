@@ -54,14 +54,17 @@ class UserLoginForm(forms.Form):
 
         if email and password:
             user_obj = User.objects.filter(email=email).first()
-            if user_obj:
-                user = authenticate(email=user_obj.email, password=password)
-                if not user:
-                    raise forms.ValidationError("Password Does not Match")
-                if not user.is_active:
-                    raise forms.ValidationError("Account is not Active.")
+            if user_obj is not None:
+                if user_obj.is_active:
+                    user = authenticate(email=user_obj.email, password=password)
+                    if not user:
+                        raise forms.ValidationError("Email or Password id incorrect")
+                elif not user_obj.is_active:
+                    raise forms.ValidationError("Account has been suspended, please contact support")
             else:
-                raise forms.ValidationError("Account Does Not Exist.")
+                raise forms.ValidationError("Account does not exist.")
+
+
 
         return super(UserLoginForm, self).clean(*args, **kwargs)
 

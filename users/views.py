@@ -20,6 +20,7 @@ from django.contrib import messages
 from .forms import UserLoginForm, UserCreationForm,EditUserForm
 from payment_details.models import Notification
 from django.contrib.auth.decorators import login_required
+from django import forms
 
 # Create your views here.
 user_creation_message = "Welcome to Bitfonix,we're happy to have you here"
@@ -89,9 +90,10 @@ def login_view(request):  # users will login with their Email & Password
             user_obj = User.objects.filter(email=email).first()
             password = form.cleaned_data.get("password")
             # authenticates Email & Password
-            user = authenticate(email=user_obj.email, password=password)
-            login(request, user)
-            return redirect("dashboard")
+            if user_obj is not None:
+                user = authenticate(email=user_obj.email, password=password)
+                login(request, user)
+                return redirect("dashboard")
 
         context = {"form": form,
                    "title": title

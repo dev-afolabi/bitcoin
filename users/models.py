@@ -67,7 +67,14 @@ class User(AbstractBaseUser, PermissionsMixin):
         blank=False,
         )
 
-    is_staff = models.BooleanField(_("active"), default=False)
+    is_staff = models.BooleanField(_("is staff"), default=False)
+    is_active = models.IntegerField(default = 1, 
+                                   blank = True, 
+                                    null = True, 
+                                    help_text ='1->Active, 0->Inactive',  
+                                    choices =( 
+                                    (1, 'Active'), (0, 'Inactive') 
+                                    ))
     email_confirmed = models.BooleanField(default=False)
 
     objects = UserManager()

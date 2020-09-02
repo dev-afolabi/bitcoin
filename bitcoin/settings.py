@@ -14,6 +14,7 @@ import django_heroku
 import os
 import psycopg2
 import dj_database_url
+from decouple import config
 import dotenv
 from os.path import join, dirname
 from dotenv import load_dotenv
@@ -31,10 +32,10 @@ load_dotenv(dotenv_path)
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xk^0x+8fhzi1(sv@v811*z2#d@n#)0x=)av9txfup0=2vma)pk'
+SECRET_KEY = os.getenv("MY_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com']
 
@@ -81,8 +82,8 @@ ROOT_URLCONF = 'bitcoin.urls'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS =True
-EMAIL_HOST_USER = 'opensociety28@gmail.com'
-EMAIL_HOST_PASSWORD = 'nxssjyzvlnuixzei'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 DEFAULT_FROM_EMAIL = 'Bitfonix Trade Center <noreply@bitfonix.com>'
@@ -111,15 +112,18 @@ WSGI_APPLICATION = 'bitcoin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD':os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT')
     }
 }
-DATABASE_URL = os.environ['DATABASE_URL']
+db_from_env = dj_database_url.config(conn_max_age=500)
 
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
 
 
@@ -163,9 +167,9 @@ USE_TZ = True
 
 
 
-AWS_ACCESS_KEY_ID= "AKIAU3Z7F3G5DQEBLZVD"
-AWS_SECRET_ACCESS_KEY= "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"
-AWS_STORAGE_BUCKET_NAME="my-ing-bucket"
+AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME")
 
 AWS_S3_REGION_NAME = 'us-east-2'
 
@@ -187,8 +191,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
     ]
 
-MEDIA_URL = 'https://'+AWS_STORAGE_BUCKET_NAME+'.s3.amazonaws.com/media-root/'
-#MEDIA_URL = '/media-root/'
+# MEDIA_URL = 'https://'+AWS_STORAGE_BUCKET_NAME+'.s3.amazonaws.com/media-root/'
+MEDIA_URL = '/media-root/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media-root')
 
 DJANGORESIZED_DEFAULT_SIZE = [160, 160]

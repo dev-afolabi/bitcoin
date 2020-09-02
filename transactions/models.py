@@ -23,7 +23,11 @@ class Deposit(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     amount= models.CharField(max_length=25, choices=AMOUNT_CHOICES,help_text="Select amount to deposit")
     payment_option = models.CharField(max_length=25,help_text="Select payment option")
-    paid = models.BooleanField(default=False)
+    STATUS_CHOICES = (
+        ('Pending','Pending'),
+        ('Successful','confirmed'),
+    )
+    status = models.CharField(max_length=40, null=True, choices=STATUS_CHOICES, default='Pending')
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
