@@ -32,12 +32,12 @@ load_dotenv(dotenv_path)
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("MY_SECRET_KEY")
+SECRET_KEY = config("MY_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com','ec2-3-129-68-16.us-east-2.compute.amazonaws.com']
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -82,8 +82,8 @@ ROOT_URLCONF = 'bitcoin.urls'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS =True
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 DEFAULT_FROM_EMAIL = 'Bitfonix Trade Center <noreply@bitfonix.com>'
@@ -167,9 +167,9 @@ USE_TZ = True
 
 
 
-AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME")
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
 
 AWS_S3_REGION_NAME = 'us-east-2'
 
