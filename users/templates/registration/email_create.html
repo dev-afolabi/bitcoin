@@ -5,9 +5,9 @@ We've received a request to create an account for this email.
 
 Please click on the link to activate your account:
 
-https://{{ domain }}{% url 'my-auth:activate' uidb64=uid token=token %}
+{{ protocol }}://{{ domain }}{% url 'my-auth:activate' uidb64=uid token=token %}
 
 
 Sincerly,
-Bitfonix management
+Fonixcoin management
 {% endautoescape %}

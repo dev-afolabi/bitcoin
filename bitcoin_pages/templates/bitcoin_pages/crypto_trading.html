@@ -11,7 +11,7 @@
 					<div class="col-12 text-center">
 						<div class="single-page-title">
 							<h2>Cryptocurrency Trading</h2>
-							<p>Lorem ipsum dolor sit amet</p>
+							<p>Trade your coin with ease.</p>
 						</div>
 					</div>
 				</div>
@@ -23,8 +23,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item active">Single Service</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+							<li class="breadcrumb-item active">Cryptocurrency Trading</li>
 						</ol>
 					</div>
 				</div>
@@ -58,24 +58,6 @@
 						</div>
 					</div>
 					<!-- end widget -->
-					<div class="widget tes_wid">
-						<h3 class="widget-title">Clinet Feebback</h3>
-						<!-- end widget tittle-->
-						<div class="widget-inner mt-5 text-center">
-							<div class="single-testimonial">
-								<div class="single-testimonial-image">
-									<img class="img-fluid rounded-circle" src="{% static 'assets/img/team/person1.jpg' %}" alt="">
-								</div>
-								<div class="single-testimonial-content">
-									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. </p>
-								</div>
-								<div class="single-testimonial-meta">
-									<p>- Jone Doe</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- end widget -->	
 				</div>
 				<!-- end col -->
 				<div class="col-lg-8 col-md-8 col-12">
@@ -134,40 +116,9 @@
 					<div class="row mt-4">
 						<div class="col-12 ser-page-into">
 							<h4>Service Overview</h4>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illodrut inventore veritatis et quasi architecto beatae vitae dicta sunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p>A cryptocurrency exchange is a service for changing digital currencies, such as Bitcoin, Ethereum, and more, to fiat (paper) currencies or for other digital currencies. At Fonixcoin, you can exchange your fiat currency, such as dollars or Euro, for several cryptocurrencies. You can also exchange your Bitcoin for fiat.</p>
 						</div>
 						<!-- end col -->
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12 mb-lg-0 mb-md-0 mb-4 pl-4 ser-page-into">
-								<ul>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Consectetur -</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Eiusmod -</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Perspiciatis -</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Voluptatem -</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</li>
-								</ul>
-							</div>
-							<!-- end col -->
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="cal-convertor">
-									<script>
-										baseUrl = "https://widgets.cryptocompare.com/";
-										var scripts = document.getElementsByTagName("script");
-										var embedder = scripts[ scripts.length - 1 ];
-										(function (){
-										var appName = encodeURIComponent(window.location.hostname);
-										if(appName==""){appName="local";}
-										var s = document.createElement("script");
-										s.type = "text/javascript";
-										s.async = true;
-										var theUrl = baseUrl+'serve/v1/coin/chart?fsym=BTC&tsym=USD';
-										s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-										embedder.parentNode.appendChild(s);
-										})();
-									</script>
-								</div>						
-							</div>
-							<!-- end col -->
-						</div>
 					</div>
 					<!-- end row -->
 					<div class="steam-details-tab">
@@ -183,7 +134,7 @@
 									<div class="tab-pane animated fadeInRight active show" id="srone">
 										<div class="row">
 											<div class="col-lg-5 col-md-5 col-12 mb-lg-0 mb-md-0 mb-sm-3 mb-3">
-												<p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborinu aliquip ex ea commodo consequat. Du aute irure dolor in reprehenderit inlore voluptate velit esse cillum dolore eure fugiat nulla pariatur. Excepteur sintdr occaecat cupidatat non proident, sun culpa qui officia deserunt.</p>										
+												<p>Cryptocurrency is a general name referring to all encrypted decentralized digital currencies such as Bitcoin, Litecoin, Ethereum and Ethereum Classic. They use cryptography to create coins and secure transactions. Typically, cryptocurrencies are open source and the transactions are based on blockchain technology.</p>										
 											</div>
 											<div class="col-lg-7 col-md-7 col-12 mt-4">
 												<img class="img-fluid" src="{% static 'assets/img/blog/2.jpg' %}" alt="">
@@ -196,16 +147,12 @@
 												<img class="img-fluid" src="{% static 'assets/img/blog/1.jpg' %}" alt="">
 											</div>
 											<div class="col-lg-5 col-md-5 col-12">
-												<p>Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborinu aliquip ex ea commodo consequat. Du aute irure dolor in reprehenderit inlore voluptate velit esse cillum dolore eure fugiat nulla pariatur. Excepteur sintdr occaecat cupidatat non proident, sun culpa qui officia deserunt.</p>										
+												<p>Cryptocurrencies are traded via wallets, which are used to store, send, and receive digital currency. Most coins have an official wallet or a few officially recommended third-party wallets. You cannot invest in any cryptocurrency without using a dedicated cryptocurrency wallet.</p>										
 											</div>
 										</div>
 									</div>
 									<div class="tab-pane animated fadeInRight" id="srthree">
-										<p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-										<ul>
-											<li><i class="icofont icofont-ui-press"></i> <strong>Consectetur -</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</li>
-											<li><i class="icofont icofont-ui-press"></i> <strong>Eiusmod -</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</li>
-										</ul>
+										<p class="mb-3">With Fonixcoin, you can skip complex processes like mining and just buy and trade cryptocurrency securely with your credit or debit card. Let’s get started!</p>
 									 </div>
 								</div>
 							</div>

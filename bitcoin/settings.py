@@ -60,7 +60,6 @@ INSTALLED_APPS = [
     'blog',
 
     'django_static_ionicons',
-    'storages',
 
 ]
 
@@ -80,13 +79,12 @@ ROOT_URLCONF = 'bitcoin.urls'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS =True
+EMAIL_HOST = 'mail.privateemail.com'
+EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-DEFAULT_FROM_EMAIL = 'Bitfonix Trade Center <noreply@bitfonix.com>'
+EMAIL_PORT = 465
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 TEMPLATES = [
     {
@@ -168,21 +166,6 @@ USE_TZ = True
 
 
 
-
-AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
-
-AWS_S3_REGION_NAME = 'us-east-2'
-
-AWS_S3_SIGNATURE_VERSION = 's3v4'
-
-AWS_S3_FILE_OVERWRITE = False
-AWS_QUERYSTRING_AUTH = False
-AWS_DEFAULT_ACL = None
-
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
 staticfiles_storage = 'whitenoise.storage.compressedmanifeststaticfilesstorage'
 
 STATIC_URL = '/static/'
@@ -193,7 +176,6 @@ STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
     ]
 
-# MEDIA_URL = 'https://'+AWS_STORAGE_BUCKET_NAME+'.s3.amazonaws.com/media-root/'
 MEDIA_URL = '/media-root/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media-root')
 
