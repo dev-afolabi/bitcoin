@@ -10,4 +10,8 @@ class UserAdmin(admin.ModelAdmin):
   
     active.boolean = True
 
+admin.site.site_header = 'Fonixcoin Trade Center Administration'
+admin.site.site_title = 'Fonixcoin Trade Center'
+admin.site.index_title = 'Fonixcoin Trade Center Administration'
+
 admin.site.register(User, UserAdmin)
