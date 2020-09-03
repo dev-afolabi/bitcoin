@@ -37,7 +37,7 @@ SECRET_KEY = config("MY_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-18-191-224-213.us-east-2.compute.amazonaws.com','.fonixcoin.com','www.fonixcoin.com']
+ALLOWED_HOSTS = ['127.0.0.1','ec2-18-191-224-213.us-east-2.compute.amazonaws.com','.fonixcoin.com','www.fonixcoin.com']
 
 AUTH_USER_MODEL = 'users.User'
 
