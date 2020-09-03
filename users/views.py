@@ -131,6 +131,8 @@ def edit_user(request):
         if form.is_valid():
             user_form = form.save(True)
             return redirect('my-auth:view_profile')
+        else:
+            return render(request, 'registration/edit_user.html', {'form':user_form})
     else:
         form = EditUserForm(instance=request.user)
         return render(request, 'registration/edit_user.html', {'form':form})

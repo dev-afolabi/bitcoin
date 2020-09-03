@@ -60,8 +60,10 @@ INSTALLED_APPS = [
     'blog',
 
     'django_static_ionicons',
+    'crispy_forms',
 
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

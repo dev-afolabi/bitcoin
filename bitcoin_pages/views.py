@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from .forms import ContactForm
 
 # Create your views here.
 def index(request):        
@@ -7,8 +10,25 @@ def index(request):
 def about(request):        
     return render(request, 'bitcoin_pages/about-us.html')
 
-def contact(request):        
-    return render(request, 'bitcoin_pages/contact-us.html')
+def contact(request):
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            fullname = form.cleaned_data['fullname']
+            from_email = form.cleaned_data['from_email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+
+            full_message = "message from: "+fullname+"\nSender email: "+from_email+"\n\n"+message
+
+            try:
+                send_mail(subject,full_message,'support@fonixcoin.com',['support@fonixcoin.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('contact')       
+    return render(request, 'bitcoin_pages/contact-us.html',{'form':form})
 
 def faq(request):        
     return render(request, 'bitcoin_pages/faq.html')

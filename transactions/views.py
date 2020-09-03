@@ -42,7 +42,7 @@ def deposit_view(request):
                 'user':request.user,
                 'amount':deposit.amount
             })
-            to_email = 'jmlindhagen@gmail.com'
+            to_email = 'support@gmail.com'
             email = EmailMessage(subject,message, to=[to_email])
             email.send()
 
@@ -91,7 +91,7 @@ def withdrawal_view(request):
                     'user':request.user,
                     'amount':withdrawal.amount
                 })
-                to_email = 'jmlindhagen@gmail.com'
+                to_email = 'support@gmail.com'
                 email = EmailMessage(subject,message, to=[to_email])
                 email.send()
 
