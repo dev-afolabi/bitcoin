@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import ContactForm
+from bitcoin.settings import EMAIL_HOST_USER
 
 # Create your views here.
 def index(request):        
@@ -24,7 +25,7 @@ def contact(request):
             full_message = "message from: "+fullname+"\nSender email: "+from_email+"\n\n"+message
 
             try:
-                send_mail(subject,full_message,'support@fonixcoin.com',['support@fonixcoin.com'])
+                send_mail(subject,full_message,EMAIL_HOST_USER,[EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('contact')       
