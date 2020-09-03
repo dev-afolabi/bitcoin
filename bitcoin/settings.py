@@ -37,7 +37,7 @@ SECRET_KEY = config("MY_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','bitfonix.herokuapp.com','ec2-3-129-68-16.us-east-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-18-191-224-213.us-east-2.compute.amazonaws.com','.fonixcoin.com','www.fonixcoin.com']
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -122,9 +122,11 @@ DATABASES = {
 }
 db_from_env = dj_database_url.config(conn_max_age=500)
 
-DATABASES['default'].update(db_from_env)
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
+
+DATABASES['default'].update(db_from_env)
+
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
 
 # Password validation
@@ -187,7 +189,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
+STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
     ]
 
