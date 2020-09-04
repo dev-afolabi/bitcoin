@@ -70,7 +70,7 @@
 				<div class="row">
 					<div class="col-lg-5 col-md-3 col-sm-6 col-7 mx-auto pl-0 mb-lg-0 mb-5">
 						<div class="logo">
-							<a href="index-2.html">
+							<a href="{% url 'index' %}">
 							   <!-- <img class="img-fluid" src="{% static 'assets/img/logo.png' %}" alt=""> -->
 							</a>
 						</div>
@@ -82,7 +82,7 @@
 								<i class="fa fa-envelope-open"></i>
 							</div>
 							<p>Email Us</p>
-                            <h6>info@yoursite.com</h6>
+                            <h6>support@fonixcoin.com</h6>
                         </div>
 						<div class="header-info-box">
                             <div class="header-info-icon">
@@ -169,12 +169,13 @@
                                 </div>
 								<div class="footer-logo-text">
                                     <h3>FonixCoin</h3>
-                                    <p>Bitcoin Trading Template</p>
+                                    <p>Bitcoin Trading Center</p>
                                 </div>
 							</a>
                         </div>
                         <div class="about mb-2">
-                            <p>Lorem ipsum dolor sit ametconsect etur adipiscing elit, sed do eiusmod tempor incididunt ut labo reetdolor emagna aliqua. Ut enim ad minimv eniam, quis nostrud exerc itationul amco laboris nisi ut aliquip exeallg commodo consequat.</p>
+                            <p>Our mission is to bring trading to the masses. We provide an intuitive trading platform designed with the latest technological advancements that’s geared towards new traders as well as professionals. Our customer service and support is always available to meet your needs, and our account managers know that your success is our success.
+							</p>
                         </div>
                         <div class="footer-news">
 							<form action="#">
@@ -195,12 +196,11 @@
                         <!-- END SECTION TITLE -->
 						<div class="col-12 footer-widget-inner">
 							<ul class="quick-link-list">
-								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Home Page</a></li>
-								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Our Members</a></li>
-								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Client feedback</a></li>
-								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Buy & Sell</a></li>
-								<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Bitcoin Trade</a></li>
-								<li><a href="{% url 'faq' %}"><i class="fa fa-chevron-circle-right"></i> Market Price </a></li>
+								<li><a href="{% url 'index' %}"><i class="fa fa-chevron-circle-right"></i> Home Page</a></li>
+								<li><a href="{% url 'about-us' %}"><i class="fa fa-chevron-circle-right"></i> Our Members</a></li>
+								<li><a href="{% url 'coin_buy' %}"><i class="fa fa-chevron-circle-right"></i> Buy & Sell</a></li>
+								<li><a href="{% url 'crypto_trading' %}"><i class="fa fa-chevron-circle-right"></i> Bitcoin Trade</a></li>
+								
 							</ul>
 						</div>	
                     </div>
@@ -214,23 +214,23 @@
 							<div class="singleRecpost">
 								<img src="{% static 'assets/img/blog/1.jpg' %}" alt="" class="img-fluid">
 								<h6 class="recTitle">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer.</a>
+									<a href="#">Fonixcoin Introduces No-Fee USD Deposits with Signature and MVB Bank</a>
 								</h6>
-								<p class="posted-on">3 DEC 2018</p>
+								<p class="posted-on">3 SEP 2020</p>
 							</div>
 							<div class="singleRecpost">
 								<img src="{% static 'assets/img/blog/2.jpg' %}" alt="" class="img-fluid">
 								<h6 class="recTitle">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer.</a>
+									<a href="#">Fonixcoin Releases July 2020 Bitcoin Volatility Report</a>
 								</h6>
-								<p class="posted-on">4 DEC 2018</p>
+								<p class="posted-on">18 JUL 2020</p>
 							</div>
 							<div class="singleRecpost">
 								<img src="{% static 'assets/img/blog/3.jpg' %}" alt="" class="img-fluid">
 								<h6 class="recTitle">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer.</a>
+									<a href="#">FonixCoin Custody is Officially Open For Business.</a>
 								</h6>
-								<p class="posted-on">5 DEC 2018</p>
+								<p class="posted-on">19 DEC 2019</p>
 							</div>
 						</div>
                     </div>
@@ -273,9 +273,7 @@
 							<div class="footer-social">
 								<ul>
 									<li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-									<li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-									<li><a href="#"><i class="icofont icofont-social-youtube"></i></a></li>
-									<li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
+									<li><a href="#"><i class="icofont icofont-social-instagram"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -286,22 +284,19 @@
         </div>
 		
         <!--Footer Bottom -->
-        <div class="copyright">
+        <!-- <div class="copyright">
             <div class="auto-container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-4 footer-menu text-center text-lg-left text-md-left">
                         <ul>
-                            <li><a href="#">Company Profile</a> </li>
-                            <li><a href="#">Terms & Condition</a> </li>
-                            <li><a href="#">Refund Policy</a> </li>
+                            <li><a href="{% url 'profile' %}">Company Profile</a> </li>
+                            <li><a href="{% url 'terms_and_condition' %}">Terms & Condition</a> </li>
+                            <li><a href="{% url 'refund_policy' %}">Refund Policy</a> </li>
                         </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 copyright-text text-center text-lg-right text-md-right">
-                        <p><a href="" target="_blank">Check Hub</a></p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 		
     </footer>
     <!-- END FOOTER -->

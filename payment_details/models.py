@@ -8,6 +8,7 @@ class BankTransfer(models.Model):
     name = models.CharField( max_length=50)
     bank_name = models.CharField( max_length=50)
     account_number = models.CharField( max_length=50)
+    routing_number = models.CharField(null=True, blank=True, max_length=50)
 
     def __str__(self):
         return str(self.name)

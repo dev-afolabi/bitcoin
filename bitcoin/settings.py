@@ -35,7 +35,7 @@ load_dotenv(dotenv_path)
 SECRET_KEY = config("MY_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','ec2-18-191-224-213.us-east-2.compute.amazonaws.com','.fonixcoin.com','www.fonixcoin.com']
 

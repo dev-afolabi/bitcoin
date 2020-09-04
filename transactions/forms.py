@@ -22,6 +22,12 @@ class DepositForm(forms.ModelForm):
 
 
 class WithdrawalForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        # first call parent's constructor
+        super(WithdrawalForm, self).__init__(*args, **kwargs)
+        # there's a `fields` property now
+        self.fields['IBAN_number'].required = False
+        self.fields['swift_code'].required = False
     payment_option = forms.ChoiceField(choices=PAYMENT_CHOICES, required=True, widget=forms.RadioSelect())
     class Meta:
         model = Withdrawal

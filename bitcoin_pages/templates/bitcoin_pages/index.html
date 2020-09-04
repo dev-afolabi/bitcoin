@@ -1,4 +1,7 @@
 {% extends 'base_layout.html' %}
+{% block nav-home %}
+active
+{% endblock %}
 {% load static %}
 {% block title %}Bitcoin{% endblock %}
 {% block content %}
@@ -611,78 +614,6 @@
     </section>
     <!-- END HOW WORK SECTION -->
 	
-	<!-- START PROMO 2 SECTION -->
-    <section id="promot" class="section-padding">
-        <div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-12 pr-lg-5 pr-md-5 pr-sm-0 pr-0 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
-					<div class="row">
-						<div class="col-12 text-left">
-							<div class="section-title-2">
-								<h3>Promo <span>Video</span></h3>
-							</div>
-						</div>
-					</div>
-					<!-- end section title -->
-					<div class="youtube-promo-video-wrap">
-						<div class="youtube-promo-video-img">
-							<img class="img-fluid" src="{% static 'assets/img/bg/bg8.jpg' %}" alt="">
-						</div>
-						<div class="youtube-promo-video">
-							<a href="https://www.youtube.com/watch?v=OTewW0jWRQM" data-title="FonixCoin PROMO VIDEO" data-vbtype="youtube" class="venobox info vbox-item" data-gall="gallu">
-								<i class="icofont icofont-ui-play"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- end col -->
-				<div class="col-lg-6 col-md-6 col-12">
-					<div class="row">
-						<div class="col-12 text-left">
-							<div class="section-title-2">
-								<h3>Request <span>free quote</span></h3>
-							</div>
-						</div>
-					</div>
-					<!-- end section title -->
-					<div class="home-p-form-wrapper">
-						<div class="home-p-form">
-							<form action="#">
-								<div class="row">
-									<div class="form-group col-lg-6 mb-3">
-										<input name="aname" class="form-control" id="afirst-name" placeholder="Your Name*" required="required" type="text">
-									</div>
-									<div class="form-group col-lg-6 mb-3">
-										<input name="aemail" class="form-control" id="aemail" placeholder="Email id*" required="required" type="email">
-									</div>
-									<div class="form-group col-lg-6 mb-3">
-										<input name="aphone" class="form-control" id="aphone" placeholder="Phone Number*" required="required" type="text">
-									</div>
-									<div class="form-group col-lg-6 mb-3">
-										<input name="asubject" class="form-control" id="asubject" placeholder="Subject" required="required" type="text">
-									</div>									
-									<div class="form-group col-lg-12 mb-3">
-										<textarea rows="6" name="rmessage" class="form-control" id="adescription" placeholder="Your Message Here..." required="required"></textarea>
-									</div>
-									<div class="form-group col-lg-5 mb-lg-0 mb-md-0 mb-2 pr-0">
-										<a href="#" title="Click here to submit your message!" class="btn-style btn-filled btn-filled-2">Send Message <i class="fa fa-paper-plane"></i></a>
-									</div>
-									<div class="form-group col-lg-7">
-										<p><strong>Note:</strong> We promise that we don't do spam & your mail id is confidential. </p>
-									</div>
-								</div>
-							</form>								
-						</div>
-					</div>
-				</div>
-				<!-- end col -->				
-			</div>
-        </div>
-        <!--- END CONTAINER -->
-    </section>
-    <!-- END PROMO 2 SECTION -->
-	
-	
 	<!-- START TESTIMONIAL SECTION -->
     <section id="testimonial" class="section-padding">
         <div class="container">
@@ -768,14 +699,14 @@
 				<div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
 					<div class="single-blogh">
 						<div class="single-blog-himage">
-							<img class="img-fluid" src="{% static 'assets/img/blog/2.jpg' %}" alt="">
+							<img class="img-fluid" src="{% static 'assets/img/blog/1.jpg' %}" alt="">
 						</div>
 						<div class="single-blog-hdec">
-							<a href="#"><h5>Final Testing for ETC Support on FonixCoin</h5></a>
-							<span class="post-date"><i class="icofont icofont-calendar"></i> 17 Dec 2018</span>
+							<a href="#"><h5>Fonixcoin Introduces No-Fee USD Deposits with Signature and MVB Bank</h5></a>
+							<span class="post-date"><i class="icofont icofont-calendar"></i> 03 Sep 2020</span>
 							<span class="post-comment"><i class="fa fa-comment"></i> 3 comments</span>
 							<p>
-								Lorem ipsum dolor sit amet consectetu adipiscing elit, sed do eiusmod tempor incididunt ut labore
+								Funding your Fonixcoin account is now easier, faster and more cost-effective with our newest integration with Signature Bank.
 								<a href="#">[...]</a>
 							</p>
 							<div class="single-blog-hadmin">
@@ -783,7 +714,7 @@
 									<img class="img-fluid rounded-circle" src="{% static 'assets/img/team/person1.jpg' %}" alt="">
 								</div>
 								<div class="single-blog-hadmin-info">
-									<p>By: <span>Jon Doe</span>for <span>TRADING</span></p>
+									<p>By: <span>Jane Swaniger</span>for <span>TRADING</span></p>
 								</div>
 							</div>
 						</div>
@@ -793,14 +724,14 @@
 				<div class="col-lg-4 col-md-4 col-12 mb-lg-0 mb-md-4 mb-sm-4 mb-4">
 					<div class="single-blogh">
 						<div class="single-blog-himage">
-							<img class="img-fluid" src="{% static 'assets/img/blog/1.jpg' %}" alt="">
+							<img class="img-fluid" src="{% static 'assets/img/blog/2.jpg' %}" alt="">
 						</div>
 						<div class="single-blog-hdec">
-							<a href="#"><h5>What we accomplished at Coinbase in 2018</h5></a>
-							<span class="post-date"><i class="icofont icofont-calendar"></i> 18 Dec 2018</span>
-							<span class="post-comment"><i class="fa fa-comment"></i> 5 comments</span>
+							<a href="#"><h5>C-C-C-COMBO BREAKER:Fonixcoin Releases July 2020 Bitcoin Volatility Report</h5></a>
+							<span class="post-date"><i class="icofont icofont-calendar"></i> 18 July 2020</span>
+							<span class="post-comment"><i class="fa fa-comment"></i> 18 comments</span>
 							<p>
-								Lorem ipsum dolor sit amet consectetu adipiscing elit, sed do eiusmod tempor incididunt ut labore
+								VIP clients are the first to receive Fonixcoin Intelligence reports. If you’d like early access to our latest research, sign up to trade with us today.
 								<a href="#">[...]</a>
 							</p>
 							<div class="single-blog-hadmin">
@@ -808,7 +739,7 @@
 									<img class="img-fluid rounded-circle" src="{% static 'assets/img/team/person2.jpg' %}" alt="">
 								</div>
 								<div class="single-blog-hadmin-info">
-									<p>By: <span>Jon Doe</span>for <span>TRADING</span></p>
+									<p>By: <span>Greg Alan</span>for <span>TRADING</span></p>
 								</div>
 							</div>
 						</div>
@@ -822,10 +753,10 @@
 						</div>
 						<div class="single-blog-hdec">
 							<a href="#"><h5>FonixCoin Custody is Officially Open For Business</h5></a>
-							<span class="post-date"><i class="icofont icofont-calendar"></i> 19 Dec 2018</span>
+							<span class="post-date"><i class="icofont icofont-calendar"></i> 19 Dec 2019</span>
 							<span class="post-comment"><i class="fa fa-comment"></i> 4 comments</span>
 							<p>
-								Lorem ipsum dolor sit amet consectetu adipiscing elit, sed do eiusmod tempor incididunt ut labore
+								As part of our continued effort to make Kraken the world’s best place to trade crypto.
 								<a href="#">[...]</a>
 							</p>
 							<div class="single-blog-hadmin">
@@ -833,7 +764,7 @@
 									<img class="img-fluid rounded-circle" src="{% static 'assets/img/team/person1.jpg' %}" alt="">
 								</div>
 								<div class="single-blog-hadmin-info">
-									<p>By: <span>Jon Doe</span>for <span>TRADING</span></p>
+									<p>By: <span>Jane Swaniger</span>for <span>TRADING</span></p>
 								</div>
 							</div>
 						</div>
