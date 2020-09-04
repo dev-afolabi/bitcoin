@@ -93,6 +93,8 @@ celerybeat-schedule
 
 # dotenv
 .env
+.env.swp
+.env.swo
 
 # virtualenv
 .venv
