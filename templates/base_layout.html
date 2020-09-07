@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -84,7 +85,7 @@
 						<div class="info-menu">
 							
 							<ul>
-								<li><a href="#"><i class="icofont icofont-time"></i> Opening Hours - Mon to Sat: 9AM to 5PM</a></li>
+								<li><a href="#"><i class="icofont icofont-time"></i> {% trans "Opening Hours" %} - Mon to Sat: 9AM to 5PM</a></li>
 							</ul>
 						</div>
 					</div>
@@ -92,15 +93,43 @@
 					<div class="col-lg-4 col-md-12 col-sm-12 col-12">
 						<div class="info-menu">
 							<ul>{% if user.is_authenticated %}
-								<li><a href="{% url 'dashboard' %}"><i class="icofont icofont-dashboard"></i> Dashboard </a></li>
-								<li><a href="{% url 'logout' %}"><i class="icofont icofont-login"></i> Logout </a></li>
+								<li><a href="{% url 'dashboard' %}"><i class="icofont icofont-dashboard"></i>{% trans 'Dashboard' %}</a></li>
+								<li><a href="{% url 'logout' %}"><i class="icofont icofont-login"></i> {% trans 'Logout' %} </a></li>
 								{% else %}
-								<li><a href="{% url 'my-auth:login' %}"><i class="icofont icofont-login"></i> Login </a></li>
-								<li><a href="{% url 'my-auth:create' %}"><i class="icofont icofont-user-alt-5"></i> Register </a></li>
-								<li><a href="#"><i class="icofont icofont-hand-drag2"></i> Help </a></li>
+								<li><a href="{% url 'my-auth:login' %}"><i class="icofont icofont-login"></i> {% trans "Login" %}</a></li>
+								<li><a href="{% url 'my-auth:create' %}"><i class="icofont icofont-user-alt-5"></i> {% trans "Register" %} </a></li>
+								<li><a href="#"><i class="icofont icofont-hand-drag2"></i> {% trans "Help" %} </a></li>
 								{% endif %}
 								
-								<li><a href="#"><i class="icofont icofont-live-support"></i> Support </a></li>
+								<li><a href="#"><i class="icofont icofont-live-support"></i>{% trans "Support" %} </a></li>
+								<details>
+									
+									<summary><li><a><i class="icofont icofont-earth"></i></a></li> language</summary>
+									<ul class="nav navbar-nav navbar-right language menu">
+										{% get_current_language as LANGUAGE_CODE %}
+										{% get_available_languages as LANGUAGES %}
+										{% get_language_info_list for LANGUAGES as languages %}
+										{% for language in languages %}
+										{% if LANGUAGE_CODE == 'zh-hans' %}
+											<li>
+												<a href="/{{ language.code }}{{ request.get_full_path|slice:'8:' }}"
+												   class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}"
+												   lang="{{ language.code }}">
+													{{ language.name_local }}
+												</a>
+											</li>
+										{% else %}
+												<li>
+													<a href="/{{ language.code }}{{ request.get_full_path|slice:'3:' }}"
+													class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}"
+													lang="{{ language.code }}">
+														{{ language.name_local }}
+													</a>
+												</li>
+										{% endif %}
+										{% endfor %}
+									</ul>
+								</details>
 								
 							</ul>
 						</div>
@@ -128,18 +157,18 @@
                             <div class="header-info-icon">
 								<i class="fa fa-envelope-open"></i>
 							</div>
-							<p>Email Us</p>
+							<p>{% trans "Email Us" %}</p>
                             <h6>support@fonixcoin.com</h6>
                         </div>
 						<div class="header-info-box">
                             <div class="header-info-icon">
 								<i class="icofont icofont-phone"></i>
 							</div>
-							<p>Call Us</p>
+							<p>{% trans "Call Us" %}</p>
                             <h6>+1-470-673-1900</h6>
                         </div>
 						<div class="header-info-box">
-                            <a href="#" class="quote-btn">Get Started <i class="icofont icofont-caret-right"></i></a>
+                            <a href="#" class="quote-btn">{% trans "Get Started" %} <i class="icofont icofont-caret-right"></i></a>
                         </div>
 					</div>
 					<!-- end col -->
@@ -156,20 +185,20 @@
 						<div class="col-lg-9 d-none d-lg-block d-md-none">
 							<nav class="navbar navbar-expand-lg justify-content-left">
 								<ul class="navbar-nav">
-									<li><a href="{% url 'index' %}" class="{% block nav-home %}{% endblock %} nav-link">Home</a></li>
+									<li><a href="{% url 'index' %}" class="{% block nav-home %}{% endblock %} nav-link">{% trans "Home" %}</a></li>
 									<li class="dropdown"><a href="{% url 'services' %}" class="{% block nav-service %}{% endblock %} nav-link">Services</a>
 										<ul class="dropdown-menu">
-											<li><a href="{% url 'services' %}">All Our Services</a></li>
-											<li><a href="{% url 'bitcoin_trading' %}">Bitcoin Trading</a></li>
-											<li><a href="{% url 'coin_buy' %}">Coin Buy & Sell</a></li>
-											<li><a href="{% url 'bitcoin_ethereum' %}">Bitcoin & Ethereum</a></li>
-											<li><a href="{% url 'crypto_trading' %}">Cryptocurrency</a></li>
+											<li><a href="{% url 'services' %}">{% trans "All Our Services" %}</a></li>
+											<li><a href="{% url 'bitcoin_trading' %}">{% trans "Bitcoin Trading" %}</a></li>
+											<li><a href="{% url 'coin_buy' %}">{% trans "Coin Buy & Sell" %}</a></li>
+											<li><a href="{% url 'bitcoin_ethereum' %}">{% trans "Bitcoin & Ethereum" %}</a></li>
+											<li><a href="{% url 'crypto_trading' %}">{% trans "Cryptocurrency" %}</a></li>
 										</ul>
 									</li>
-									<li><a href="" class="nav-link">Blog</a>
+									<li><a href="" class="nav-link">{% trans "Blog" %}</a>
 									</li>
-									<li><a href="{% url 'about-us' %}" class="{% block nav-about %}{% endblock %} nav-link">About Us</a></li>
-									<li><a href="{% url 'contact' %}" class="{% block nav-contact %}{% endblock %} nav-link">Contact</a></li>
+									<li><a href="{% url 'about-us' %}" class="{% block nav-about %}{% endblock %} nav-link">{% trans "About Us" %}</a></li>
+									<li><a href="{% url 'contact' %}" class="{% block nav-contact %}{% endblock %} nav-link">{% trans "Contact" %}</a></li>
 								</ul>
 							</nav>
 						</div>

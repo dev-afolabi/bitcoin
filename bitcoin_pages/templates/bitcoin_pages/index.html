@@ -1,4 +1,5 @@
 {% extends 'base_layout.html' %}
+{% load i18n %}
 {% block nav-home %}
 active
 {% endblock %}
@@ -16,11 +17,11 @@ active
 						<div class="row">
 							<div class="col-lg-7 col-md-10 col-12 mr-auto text-left">
 								<div class="home-single-slide-dec">
-									<h2>Secure & easy way to <br> buy & sell bitcoin</h2>
-									<p class="text-capitalize">We put the power in your hands, to buy, sell and trade digital currency. We are FonixCoin, consistently rated the best and most secure cryptocurrency exchange.</p>
+									<h2>{% trans "Secure & easy way to" %} <br> {% trans "buy & sell bitcoin" %}</h2>
+									<p class="text-capitalize">{% trans "We put the power in your hands, to buy, sell and trade digital currency. We are FonixCoin, consistently rated the best and most secure cryptocurrency exchange." %}</p>
 									<div class="home-single-slide-button">
-										<a href="#" class="btn-style btn-filled">Learn More</a>
-										<a href="{% url 'my-auth:create' %}" class="btn-style btn-border">Get started</a>
+										<a href="#" class="btn-style btn-filled">{% trans 'Learn More' %}</a>
+										<a href="{% url 'my-auth:create' %}" class="btn-style btn-border">{% trans "Get started" %}</a>
 									</div>
 								</div>
 							</div>

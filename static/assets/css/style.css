@@ -5611,4 +5611,21 @@ h2 {
 	}
 	  
 
-	
+	details {
+		font: 16px "Open Sans", Calibri, sans-serif;
+		width: 170px;
+		color: white;
+		border: none;
+		display: inline;
+	  }
+	  
+	  details > summary {
+		padding: 1px 1px;
+		width: 9em;
+		margin-left: 0;
+		border: none;
+	  }
+	  
+	  details > summary::-webkit-details-marker {
+		display: none;
+	  }

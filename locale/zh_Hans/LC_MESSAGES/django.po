@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-07 01:23+0100\n"
+"PO-Revision-Date: 2019-11-05 00:38+0000\n"
+"Last-Translator: Ramiro Morales\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/django/django/MIME-"
+"Version: 1.0\n"
+"Language: zh-hans\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: bitcoin/settings.py:167
+msgid "English"
+msgstr ""
+
+#: bitcoin/settings.py:168
+msgid "Chinese"
+msgstr ""
+
+#: bitcoin/settings.py:169
+msgid "French"
+msgstr ""
+
+#: bitcoin/settings.py:170
+msgid "Spanish"
+msgstr ""
+
+#: bitcoin/settings.py:171
+msgid "German"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:20
+msgid "Secure & easy way to"
+msgstr "安全便捷的方式至"
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:20
+msgid "buy & sell bitcoin"
+msgstr "买卖比特币"
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:21
+msgid ""
+"We put the power in your hands, to buy, sell and trade digital currency. We "
+"are FonixCoin, consistently rated the best and most secure cryptocurrency "
+"exchange."
+msgstr ""
+"我们将权力掌握在您手中，以购买，出售和交易数字货币。我们是FonixCoin，一直被评"
+"为最佳和最安全的加密货币交易所。"
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:23
+msgid "Learn More"
+msgstr "学到更多"
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:24
+msgid "Get started"
+msgstr "现在开始"
+
+#: templates/base_layout.html:88
+msgid "Opening Hours"
+msgstr ""
+
+#: templates/base_layout.html:96
+msgid "Dashboard"
+msgstr "仪表板"
+
+#: templates/base_layout.html:97
+msgid "Logout"
+msgstr "登出"
+
+#: templates/base_layout.html:99
+msgid "Login"
+msgstr "登录"
+
+#: templates/base_layout.html:100
+msgid "Register"
+msgstr "寄存器"
+
+#: templates/base_layout.html:101
+msgid "Help"
+msgstr "救命"
+
+#: templates/base_layout.html:104
+msgid "Support"
+msgstr ""
+
+#: templates/base_layout.html:110
+msgid "language"
+msgstr ""
+
+#: templates/base_layout.html:152
+msgid "Email Us"
+msgstr ""
+
+#: templates/base_layout.html:159
+msgid "Call Us"
+msgstr ""
+
+#: templates/base_layout.html:163
+#, fuzzy
+#| msgid "Get started"
+msgid "Get Started"
+msgstr "现在开始"
+
+#: templates/base_layout.html:180
+msgid "Home"
+msgstr ""
+
+#: templates/base_layout.html:183
+msgid "All Our Services"
+msgstr ""
+
+#: templates/base_layout.html:185
+msgid "Coin Buy & Sell"
+msgstr ""
+
+#: templates/base_layout.html:186
+msgid "Bitcoin & Ethereum"
+msgstr ""
+
+#: templates/base_layout.html:187
+msgid "Cryptocurrency"
+msgstr ""
+
+#: templates/base_layout.html:190
+msgid "Blog"
+msgstr ""
+
+#: templates/base_layout.html:192
+msgid "About Us"
+msgstr ""
+
+#: templates/base_layout.html:193
+msgid "Contact"
+msgstr ""
+
+#: users/models.py:70
+msgid "is staff"
+msgstr ""
+
+#: users/models.py:87
+msgid "user"
+msgstr ""
+
+#: users/models.py:88
+msgid "users"
+msgstr ""

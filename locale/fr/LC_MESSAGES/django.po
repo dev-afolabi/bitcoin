@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-07 01:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: bitcoin/settings.py:167
+msgid "English"
+msgstr ""
+
+#: bitcoin/settings.py:168
+msgid "Chinese"
+msgstr ""
+
+#: bitcoin/settings.py:169
+msgid "French"
+msgstr ""
+
+#: bitcoin/settings.py:170
+msgid "Spanish"
+msgstr ""
+
+#: bitcoin/settings.py:171
+msgid "German"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:20
+msgid "Secure & easy way to"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:20
+msgid "buy & sell bitcoin"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:21
+msgid ""
+"We put the power in your hands, to buy, sell and trade digital currency. We "
+"are FonixCoin, consistently rated the best and most secure cryptocurrency "
+"exchange."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:23
+msgid "Learn More"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:24
+msgid "Get started"
+msgstr ""
+
+#: templates/base_layout.html:88
+msgid "Opening Hours"
+msgstr ""
+
+#: templates/base_layout.html:96
+msgid "Dashboard"
+msgstr ""
+
+#: templates/base_layout.html:97
+msgid "Logout"
+msgstr ""
+
+#: templates/base_layout.html:99
+msgid "Login"
+msgstr ""
+
+#: templates/base_layout.html:100
+msgid "Register"
+msgstr ""
+
+#: templates/base_layout.html:101
+msgid "Help"
+msgstr ""
+
+#: templates/base_layout.html:104
+msgid "Support"
+msgstr ""
+
+#: templates/base_layout.html:110
+msgid "language"
+msgstr ""
+
+#: templates/base_layout.html:152
+msgid "Email Us"
+msgstr ""
+
+#: templates/base_layout.html:159
+msgid "Call Us"
+msgstr ""
+
+#: templates/base_layout.html:163
+msgid "Get Started"
+msgstr ""
+
+#: templates/base_layout.html:180
+msgid "Home"
+msgstr ""
+
+#: templates/base_layout.html:183
+msgid "All Our Services"
+msgstr ""
+
+#: templates/base_layout.html:185
+msgid "Coin Buy & Sell"
+msgstr ""
+
+#: templates/base_layout.html:186
+msgid "Bitcoin & Ethereum"
+msgstr ""
+
+#: templates/base_layout.html:187
+msgid "Cryptocurrency"
+msgstr ""
+
+#: templates/base_layout.html:190
+msgid "Blog"
+msgstr ""
+
+#: templates/base_layout.html:192
+msgid "About Us"
+msgstr ""
+
+#: templates/base_layout.html:193
+msgid "Contact"
+msgstr ""
+
+#: users/models.py:70
+msgid "is staff"
+msgstr ""
+
+#: users/models.py:87
+msgid "user"
+msgstr ""
+
+#: users/models.py:88
+msgid "users"
+msgstr ""
