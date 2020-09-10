@@ -5617,6 +5617,7 @@ h2 {
 		color: white;
 		border: none;
 		display: inline;
+		cursor: pointer;
 	  }
 	  
 	  details > summary {

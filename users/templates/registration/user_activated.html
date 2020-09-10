@@ -1,4 +1,5 @@
 {% extends "base_layout.html" %}
+{% load i18n %}
 {% load static %}
 {% block title %}{{ block.super }} - Activated{% endblock title %}
 
@@ -10,8 +11,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>Activate Your Account</h2>
-							<p>Account successfully activated</p>
+							<h2>{% trans 'Activate Your Account' %}</h2>
+							<p>{% trans 'Account successfully activated' %}</p>
 						</div>
 					</div>
 				</div>
@@ -23,8 +24,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">Activated</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'Activated' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -40,8 +41,8 @@
 			<!-- end section title -->
 			<div class="row">
                 <div class="col-lg-7 mx-auto">
-                    <p>Your Fonixcoin account has been successfully activated</p></br>
-                    <p>Please login <a href="{% url 'my-auth:login' %}">HERE</a></p>
+                    <p>{% trans 'Your Fonixcoin account has been successfully activated' %}</p></br>
+                    <p>{% trans 'Please login' %} <a href="{% url 'my-auth:login' %}">{% trans 'HERE' %}</a></p>
                 </div>
 			</div>
 			<!-- end row -->

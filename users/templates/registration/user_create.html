@@ -1,4 +1,5 @@
 {% extends "base_layout.html" %}
+{% load i18n %}
 {% load static %}
 {% block title %}{{ block.super }} - Create Account{% endblock title %}
 
@@ -12,8 +13,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>Registeration</h2>
-							<p>Create Your Account</p>
+							<h2>{% trans 'Registeration' %}</h2>
+							<p>{% trans 'Create Your Account' %}</p>
 						</div>
 					</div>
 				</div>
@@ -25,8 +26,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">Registeration</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'Registeration' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -47,7 +48,7 @@
                     <div class="signup-content">
                         <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
                           {% csrf_token %}
-                            <h2 class="form-title">Sign Up</h2>
+                            <h2 class="form-title">{% trans 'Sign Up' %}</h2>
                             <div class="form-group">
                               {{ form.first_name }}
                               {% if form.first_name.errors %}
@@ -104,7 +105,7 @@
                                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
                               </div> -->
                               <div class="form-group col-lg-6">
-                                <label for="inputGender">Upload Profile Picture</label>
+                                <label for="inputGender">{% trans 'Upload Profile Picture' %}</label>
                                 <div class="form-group">
                                   {{ form.picture }}
                                   {% if form.picture.errors %}
@@ -118,7 +119,7 @@
                             </div>
 
                               <div class="form-group col-lg-6">
-                                  <label for="inputGender">Gender</label>
+                                  <label for="inputGender">{% trans 'Gender' %}</label>
                                   <div class="form-group">
                                     {{ form.gender }}
                                     {% if form.gender.errors %}
@@ -131,16 +132,12 @@
                                   </div>
                               </div>
                             </div>
-                            <!-- <div class="form-group">
-                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                            </div> -->
                             <div class="form-group">
                                 <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
                             </div>
                         </form>
                         <p class="loginhere">
-                            Have already an account ? <a href="{% url 'my-auth:login' %}" class="loginhere-link">Login here</a>
+                            {% trans 'Have an account already ?' %} <a href="{% url 'my-auth:login' %}" class="loginhere-link">{% trans 'Login here' %}</a>
                         </p>
 					</div>
 					</div>

@@ -1,5 +1,6 @@
 {% extends 'base_dash.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 
 <!-- Content Wrapper. Contains page content -->
@@ -7,11 +8,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        View Profile
+        {% trans 'View Profile' %}
       </h1>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i>{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">{% trans 'Dashboard' %}</a></li>
         <li class="breadcrumb-item active"></li>
       </ol>
     </section>
@@ -22,8 +23,8 @@
      <!-- Basic Forms -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Profile Details</h3>
-          <h6 class="box-subtitle">Update your profile</h6>
+          <h3 class="box-title">{% trans 'Profile Details' %}</h3>
+          <h6 class="box-subtitle">{% trans 'Update your profile' %}</h6>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -31,23 +32,23 @@
             <div class="col">
     
 					<div class="form-group">
-						<h5>Fullname <span class="text-danger">*</span></h5>
+						<h5>{% trans 'Fullname' %} <span class="text-danger">*</span></h5>
 						<div class="controls">
 							<input type="text" name="text" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.get_full_name }}"> </div>
 					</div>
 					<div class="form-group">
-						<h5>Email<span class="text-danger">*</span></h5>
+						<h5>{% trans 'Email' %}<span class="text-danger">*</span></h5>
 						<div class="controls">
 							<input type="email" name="email" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.email }}"> </div>
                     </div>
                     <div class="form-group">
-						<h5>Gender<span class="text-danger">*</span></h5>
+						<h5>{% trans 'Gender' %}<span class="text-danger">*</span></h5>
 						<div class="controls">
 							<input type="email" name="email" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.gender }}"> </div>
                     </div>
 					
 					<div class="text-xs-right">
-						<a href="{% url 'my-auth:edit_user' %}"><button type="submit" class="btn btn-info">Edit Profile</button></a>
+						<a href="{% url 'my-auth:edit_user' %}"><button type="submit" class="btn btn-info">{% trans 'Edit Profile' %}</button></a>
 					</div>
             	
             </div>

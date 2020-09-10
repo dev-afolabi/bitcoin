@@ -1,4 +1,5 @@
 {% extends 'base_layout.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %} Cryptocurrency trading {% endblock %}
 {% block content %}
@@ -10,8 +11,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>Cryptocurrency Trading</h2>
-							<p>Trade your coin with ease.</p>
+							<h2>{% trans 'Cryptocurrency Trading' %}</h2>
+							<p>{% trans 'Trade your coin with ease.' %}</p>
 						</div>
 					</div>
 				</div>
@@ -23,8 +24,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">Cryptocurrency Trading</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'Cryptocurrency Trading' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -40,19 +41,19 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-5 pr-lg-5 pr-md-5 pr-sm-2 pr-2">
 					<div class="widget cat_wid mb-5">
-						<h3 class="widget-title">Service List</h3>
+						<h3 class="widget-title">{% trans 'Service List' %}</h3>
 						<!-- end widget tittle-->
 						<div class="widget-inner mt-5">
 							<div class="category-menu">
 								<ul>
-									<li><a href="{% url 'bitcoin_ethereum' %}">Bitcoin & Ethereum <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#" class="active">Cryptocurrency Trading <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'bitcoin_trading' %}">Bitcoin Trading <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'coin_buy' %}">Coin Buy & Sell <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'security_ensure' %}">Account Security <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'bitcoin_legality' %}">Bitcoin Legality <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#">Trading Strategy <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#">Money Exchange <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_ethereum' %}">{% trans 'Bitcoin & Ethereum' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#" class="active">{% trans 'Cryptocurrency Trading' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_trading' %}">{% trans 'Bitcoin Trading' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'coin_buy' %}">{% trans 'Coin Buy & Sell' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'security_ensure' %}">{% trans 'Account Security' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_legality' %}">{% trans 'Bitcoin Legality' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#">{% trans 'Trading Strategy' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#">{% trans 'Money Exchange' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -115,8 +116,8 @@
 					<!-- end image tab -->
 					<div class="row mt-4">
 						<div class="col-12 ser-page-into">
-							<h4>Service Overview</h4>
-							<p>A cryptocurrency exchange is a service for changing digital currencies, such as Bitcoin, Ethereum, and more, to fiat (paper) currencies or for other digital currencies. At Fonixcoin, you can exchange your fiat currency, such as dollars or Euro, for several cryptocurrencies. You can also exchange your Bitcoin for fiat.</p>
+							<h4>{% trans 'Service Overview' %}</h4>
+							<p>{% trans 'A cryptocurrency exchange is a service for changing digital currencies, such as Bitcoin, Ethereum, and more, to fiat (paper) currencies or for other digital currencies. At Fonixcoin, you can exchange your fiat currency, such as dollars or Euro, for several cryptocurrencies. You can also exchange your Bitcoin for fiat.' %}</p>
 						</div>
 						<!-- end col -->
 					</div>
@@ -125,16 +126,16 @@
 						<div class="row">
 							<div class="col-12">
 								<ul class="nav nav-tabs" role="tablist">
-									<li class="nav-item"><a class="nav-link active" href="#" data-target="#srone" data-toggle="tab">Description</a></li>
-									<li class="nav-item"><a class="nav-link" href="#" data-target="#srtwo" data-toggle="tab">Experinece</a></li>
-									<li class="nav-item"><a class="nav-link" href="#" data-target="#srthree" data-toggle="tab">Values</a></li>
+									<li class="nav-item"><a class="nav-link active" href="#" data-target="#srone" data-toggle="tab">{% trans 'Description' %}</a></li>
+									<li class="nav-item"><a class="nav-link" href="#" data-target="#srtwo" data-toggle="tab">{% trans 'Experience' %}</a></li>
+									<li class="nav-item"><a class="nav-link" href="#" data-target="#srthree" data-toggle="tab">{% trans 'Values' %}</a></li>
 								</ul>
 								<!-- Tab panes -->
 								<div class="tab-content">
 									<div class="tab-pane animated fadeInRight active show" id="srone">
 										<div class="row">
 											<div class="col-lg-5 col-md-5 col-12 mb-lg-0 mb-md-0 mb-sm-3 mb-3">
-												<p>Cryptocurrency is a general name referring to all encrypted decentralized digital currencies such as Bitcoin, Litecoin, Ethereum and Ethereum Classic. They use cryptography to create coins and secure transactions. Typically, cryptocurrencies are open source and the transactions are based on blockchain technology.</p>										
+												<p>{% trans 'Cryptocurrency is a general name referring to all encrypted decentralized digital currencies such as Bitcoin, Litecoin, Ethereum and Ethereum Classic. They use cryptography to create coins and secure transactions. Typically, cryptocurrencies are open source and the transactions are based on blockchain technology.' %}</p>										
 											</div>
 											<div class="col-lg-7 col-md-7 col-12 mt-4">
 												<img class="img-fluid" src="{% static 'assets/img/blog/2.jpg' %}" alt="">
@@ -147,12 +148,12 @@
 												<img class="img-fluid" src="{% static 'assets/img/blog/1.jpg' %}" alt="">
 											</div>
 											<div class="col-lg-5 col-md-5 col-12">
-												<p>Cryptocurrencies are traded via wallets, which are used to store, send, and receive digital currency. Most coins have an official wallet or a few officially recommended third-party wallets. You cannot invest in any cryptocurrency without using a dedicated cryptocurrency wallet.</p>										
+												<p>{% trans 'Cryptocurrencies are traded via wallets, which are used to store, send, and receive digital currency. Most coins have an official wallet or a few officially recommended third-party wallets. You cannot invest in any cryptocurrency without using a dedicated cryptocurrency wallet.' %}</p>										
 											</div>
 										</div>
 									</div>
 									<div class="tab-pane animated fadeInRight" id="srthree">
-										<p class="mb-3">With Fonixcoin, you can skip complex processes like mining and just buy and trade cryptocurrency securely with your credit or debit card. Let’s get started!</p>
+										<p class="mb-3">{% trans "With Fonixcoin, you can skip complex processes like mining and just buy and trade cryptocurrency securely with your credit or debit card. Let’s get started!" %}</p>
 									 </div>
 								</div>
 							</div>

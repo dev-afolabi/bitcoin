@@ -1,4 +1,5 @@
 {% extends 'base_layout.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %} Coin buy and sell {% endblock %}
 {% block content %}
@@ -10,8 +11,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>Coin Buy and Sell</h2>
-							<p>Coin trade without hassle</p>
+							<h2>{% trans 'Coin Buy and Sell' %}</h2>
+							<p>{% trans 'Coin trade without hassle' %}</p>
 						</div>
 					</div>
 				</div>
@@ -23,8 +24,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">Coin buy and Sell</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'Coin buy and Sell' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -40,19 +41,19 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-5 pr-lg-5 pr-md-5 pr-sm-2 pr-2">
 					<div class="widget cat_wid mb-5">
-						<h3 class="widget-title">Service List</h3>
+						<h3 class="widget-title">{% trans 'Service List' %}</h3>
 						<!-- end widget tittle-->
 						<div class="widget-inner mt-5">
 							<div class="category-menu">
 								<ul>
-									<li><a href="{% url 'bitcoin_ethereum' %}">Bitcoin & Ethereum <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'crypto_trading' %}">Cryptocurrency Trading <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'bitcoin_trading' %}">Bitcoin Trading <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#" class="active">Coin Buy & Sell <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'security_ensure' %}">Account Security <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'bitcoin_legality' %}">Bitcoin Legality <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#">Trading Strategy <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#">Money Exchange <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_ethereum' %}">{% trans 'Bitcoin & Ethereum' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'crypto_trading' %}">{% trans 'Cryptocurrency Trading' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_trading' %}">{% trans 'Bitcoin Trading' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#" class="active">{% trans 'Coin Buy & Sell' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'security_ensure' %}">{% trans 'Account Security' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_legality' %}">{% trans 'Bitcoin Legality' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#">{% trans 'Trading Strategy' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#">{% trans 'Money Exchange' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -116,17 +117,17 @@
 					<!-- end image tab -->
 					<div class="row mt-4">
 						<div class="col-12 ser-page-into">
-							<h4>Coin buy and Sell</h4>
-							<p>FonixCoin offers order books with top tier liquidity, allowing users to easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other digital assets with minimal slippage.Bitfinex also boasts a suite of order types to help traders take advantage of every situation.</p>
+							<h4>{% trans 'Coin buy and Sell' %}</h4>
+							<p>{% trans "FonixCoin offers order books with top tier liquidity, allowing users to easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other digital assets with minimal slippage.Bitfinex also boasts a suite of order types to help traders take advantage of every situation." %}</p>
 						</div>
 						<!-- end col -->
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12 mb-lg-0 mb-md-0 mb-4 pl-4 ser-page-into">
 								<ul>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Professional connectivity -</strong>Partnering with Market Synergy, corporate accounts and professional traders can take advantage of the fastest trading speed through institutional-grade connectivity.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Chart features -</strong>FonixCoin facilitates a graphical trading experience with advanced charting functionality. </li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Corporate accounts -</strong> FonixCoin has a bespoke offering expertly tailored to meet the specific needs of professional and institutional traders.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Enhanced Reporting -</strong> Bitfinex’s enhanced reporting framework would benefit both traders and developers.</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Professional connectivity' %} -</strong>{% trans "Partnering with Market Synergy, corporate accounts and professional traders can take advantage of the fastest trading speed through institutional-grade connectivity." %}</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Chart features' %} -</strong>{% trans "FonixCoin facilitates a graphical trading experience with advanced charting functionality." %} </li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Corporate accounts' %} -</strong> {% trans "FonixCoin has a bespoke offering expertly tailored to meet the specific needs of professional and institutional traders." %}</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Enhanced Reporting' %} -</strong> {% trans "FonixCoin’s enhanced reporting framework would benefit both traders and developers." %}</li>
 								</ul>
 							</div>
 							<!-- end col -->
@@ -157,16 +158,16 @@
 						<div class="row">
 							<div class="col-12">
 								<ul class="nav nav-tabs" role="tablist">
-									<li class="nav-item"><a class="nav-link active" href="#" data-target="#srone" data-toggle="tab">Description</a></li>
-									<li class="nav-item"><a class="nav-link" href="#" data-target="#srtwo" data-toggle="tab">Experinece</a></li>
-									<li class="nav-item"><a class="nav-link" href="#" data-target="#srthree" data-toggle="tab">Values</a></li>
+									<li class="nav-item"><a class="nav-link active" href="#" data-target="#srone" data-toggle="tab">{% trans 'Description' %}</a></li>
+									<li class="nav-item"><a class="nav-link" href="#" data-target="#srtwo" data-toggle="tab">{% trans 'Experience' %}</a></li>
+									<li class="nav-item"><a class="nav-link" href="#" data-target="#srthree" data-toggle="tab">{% trans 'Values' %}</a></li>
 								</ul>
 								<!-- Tab panes -->
 								<div class="tab-content">
 									<div class="tab-pane animated fadeInRight active show" id="srone">
 										<div class="row">
 											<div class="col-lg-5 col-md-5 col-12 mb-lg-0 mb-md-0 mb-sm-3 mb-3">
-												<p>FonixCoin allows users to trade with up to 5x leverage by receiving funding from the peer to peer margin funding platform. Users can enter an order to borrow the desired amount of funding at the rate and duration of their choice.</p>										
+												<p>{% trans "FonixCoin allows users to trade with up to 5x leverage by receiving funding from the peer to peer margin funding platform. Users can enter an order to borrow the desired amount of funding at the rate and duration of their choice." %}</p>										
 											</div>
 											<div class="col-lg-7 col-md-7 col-12 mt-4">
 												<img class="img-fluid" src="{% static 'assets/img/blog/2.jpg' %}" alt="">
@@ -179,12 +180,12 @@
 												<img class="img-fluid" src="{% static 'assets/img/blog/1.jpg' %}" alt="">
 											</div>
 											<div class="col-lg-5 col-md-5 col-12">
-												<p>The FonixCoin margin funding market provides a secure way to earn interest on fiat and digital assets by providing funding to traders wanting to trade with leverage. Users can offer funding across a wide range of currencies & assets, at the rate and duration of their choice.</p>										
+												<p>{% trans "The FonixCoin margin funding market provides a secure way to earn interest on fiat and digital assets by providing funding to traders wanting to trade with leverage. Users can offer funding across a wide range of currencies & assets, at the rate and duration of their choice." %}</p>										
 											</div>
 										</div>
 									</div>
 									<div class="tab-pane animated fadeInRight" id="srthree">
-										<p class="mb-3">Users wishing to mitigate the risks associated with the volatility of Digital Tokens may trade Derivative Products on the Derivatives Site. Perpetual contracts are already available and further Derivative Products are under development.</p>
+										<p class="mb-3">{% trans "Users wishing to mitigate the risks associated with the volatility of Digital Tokens may trade Derivative Products on the Derivatives Site. Perpetual contracts are already available and further Derivative Products are under development." %}</p>
 									 </div>
 								</div>
 							</div>

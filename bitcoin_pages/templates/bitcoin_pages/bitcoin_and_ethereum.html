@@ -1,4 +1,5 @@
 {% extends 'base_layout.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %} Bitcoin and Ethereum {% endblock %}
 {% block content %}
@@ -10,7 +11,7 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>Bitcoin & Ethereum</h2>
+							<h2>{% trans 'Bitcoin & Ethereum' %}</h2>
 						</div>
 					</div>
 				</div>
@@ -22,8 +23,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">Bitcoin & Ethereum</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'Bitcoin & Ethereum' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -39,19 +40,19 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-5 pr-lg-5 pr-md-5 pr-sm-2 pr-2">
 					<div class="widget cat_wid mb-5">
-						<h3 class="widget-title">Service List</h3>
+						<h3 class="widget-title">{% trans 'Service List' %}</h3>
 						<!-- end widget tittle-->
 						<div class="widget-inner mt-5">
 							<div class="category-menu">
 								<ul>
-									<li><a href="#" class="active">Bitcoin & Ethereum <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'crypto_trading' %}">Cryptocurrency Trading <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'bitcoin_trading' %}">Bitcoin Trading <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'coin_buy' %}">Coin Buy & Sell <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'security_ensure' %}">Account Security <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'bitcoin_legality' %}">Bitcoin Legality <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#">Trading Strategy <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#">Money Exchange <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#" class="active">{% trans 'Bitcoin & Ethereum' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'crypto_trading' %}">{% trans 'Cryptocurrency Trading' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_trading' %}">{% trans 'Bitcoin Trading' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'coin_buy' %}">{% trans 'Coin Buy & Sell' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'security_ensure' %}">{% trans 'Account Security' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_legality' %}">{% trans 'Bitcoin Legality' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#">{% trans 'Trading Strategy' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#">{% trans 'Money Exchange' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -113,17 +114,17 @@
 					<!-- end image tab -->
 					<div class="row mt-4">
 						<div class="col-12 ser-page-into">
-							<h4>Bitcoin and Ethereum</h4>
-							<p>If Bitcoin seeks to serve as a digital gold, Ethereum has taken a different approach, generalizing so its users can create any number of custom assets and programs governing their operation.</p>
+							<h4>{% trans 'Bitcoin and Ethereum' %}</h4>
+							<p>{% trans 'If Bitcoin seeks to serve as a digital gold, Ethereum has taken a different approach, generalizing so its users can create any number of custom assets and programs governing their operation.' %}</p>
 						</div>
 						<!-- end col -->
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12 mb-lg-0 mb-md-0 mb-4 pl-4 ser-page-into">
 								<ul>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Ethereum Blockchain -</strong> Today, Ethereum uses proof-of-work mining (in which computers burn energy to solve puzzles needed to create blocks) to power its blockchain.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Proof-of-Stake -</strong> With the transition to Ethereum 2.0, Ethereum plans to alter its core operating system, migrating to a system called proof-of-stake (PoS). </li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>A finite supply -</strong> According to the software rules, only 21 million bitcoins can be produced, a limit that gives bitcoins value.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Portability -</strong> With BTC, you can carry around all your wealth on a flash drive, memorized in your brain or transfer it instantly via the internet.</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Ethereum Blockchain' %} -</strong> {% trans 'Today, Ethereum uses proof-of-work mining (in which computers burn energy to solve puzzles needed to create blocks) to power its blockchain.' %}</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Proof-of-Stake' %} -</strong> {% trans 'With the transition to Ethereum 2.0, Ethereum plans to alter its core operating system, migrating to a system called proof-of-stake (PoS).' %} </li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'A finite supply' %} -</strong> {% trans 'According to the software rules, only 21 million bitcoins can be produced, a limit that gives bitcoins value.' %}</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Portability' %} -</strong> {% trans 'With BTC, you can carry around all your wealth on a flash drive, memorized in your brain or transfer it instantly via the internet.' %}</li>
 								</ul>
 							</div>
 							<!-- end col -->
@@ -154,16 +155,16 @@
 						<div class="row">
 							<div class="col-12">
 								<ul class="nav nav-tabs" role="tablist">
-									<li class="nav-item"><a class="nav-link active" href="#" data-target="#srone" data-toggle="tab">Description</a></li>
-									<li class="nav-item"><a class="nav-link" href="#" data-target="#srtwo" data-toggle="tab">Experinece</a></li>
-									<li class="nav-item"><a class="nav-link" href="#" data-target="#srthree" data-toggle="tab">Values</a></li>
+									<li class="nav-item"><a class="nav-link active" href="#" data-target="#srone" data-toggle="tab">{% trans 'Description' %}</a></li>
+									<li class="nav-item"><a class="nav-link" href="#" data-target="#srtwo" data-toggle="tab">{% trans 'Experience' %}</a></li>
+									<li class="nav-item"><a class="nav-link" href="#" data-target="#srthree" data-toggle="tab">{% trans 'Values' %}</a></li>
 								</ul>
 								<!-- Tab panes -->
 								<div class="tab-content">
 									<div class="tab-pane animated fadeInRight active show" id="srone">
 										<div class="row">
 											<div class="col-lg-5 col-md-5 col-12 mb-lg-0 mb-md-0 mb-sm-3 mb-3">
-												<p>Among the first to embrace Ethereum were major banks and institutions, who took advantage of its open-source code to create proof-of-concepts and R&D initiatives in 2015 and 2016.</p>										
+												<p>{% trans 'Among the first to embrace Ethereum were major banks and institutions, who took advantage of its open-source code to create proof-of-concepts and R&D initiatives in 2015 and 2016.' %}</p>										
 											</div>
 											<div class="col-lg-7 col-md-7 col-12 mt-4">
 												<img class="img-fluid" src="{% static 'assets/img/blog/2.jpg' %}" alt="">
@@ -176,15 +177,15 @@
 												<img class="img-fluid" src="{% static 'assets/img/blog/1.jpg' %}" alt="">
 											</div>
 											<div class="col-lg-5 col-md-5 col-12">
-												<p>Like paper cash or gold, depending on how you received your BTC it will have varying degrees of fungibility. BTC that was involved in a crime, for example, may not be accepted by exchanges or merchants. (This remains an active area of research for Bitcoin developers.)</p>										
+												<p>{% trans 'Like paper cash or gold, depending on how you received your BTC it will have varying degrees of fungibility. BTC that was involved in a crime, for example, may not be accepted by exchanges or merchants. (This remains an active area of research for Bitcoin developers.)' %}</p>										
 											</div>
 										</div>
 									</div>
 									<div class="tab-pane animated fadeInRight" id="srthree">
-										<p class="mb-3">For something to store value, people need to recognize and accept that it’s worth something.</p>
+										<p class="mb-3">{% trans 'For something to store value, people need to recognize and accept that it’s worth something.' %}</p>
 										<ul>
-											<li><i class="icofont icofont-ui-press"></i> <strong>Acceptability -</strong> There are currently thousands of individuals and vendors accepting Bitcoin payments.</li>
-											<li><i class="icofont icofont-ui-press"></i> <strong>Buy and sell -</strong> You can also buy and sell BTC for other cryptocurrencies alongside more traditional currencies at exchanges like Fonixcoin.</li>
+											<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Acceptability' %} -</strong> {% trans 'There are currently thousands of individuals and vendors accepting Bitcoin payments.' %}</li>
+											<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Buy and sell' %} -</strong> {% trans 'You can also buy and sell BTC for other cryptocurrencies alongside more traditional currencies at exchanges like Fonixcoin.' %}</li>
 										</ul>
 									 </div>
 								</div>

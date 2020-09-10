@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% include 'transactions/messages.html' %}
 <!DOCTYPE html>
 <html lang="en">
@@ -83,14 +84,14 @@
 	  </b>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
-        Dashboard
+        {% trans 'Dashboard' %}
 	  </span>
     </a>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">{% trans 'Toggle navigation' %}</span>
       </a>
 
       <div class="navbar-custom-menu">
@@ -109,7 +110,7 @@
               <i class="fa fa-envelope"></i>
             </a>
             <ul class="dropdown-menu scale-up">
-              <li class="header">You have {{ messages_count }} message(s)</li>
+              <li class="header">{% trans 'You have' %} {{ messages_count }} {% trans 'message(s)' %}</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu inner-content-div">
@@ -132,7 +133,7 @@
                   {% endfor %}
                 </ul>
               </li>
-              <li class="footer"><a href="{% url 'inbox' %}">See all e-Mails</a></li>
+              <li class="footer"><a href="{% url 'inbox' %}">{% trans 'See all e-Mails' %}</a></li>
             </ul>
           </li>
           <!-- Notifications -->
@@ -141,7 +142,7 @@
               <i class="fa fa-bell"></i>
             </a>
             <ul class="dropdown-menu scale-up">
-              <li class="header">You have new notifications</li>
+              <li class="header">{% trans 'You have new notifications' %}</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu inner-content-div">
@@ -154,7 +155,7 @@
                   {% endfor %}
                 </ul>
               </li>
-              <li class="footer"><a href="{% url 'inbox' %}">View all</a></li>
+              <li class="footer"><a href="{% url 'inbox' %}">{% trans 'View all' %}</a></li>
             </ul>
           </li>
 		  <!-- User Account -->
@@ -176,16 +177,16 @@
               <li class="user-body">
                 <div class="row no-gutters">
                   <div class="col-12 text-left">
-                    <a href="{% url 'my-auth:view_profile' %}"><i class="ion ion-person"></i> My Profile</a>
+                    <a href="{% url 'my-auth:view_profile' %}"><i class="ion ion-person"></i> {% trans 'My Profile' %}</a>
                   </div>
                   <div class="col-12 text-left">
-                    <a href="{% url 'inbox' %}"><i class="ion ion-email-unread"></i> Inbox</a>
+                    <a href="{% url 'inbox' %}"><i class="ion ion-email-unread"></i> {% trans 'Inbox' %}</a>
                   </div>
 
 
 				<div role="separator" class="divider col-12"></div>
 				  <div class="col-12 text-left">
-                    <a href="{% url 'logout' %}"><i class="fa fa-power-off"></i> Logout</a>
+                    <a href="{% url 'logout' %}"><i class="fa fa-power-off"></i> {% trans 'Logout' %}</a>
                   </div>				
                 </div>
                 <!-- /.row -->
@@ -206,7 +207,7 @@
 		 <div class="ulogo">
 			 <a href="{% url 'dashboard' %}">
 			  <!-- logo for regular state and mobile devices -->
-			  <span><b>Fonixcoin </b>Admin</span>
+			  <span><b>Fonixcoin </b>{% trans 'Admin' %}</span>
 			</a>
 		</div>
         <div class="image">
@@ -222,10 +223,10 @@
       <!-- sidebar menu -->
       <ul class="sidebar-menu" data-widget="tree">
 		<li class="nav-devider"></li>
-        <li class="header nav-small-cap">PERSONAL</li>
+        <li class="header nav-small-cap">{% trans 'PERSONAL' %}</li>
         <li class="active">
           <a href="{% url 'dashboard' %}">
-            <span>Dashboard</span>
+            <span>{% trans 'Dashboard' %}</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -234,25 +235,25 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-th"></i>
-            <span>Personalize</span>
+            <span>{% trans 'Personalize' %}</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{% url 'my-auth:edit_user' %}">Edit Profile</a></li>
-            <li><a href="{% url 'my-auth:change_password' %}">Change password</a></li>
+            <li><a href="{% url 'my-auth:edit_user' %}">{% trans 'Edit Profile' %}</a></li>
+            <li><a href="{% url 'my-auth:change_password' %}">{% trans 'Change password' %}</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <i class="fa fa-envelope"></i> <span>{% trans 'Mailbox' %}</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{% url 'inbox' %}">Inbox</a></li>
+            <li><a href="{% url 'inbox' %}">{% trans 'Inbox' %}</a></li>
             <!-- <li><a href="{% url 'compose' %}">Compose</a></li> -->
           </ul>
         </li>
@@ -265,8 +266,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{% url 'deposit' %}">Deposit</a></li>
-            <li><a href="{% url 'withdraw' %}">Withdraw</a></li>	  
+            <li><a href="{% url 'deposit' %}">{% trans 'Deposit' %}</a></li>
+            <li><a href="{% url 'withdraw' %}">{% trans 'Withdraw' %}</a></li>	  
           </ul>
         </li> 
       </ul>

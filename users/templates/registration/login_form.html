@@ -1,9 +1,10 @@
+{% load i18n %}
   <div class="container-fluid">
     <form action="" method="POST">
       {% csrf_token %}
       
       <div class="limiter">
-          <h2 class="login-header">Login to Continue</h2>
+          <h2 class="login-header">{% trans 'Login to Continue' %}</h2>
           <div class="form-group">
             {{ form }}
           </div>    
@@ -11,13 +12,13 @@
           <div class="contact100-form-checkbox">
               <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
               <label class="label-checkbox100" for="ckb1">
-                  Remember me
+                  {% trans 'Remember me' %}
               </label>
           </div>
 
           <div>
               <a href="{% url 'password_reset' %}" class="txt1">
-                  Forgot Password?
+                  {% trans 'Forgot Password?' %}
               </a>
           </div>
       </div>

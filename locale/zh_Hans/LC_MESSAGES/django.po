@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-07 01:23+0100\n"
+"POT-Creation-Date: 2020-09-10 15:16+0100\n"
 "PO-Revision-Date: 2019-11-05 00:38+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django/MIME-"
@@ -18,22 +18,801 @@ msgstr ""
 
 #: bitcoin/settings.py:167
 msgid "English"
-msgstr ""
+msgstr "英语"
 
 #: bitcoin/settings.py:168
 msgid "Chinese"
-msgstr ""
+msgstr "中文"
 
 #: bitcoin/settings.py:169
 msgid "French"
-msgstr ""
+msgstr "法文"
 
 #: bitcoin/settings.py:170
 msgid "Spanish"
-msgstr ""
+msgstr "西班牙文"
 
 #: bitcoin/settings.py:171
 msgid "German"
+msgstr "德语"
+
+#: bitcoin_pages/forms.py:5
+msgid "Your Fullname"
+msgstr "你的全名"
+
+#: bitcoin_pages/forms.py:6
+msgid "Your Email"
+msgstr "你的电子邮件"
+
+#: bitcoin_pages/forms.py:7
+msgid "Subject"
+msgstr "学科"
+
+#: bitcoin_pages/forms.py:8
+msgid "Your Message"
+msgstr "你的信息"
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:18
+msgid "About FonixCoin"
+msgstr "关于FonixCoin"
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:19
+msgid "Delivering quality"
+msgstr "优质的服务"
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:31
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:26
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:27
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:27
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:27
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:31
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:27
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:27
+#: bitcoin_pages/templates/bitcoin_pages/services.html:30
+#: dashboard/templates/dashboard/dashboard.html:15
+#: dashboard/templates/dashboard/inbox.html:14 templates/base_layout.html:188
+#: transactions/templates/transactions/bank_details.html:14
+#: transactions/templates/transactions/bitcoin_details.html:14
+#: transactions/templates/transactions/deposit_form.html:14
+#: transactions/templates/transactions/withdrawal_form.html:14
+#: users/templates/registration/edit_user.html:14
+#: users/templates/registration/login.html:27
+#: users/templates/registration/password_change.html:14
+#: users/templates/registration/password_change_success.html:14
+#: users/templates/registration/user_activate_failed.html:27
+#: users/templates/registration/user_activated.html:27
+#: users/templates/registration/user_create.html:29
+#: users/templates/registration/user_create_done.html:27
+#: users/templates/registration/view_profile.html:14
+msgid "Home"
+msgstr "主页"
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:32
+msgid "About us"
+msgstr "关于我们"
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:50
+msgid ""
+"Partnering with Market Synergy, corporate accounts and professional traders "
+"can take advantage of the fastest trading speeds through institutional-grade "
+"connectivity and co-location services with direct access to our digital "
+"asset gateway."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:67
+msgid ""
+"We believe cryptocurrency is the future of money, and that building a "
+"robust, trusted, and accessible cryptoeconomy will create a more equitable "
+"and open financial system around the world."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:89
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:162
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:53
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:14
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:54
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:54
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:54
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:54
+#: bitcoin_pages/templates/bitcoin_pages/index.html:207
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:54
+#: bitcoin_pages/templates/bitcoin_pages/services.html:148
+msgid "Bitcoin Legality"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:90
+#: bitcoin_pages/templates/bitcoin_pages/index.html:341
+msgid "Why Choose"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:102
+#: bitcoin_pages/templates/bitcoin_pages/index.html:355
+msgid "Easy Trading"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:103
+msgid ""
+"FonixCoin offers a methodical approach to ensure profitability. Each trade "
+"is calculated through risk management techniques, technical analysis, and "
+"deep fundamental research."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:114
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:54
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:55
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:55
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:55
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:55
+#: bitcoin_pages/templates/bitcoin_pages/index.html:367
+#: bitcoin_pages/templates/bitcoin_pages/index.html:583
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:55
+msgid "Trading Strategy"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:115
+msgid ""
+"Master the basics with Fonixcoin's Crypto Guides, where we take an in-depth "
+"look at some of the top projects in this space."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:126
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:55
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:56
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:56
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:56
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:56
+#: bitcoin_pages/templates/bitcoin_pages/index.html:379
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:56
+msgid "Money Exchange"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:127
+msgid ""
+"Buy and sell popular digital currencies, keep track of them in the one place."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:138
+#: bitcoin_pages/templates/bitcoin_pages/services.html:171
+msgid "Security Ensure"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:139
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:181
+msgid ""
+"Fonixcoin takes a comprehensive approach to protecting your investments. Our "
+"team of experts have built in a number of sophisticated measures to prevent "
+"the theft of money or information."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:150
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:49
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:50
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:50
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:50
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:14
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:28
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:50
+#: bitcoin_pages/templates/bitcoin_pages/index.html:186
+#: bitcoin_pages/templates/bitcoin_pages/index.html:496
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:50
+#: bitcoin_pages/templates/bitcoin_pages/services.html:125
+msgid "Cryptocurrency Trading"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:151
+msgid ""
+"A cryptocurrency exchange is a service for changing digital currencies, such "
+"as Bitcoin, Ethereum, and more."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:163
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:126
+msgid ""
+"Fonixcoin accepts deposits and provides withdrawals in any of the following "
+"crypto assets."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:180
+#: bitcoin_pages/templates/bitcoin_pages/index.html:524
+msgid "FonixCoin conversation"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:181
+#: bitcoin_pages/templates/bitcoin_pages/index.html:525
+msgid "Trade Bitcoin"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:181
+#: bitcoin_pages/templates/bitcoin_pages/index.html:525
+msgid "With Us"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:240
+msgid "quality experts"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:241
+msgid "Our Team"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:241
+msgid "Members"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:256
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:270
+msgid "Consultant"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:284
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:298
+msgid "Broker"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:312
+msgid "Cryptocurrency expert"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:332
+#: bitcoin_pages/templates/bitcoin_pages/index.html:844
+msgid "Need More Service?"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:333
+#: bitcoin_pages/templates/bitcoin_pages/index.html:845
+msgid ""
+"If you have questions, comments or concerns, our local staff is on-hand to "
+"answer all your needs."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:333
+#: bitcoin_pages/templates/bitcoin_pages/index.html:845
+msgid "Contact us by email"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/about-us.html:335
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:32
+#: bitcoin_pages/templates/bitcoin_pages/index.html:63
+#: bitcoin_pages/templates/bitcoin_pages/index.html:850
+msgid "Contact Us"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:14
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:27
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:48
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:49
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:49
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:49
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:49
+#: bitcoin_pages/templates/bitcoin_pages/index.html:144
+#: bitcoin_pages/templates/bitcoin_pages/index.html:477
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:49
+#: bitcoin_pages/templates/bitcoin_pages/services.html:102
+#: templates/base_layout.html:194
+msgid "Bitcoin & Ethereum"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:43
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:44
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:44
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:44
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:44
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:44
+msgid "Service List"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:50
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:51
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:14
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:28
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:51
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:51
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:51
+#: bitcoin_pages/templates/bitcoin_pages/index.html:102
+#: bitcoin_pages/templates/bitcoin_pages/index.html:439
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:51
+#: bitcoin_pages/templates/bitcoin_pages/services.html:56
+#: templates/base_layout.html:192
+msgid "Bitcoin Trading"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:51
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:52
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:52
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:52
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:52
+#: bitcoin_pages/templates/bitcoin_pages/index.html:123
+#: bitcoin_pages/templates/bitcoin_pages/index.html:458
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:52
+#: bitcoin_pages/templates/bitcoin_pages/services.html:79
+#: templates/base_layout.html:193
+msgid "Coin Buy & Sell"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:52
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:53
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:53
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:53
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:53
+#: bitcoin_pages/templates/bitcoin_pages/index.html:165
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:14
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:28
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:53
+msgid "Account Security"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:117
+msgid "Bitcoin and Ethereum"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:118
+msgid ""
+"If Bitcoin seeks to serve as a digital gold, Ethereum has taken a different "
+"approach, generalizing so its users can create any number of custom assets "
+"and programs governing their operation."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:124
+msgid "Ethereum Blockchain"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:124
+msgid ""
+"Today, Ethereum uses proof-of-work mining (in which computers burn energy to "
+"solve puzzles needed to create blocks) to power its blockchain."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:125
+msgid "Proof-of-Stake"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:125
+msgid ""
+"With the transition to Ethereum 2.0, Ethereum plans to alter its core "
+"operating system, migrating to a system called proof-of-stake (PoS)."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:126
+msgid "A finite supply"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:126
+msgid ""
+"According to the software rules, only 21 million bitcoins can be produced, a "
+"limit that gives bitcoins value."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:127
+msgid "Portability"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:127
+msgid ""
+"With BTC, you can carry around all your wealth on a flash drive, memorized "
+"in your brain or transfer it instantly via the internet."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:158
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:158
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:161
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:161
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:129
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:159
+msgid "Description"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:159
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:159
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:162
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:162
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:130
+msgid "Experience"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:160
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:160
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:163
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:163
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:131
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:161
+msgid "Values"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:167
+msgid ""
+"Among the first to embrace Ethereum were major banks and institutions, who "
+"took advantage of its open-source code to create proof-of-concepts and R&D "
+"initiatives in 2015 and 2016."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:180
+msgid ""
+"Like paper cash or gold, depending on how you received your BTC it will have "
+"varying degrees of fungibility. BTC that was involved in a crime, for "
+"example, may not be accepted by exchanges or merchants. (This remains an "
+"active area of research for Bitcoin developers.)"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:185
+msgid ""
+"For something to store value, people need to recognize and accept that it’s "
+"worth something."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:187
+msgid "Acceptability"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:187
+msgid ""
+"There are currently thousands of individuals and vendors accepting Bitcoin "
+"payments."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:188
+msgid "Buy and sell"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:188
+msgid ""
+"You can also buy and sell BTC for other cryptocurrencies alongside more "
+"traditional currencies at exchanges like Fonixcoin."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:28
+msgid "Legality"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:118
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:119
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:118
+msgid "Service Overview"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:119
+msgid ""
+"As far as The Platform Technology acts solely as an intermediary bringing "
+"together buyers and sellers nothing on the Fonixcoin platform can be ensured "
+"to contain no errors, mistakes, mispresentations or failures etc."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:125
+msgid "Service Restriction"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:125
+msgid ""
+"You shall not use our Services and immediately cease using those if you are "
+"a resident or become a resident at any time of the state or region, where "
+"Fonixcoin is not authorized to act."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:126
+msgid "Crypto coins and tokens Policy"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:127
+msgid "General"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:127
+msgid ""
+"Any individual (the \"user\"), who opens an account with Fonixcoin "
+"understands and accepts that crypto assets do not necessarily have a "
+"specific form of protection or regulation by any governmental body."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:167
+msgid ""
+"However, Fonixcoin reserves the right to reject any deposits and suspend "
+"withdrawals which its compliance and risk management service provider has "
+"decided to be the result of detecting of suspicious activity such as "
+"criminal activity or any other infringement of its compliance guidelines."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:180
+msgid ""
+"“Crypto assets” shall mean such type of assets which can only and "
+"exclusively be transmitted by means of block-chain technology, including but "
+"not limited to digital coins and digital tokens and any other type of "
+"digital mediums of exchange, such as Bitcoin, Ethereum, Ripple, etc, to the "
+"full and absolute exempt of the securities of any kind."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:185
+msgid ""
+"\"Third-Party Content\" is the content provided by third parties, including "
+"without limitation links to web pages of such parties, which may be "
+"represented on the Technology Platform."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:15
+msgid "Trade cryptocurrency with ease"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:120
+msgid "Bitcoin Overview"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:121
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:170
+msgid ""
+"Bitcoin is typically viewed as a 'reserve asset' or store of value in the "
+"cryptocurrency space. As a result, it has the highest adoption, best "
+"liquidity, highest average trading volume, and remains the top crypto by "
+"market capitalization. In fact, some people believe that there isn’t even a "
+"need for any cryptocurrencies other than Bitcoin. Their argument is that "
+"Bitcoin could cater to all use cases that altcoins are attempting to."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:127
+msgid "Base Layer"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:127
+msgid ""
+"Bringing Bitcoin to this composable layer of financial building blocks is "
+"considered to be an exciting prospect by many."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:128
+msgid "Smart Contracts"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:128
+msgid ""
+"While the most amount of value is in Bitcoin, it can’t benefit that much "
+"from the innovation happening in other segments of the digital currency "
+"industry"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:129
+msgid "Open Source"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:129
+msgid ""
+"It means that since all these applications are running on the same public."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:130
+msgid "Circulating Supply"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:130
+msgid ""
+"Even so, the competition between these different solutions isn’t that "
+"straightforward – it’s not a zero-sum game."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:183
+msgid ""
+"Bitcoin is the backbone of the cryptocurrency market, and yet, it can’t take "
+"advantage of developments that happen in other parts of the ecosystem. Some "
+"projects have been working on solving this problem.Is there a way to use "
+"bitcoin for more than what it can do while keeping the Bitcoin network "
+"intact? Well, the growth of tokenized bitcoin on Ethereum suggests that "
+"there is a demand for it."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:188
+msgid "FonixCoin makes it simple and safe to buy, sell, and hold BTC."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:190
+msgid "Convert"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:190
+msgid ""
+"Want to own other crypto? Convert any portion of your Bitcoin balance to "
+"another crypto."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:191
+msgid "Transfer"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:191
+msgid ""
+"Unlike sending money overseas, you can send Bitcoin to anyone in the world "
+"virtually instantly."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:14
+msgid "Coin Buy and Sell"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:15
+msgid "Coin trade without hassle"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:28
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:120
+msgid "Coin buy and Sell"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:121
+msgid ""
+"FonixCoin offers order books with top tier liquidity, allowing users to "
+"easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other "
+"digital assets with minimal slippage.Bitfinex also boasts a suite of order "
+"types to help traders take advantage of every situation."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:127
+msgid "Professional connectivity"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:127
+msgid ""
+"Partnering with Market Synergy, corporate accounts and professional traders "
+"can take advantage of the fastest trading speed through institutional-grade "
+"connectivity."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:128
+msgid "Chart features"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:128
+msgid ""
+"FonixCoin facilitates a graphical trading experience with advanced charting "
+"functionality."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:129
+msgid "Corporate accounts"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:129
+msgid ""
+"FonixCoin has a bespoke offering expertly tailored to meet the specific "
+"needs of professional and institutional traders."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:130
+msgid "Enhanced Reporting"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:130
+msgid ""
+"FonixCoin’s enhanced reporting framework would benefit both traders and "
+"developers."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:170
+msgid ""
+"FonixCoin allows users to trade with up to 5x leverage by receiving funding "
+"from the peer to peer margin funding platform. Users can enter an order to "
+"borrow the desired amount of funding at the rate and duration of their "
+"choice."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:183
+msgid ""
+"The FonixCoin margin funding market provides a secure way to earn interest "
+"on fiat and digital assets by providing funding to traders wanting to trade "
+"with leverage. Users can offer funding across a wide range of currencies & "
+"assets, at the rate and duration of their choice."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:188
+msgid ""
+"Users wishing to mitigate the risks associated with the volatility of "
+"Digital Tokens may trade Derivative Products on the Derivatives Site. "
+"Perpetual contracts are already available and further Derivative Products "
+"are under development."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:18
+msgid "Get In Touch"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:19
+msgid "Send us a message"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:48
+msgid "response with in minute"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:49
+#: templates/base_layout.html:201
+msgid "Contact"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:61
+msgid "Write a mail"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:62
+#: transactions/templates/transactions/deposit_form.html:41
+#: transactions/templates/transactions/withdrawal_form.html:41
+#: users/templates/registration/view_profile.html:40
+msgid "Email"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:65
+msgid "quick Send"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:76
+msgid "Give a call"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:77
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:78
+msgid "Phone"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:92
+msgid "Visit our location"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:93
+msgid "Address"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:96
+msgid "find Direction"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:107
+msgid "Lets's have a chat"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:108
+msgid "Telephone"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:112
+msgid "click here"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:123
+msgid "Send Us Message"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/contact-us.html:132
+msgid "Send"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:15
+msgid "Trade your coin with ease."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:120
+msgid ""
+"A cryptocurrency exchange is a service for changing digital currencies, such "
+"as Bitcoin, Ethereum, and more, to fiat (paper) currencies or for other "
+"digital currencies. At Fonixcoin, you can exchange your fiat currency, such "
+"as dollars or Euro, for several cryptocurrencies. You can also exchange your "
+"Bitcoin for fiat."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:138
+msgid ""
+"Cryptocurrency is a general name referring to all encrypted decentralized "
+"digital currencies such as Bitcoin, Litecoin, Ethereum and Ethereum Classic. "
+"They use cryptography to create coins and secure transactions. Typically, "
+"cryptocurrencies are open source and the transactions are based on "
+"blockchain technology."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:151
+msgid ""
+"Cryptocurrencies are traded via wallets, which are used to store, send, and "
+"receive digital currency. Most coins have an official wallet or a few "
+"officially recommended third-party wallets. You cannot invest in any "
+"cryptocurrency without using a dedicated cryptocurrency wallet."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:156
+msgid ""
+"With Fonixcoin, you can skip complex processes like mining and just buy and "
+"trade cryptocurrency securely with your credit or debit card. Let’s get "
+"started!"
 msgstr ""
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:20
@@ -61,19 +840,686 @@ msgstr "学到更多"
 msgid "Get started"
 msgstr "现在开始"
 
-#: templates/base_layout.html:88
-msgid "Opening Hours"
+#: bitcoin_pages/templates/bitcoin_pages/index.html:40
+msgid "bitcoin & ethereum transfer you can trust"
 msgstr ""
 
+#: bitcoin_pages/templates/bitcoin_pages/index.html:41
+msgid ""
+"We give you the power to hit the ground running, no matter your experience "
+"level. Make easy deposits and withdrawals, measure your portfolio's "
+"performance and keep track of all of your digital assets in one convenient "
+"place."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:43
+#, fuzzy
+#| msgid "Get started"
+msgid "Get quote"
+msgstr "现在开始"
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:44
+#: bitcoin_pages/templates/bitcoin_pages/index.html:324
+#: bitcoin_pages/templates/bitcoin_pages/index.html:405
+#, fuzzy
+#| msgid "Learn More"
+msgid "Read More"
+msgstr "学到更多"
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:60
+msgid "Invest & double your desire bitcoin"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:61
+msgid ""
+"New to cryptocurrency? No problem. Digital assets may seem confusing, but "
+"we're here to help. While the concept is simple, we know that aspects of "
+"cryptocurrency can seem a bit complex."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:64
+#, fuzzy
+#| msgid "Learn More"
+msgid "View More"
+msgstr "学到更多"
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:83
+#, fuzzy
+#| msgid "buy & sell bitcoin"
+msgid "why buy & sell"
+msgstr "买卖比特币"
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:84
+msgid "Features"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:105
+msgid ""
+"Bifonix has consistently taken measures to makes online trading and "
+"investing accessible"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:126
+msgid "With FonixCoin, you can easily buy Bitcoin with cash"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:147
+msgid "Bitcoin and Ethereum is much more than just a digital currency."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:168
+msgid "We take every necessary precaution to keep you safe and secure."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:189
+msgid "Bank on FonixCoin’s experience as a global fintech leader."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:210
+msgid ""
+"Access crypto assets exchange platform technology under the registered "
+"trademark"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:230
+msgid "Frequently Asked"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:230
+msgid "questions"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:243
+msgid ""
+"Bitcoin is a consensus network that enables a new payment system using "
+"digital money. It is the first decentralized peer-to-peer payment network "
+"that is powered by its users with no central authority or middlemen. From a "
+"user perspective, bitcoin is pretty much like cash for the Internet."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:249
+msgid "What is a Cryptocurrency Exchange?"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:252
+msgid ""
+"A cryptocurrency exchange is a service for changing digital currencies, such "
+"as Bitcoin, Ethereum, and more, to fiat (paper) currencies or for other "
+"digital currencies. At FonixCoin, you can exchange your fiat currency, such "
+"as dollars or Euro, for several cryptocurrencies. You can also exchange your "
+"Bitcoin for fiat."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:260
+msgid "Why must I provide my personal details?"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:263
+msgid ""
+"Before creating your first order, we need to know a bit about you. As a "
+"financial service, FonixCoin is committed to the highest security and "
+"privacy standards. This also helps us keep your account safe, fight fraud, "
+"and more. The process is called verification and is something everyone must "
+"go through before buying cryptocurrency anywhere. After submitting your "
+"details for verification, we’ll then quickly go over it and make sure "
+"everything looks good. This usually happens within the hour."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:271
+msgid "How long does it take for FonixCoin to send my bitcoins once I’ve paid?"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:274
+msgid ""
+"FonixCoin sends the coins immediately after both your payment and wallet "
+"address have been confirmed."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:282
+msgid "Where can I get a Bitcoin/Ethereum wallet?"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:285
+msgid ""
+"FonixCoin is not a wallet provider - we simply send your coins to the wallet "
+"of your choice."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:293
+msgid "What methods of payment does FonixCoin offer?"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:296
+msgid ""
+"At FonixCoin you can currently buy bitcoin and other cryptocurrencies with "
+"bank wire transfer."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:308
+msgid "About"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:308
+msgid "Us"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:322
+msgid "Who we are?"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:323
+msgid ""
+"founded in 2013 by experienced system architects and technology experts, is "
+"one of the oldest and fastest growing crypto exchanges in existence. With an "
+"unparalleled track record of reliability."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:356
+msgid ""
+"Our terminal is built on the best technology and lets you trade effortlessly "
+"any of the FonixCoin currency pair."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:368
+msgid ""
+"Connect with other traders, discuss trading strategies, and also copy their "
+"trading portfolio performance."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:380
+msgid ""
+"FonixCoin offers order books with top tier liquidity, allowing users to "
+"easily exchange Bitcoin, and many other digital assets with minimal slippage"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:391
+msgid "Security Ensured"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:392
+msgid "Security of user information and funds is our first priority."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:403
+msgid "We are ready to fly with you."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:404
+msgid ""
+"Our vision is to increase the freedom of money globally. We believe that by "
+"spreading this freedom, we can significantly improve lives around the world."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:422
+msgid "what we do"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:423
+msgid "Services"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:443
+msgid ""
+"FonixCoin has consistently taken measures to ensure its platform makes "
+"online trading and investing accessible to anyone."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:462
+#: bitcoin_pages/templates/bitcoin_pages/services.html:83
+msgid ""
+"With FonixCoin, you can easily buy Bitcoin with cash, as well as other "
+"cryptocurrencies we offer on the platform."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:481
+#: bitcoin_pages/templates/bitcoin_pages/services.html:106
+msgid ""
+"Bitcoin and Ethereum is an open source network, much more than just a "
+"digital currency. At FonixCoin, we not only trade your assets, we secure it "
+"as well."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:500
+#: bitcoin_pages/templates/bitcoin_pages/services.html:129
+msgid ""
+"Bank on FonixCoin’s experience as a global fintech leader since the early "
+"days of Blockchain to provide you with a complete crypto trading solution."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:509
+msgid "Check All Services"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:570
+msgid "How we work"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:571
+msgid "Work"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:571
+msgid "Process"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:584
+msgid ""
+"FonixCoin implements reliable strategies by providing our users with state-"
+"of-the-art trading tools, innovative technology and unparalleled levels of "
+"customer service."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:595
+msgid "Group Planing"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:596
+msgid ""
+"Never trade crypto alone. FonixCoin is much more than just a place to trade. "
+"Use award-winning social trading features to connect with over 10 million "
+"users worldwide."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:607
+msgid "Final Success"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:608
+msgid ""
+"We believe cryptocurrency is the future of money and that Building a robust "
+"and accessible cryptoeconomy will create a more equitable financial system "
+"around the world."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:625
+msgid "our achievements"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:626
+msgid "Client"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:626
+msgid "Feedback"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:640
+msgid ""
+"It's been a pleasure trading with FonixCoin. Great platform for starting "
+"traders. Great selsection and transparent fee system."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:652
+msgid ""
+"So easy and fun as i ahvent had to do much. FonixCoin has been making my "
+"trading experience enjoyable and secure."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:664
+msgid ""
+"FonixCoin is a fantastic trading platform, both from an ease of use and "
+"technical perspective. I'm very satisfied with the service they FonixCoin "
+"provide. keep it up."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:676
+msgid ""
+"FonixCoin has made cryptocurrency trading so easy that i rarely have to do "
+"anything complex, i just watch and see my asset grow. Quite remarkable i "
+"must say."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:688
+msgid ""
+"Doing business on this platform has been a turning point for my life and my "
+"career in general. This is quite amazing."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:710
+msgid "get updated"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:711
+#: templates/base_layout.html:198
+msgid "Blog"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:711
+msgid "Post"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:718
+msgid "Stories from the easiest and most trusted place to"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:718
+msgid "buy, sell, and use cryptocurrencies"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/index.html:721
+msgid "More News"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:15
+msgid "Never lose a Trade"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:119
+msgid ""
+"Security of user information and funds is our first priority. Learn more "
+"about our security features and integrations.The Fonixcoin REST and "
+"Websocket APIs are designed to facilitate access to all features of the "
+"Bitfinex platform, allowing full integration with traders’ own products and "
+"platforms."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:125
+msgid "Safe and secure"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:125
+msgid ""
+"2-factor authentication, advanced encryption technology, cold storage – we "
+"give you peace of mind when it comes to security."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:126
+msgid "Robot friendly API"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:126
+msgid ""
+"Make the most of your trading with our leading API and it's low latency data "
+"and execution feeds."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:127
+msgid "Information Security"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:127
+msgid ""
+"All sensitive account information is encrypted at rest at both the system "
+"and data level. Access is strictly controlled and monitored."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:128
+msgid "Platform Security"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:128
+msgid ""
+"Our servers reside in secure cages under 24/7 surveillance by armed guards "
+"and video monitors."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:160
+msgid "Experinece"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:168
+msgid ""
+"We have an expert team dedicated to testing our own systems via every "
+"imaginable attack vector. Additionally, we run a bug bounty program to "
+"leverage the expertise of the broader security research community."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:186
+msgid ""
+"We’ve assembled a global team of top security professionals who take a risk-"
+"based approach to ensuring our clients’ assets are protected at the highest "
+"levels while maintaining exceptional performance and an unparalleled client "
+"experience."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:188
+msgid "Email confirmation"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:188
+msgid "Email confirmations for withdrawals with self-serve account lock."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:189
+msgid "Global time lock"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:189
+msgid "Global settings time lock for extreme security when you're away."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/services.html:17
+msgid "FonixCoin Services"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/services.html:18
+msgid "Our Range of Sevices"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/services.html:31
+msgid "Servcies"
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/services.html:60
+msgid ""
+"Bifonix has consistently taken measures to ensure its platform makes online "
+"trading and investing accessible to anyone."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/services.html:152
+msgid ""
+"FONIX Solution Ltd (hereinafter \"The Platform Technology\") provides access "
+"to crypto assets exchange platform technology under the registered trademark "
+"\"FonixCoin\"."
+msgstr ""
+
+#: bitcoin_pages/templates/bitcoin_pages/services.html:175
+msgid ""
+"FonixCoin takes every necessary precaution to keep its clients’ personal "
+"information and funds safe and secure."
+msgstr ""
+
+#: dashboard/templates/base_dash.html:87 dashboard/templates/base_dash.html:229
+#: dashboard/templates/dashboard/dashboard.html:11
+#: dashboard/templates/dashboard/dashboard.html:16
 #: templates/base_layout.html:96
+#: transactions/templates/transactions/bank_details.html:15
+#: transactions/templates/transactions/bitcoin_details.html:15
+#: transactions/templates/transactions/deposit_form.html:15
+#: transactions/templates/transactions/withdrawal_form.html:15
+#: users/templates/registration/edit_user.html:15
+#: users/templates/registration/password_change.html:15
+#: users/templates/registration/password_change_success.html:15
+#: users/templates/registration/view_profile.html:15
 msgid "Dashboard"
 msgstr "仪表板"
 
-#: templates/base_layout.html:97
+#: dashboard/templates/base_dash.html:94
+msgid "Toggle navigation"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:113
+msgid "You have"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:113
+msgid "message(s)"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:136
+msgid "See all e-Mails"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:145
+msgid "You have new notifications"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:158
+msgid "View all"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:180
+msgid "My Profile"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:183
+#: dashboard/templates/base_dash.html:256
+#: dashboard/templates/dashboard/inbox.html:36
+#: dashboard/templates/dashboard/inbox.html:52
+msgid "Inbox"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:189 templates/base_layout.html:97
 msgid "Logout"
 msgstr "登出"
 
-#: templates/base_layout.html:99
+#: dashboard/templates/base_dash.html:210
+msgid "Admin"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:226
+msgid "PERSONAL"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:238
+msgid "Personalize"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:244
+#: users/templates/registration/view_profile.html:51
+msgid "Edit Profile"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:245
+msgid "Change password"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:250
+#: dashboard/templates/dashboard/inbox.html:11
+#: dashboard/templates/dashboard/inbox.html:15
+msgid "Mailbox"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:269
+msgid "Deposit"
+msgstr ""
+
+#: dashboard/templates/base_dash.html:270
+msgid "Withdraw"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:12
+msgid "Control panel"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:111
+msgid "Technical Analysis for"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:131
+msgid "Wallet Balance"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:135
+msgid "Asset"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:136
+msgid "Amount"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:143
+msgid "Bonus"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:147
+msgid "DEPOSIT"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:148
+msgid "WITHDRAW"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:155
+msgid "Market"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:158
+msgid "Limit"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:161
+msgid "Stop"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:171
+#: dashboard/templates/dashboard/dashboard.html:196
+#: dashboard/templates/dashboard/dashboard.html:221
+msgid "Amount BTC"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:175
+#: dashboard/templates/dashboard/dashboard.html:200
+#: dashboard/templates/dashboard/dashboard.html:225
+msgid "Price"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:179
+#: dashboard/templates/dashboard/dashboard.html:204
+#: dashboard/templates/dashboard/dashboard.html:229
+msgid "Fee"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:183
+#: dashboard/templates/dashboard/dashboard.html:208
+#: dashboard/templates/dashboard/dashboard.html:233
+msgid "Total"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:187
+#: dashboard/templates/dashboard/dashboard.html:212
+#: dashboard/templates/dashboard/dashboard.html:237
+msgid "BUY"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:188
+#: dashboard/templates/dashboard/dashboard.html:213
+#: dashboard/templates/dashboard/dashboard.html:238
+msgid "SELL"
+msgstr ""
+
+#: dashboard/templates/dashboard/dashboard.html:256
+msgid "Balance"
+msgstr ""
+
+#: dashboard/templates/dashboard/inbox.html:23
+msgid "Compose"
+msgstr ""
+
+#: dashboard/templates/dashboard/inbox.html:27
+msgid "Folders"
+msgstr ""
+
+#: dashboard/templates/dashboard/inbox.html:39
+msgid "Drafts"
+msgstr ""
+
+#: dashboard/templates/dashboard/inbox.html:40
+#, fuzzy
+#| msgid "Get started"
+msgid "Starred"
+msgstr "现在开始"
+
+#: dashboard/templates/dashboard/inbox.html:83
+msgid "You do not have any new message"
+msgstr ""
+
+#: templates/base_layout.html:88
+msgid "Opening Hours"
+msgstr "营业时间"
+
+#: templates/base_layout.html:99 users/templates/registration/login.html:14
+#: users/templates/registration/login.html:28
 msgid "Login"
 msgstr "登录"
 
@@ -87,56 +1533,164 @@ msgstr "救命"
 
 #: templates/base_layout.html:104
 msgid "Support"
-msgstr ""
+msgstr "客户服务"
 
-#: templates/base_layout.html:110
+#: templates/base_layout.html:107
 msgid "language"
-msgstr ""
+msgstr "语言"
 
-#: templates/base_layout.html:152
+#: templates/base_layout.html:160
 msgid "Email Us"
-msgstr ""
+msgstr "给我们发电子邮件"
 
-#: templates/base_layout.html:159
+#: templates/base_layout.html:167
 msgid "Call Us"
-msgstr ""
+msgstr "给我们打电话"
 
-#: templates/base_layout.html:163
+#: templates/base_layout.html:171
 #, fuzzy
 #| msgid "Get started"
 msgid "Get Started"
 msgstr "现在开始"
 
-#: templates/base_layout.html:180
-msgid "Home"
-msgstr ""
-
-#: templates/base_layout.html:183
+#: templates/base_layout.html:191
 msgid "All Our Services"
-msgstr ""
+msgstr "我们所有的服务"
 
-#: templates/base_layout.html:185
-msgid "Coin Buy & Sell"
-msgstr ""
-
-#: templates/base_layout.html:186
-msgid "Bitcoin & Ethereum"
-msgstr ""
-
-#: templates/base_layout.html:187
+#: templates/base_layout.html:195
 msgid "Cryptocurrency"
-msgstr ""
+msgstr "加密货币"
 
-#: templates/base_layout.html:190
-msgid "Blog"
-msgstr ""
-
-#: templates/base_layout.html:192
+#: templates/base_layout.html:200
 msgid "About Us"
+msgstr "关于我们"
+
+#: templates/base_layout.html:238
+msgid "Bitcoin Trading Center"
+msgstr "比特币交易中心"
+
+#: templates/base_layout.html:243
+msgid ""
+"Our mission is to bring trading to the masses. We provide an intuitive "
+"trading platform designed with the latest technological advancements that’s "
+"geared towards new traders as well as professionals. Our customer service "
+"and support is always available to meet your needs, and our account managers "
+"know that your success is our success."
 msgstr ""
 
-#: templates/base_layout.html:193
-msgid "Contact"
+#: templates/base_layout.html:259
+msgid "Quick Links"
+msgstr ""
+
+#: templates/base_layout.html:264
+msgid "Home Page"
+msgstr "主页"
+
+#: templates/base_layout.html:265
+msgid "Our Members"
+msgstr "我们的会员"
+
+#: templates/base_layout.html:266
+msgid "Buy & Sell"
+msgstr ""
+
+#: templates/base_layout.html:267
+msgid "Bitcoin Trade"
+msgstr ""
+
+#: templates/base_layout.html:275
+msgid "latest Post"
+msgstr ""
+
+#: templates/base_layout.html:323
+msgid "Phone Number"
+msgstr ""
+
+#: templates/base_layout.html:332
+msgid "Door Open"
+msgstr ""
+
+#: transactions/templates/transactions/bank_details.html:26
+#: transactions/templates/transactions/bitcoin_details.html:26
+#: transactions/templates/transactions/deposit_form.html:26
+#: transactions/templates/transactions/deposit_form.html:79
+msgid "Deposit Fund"
+msgstr ""
+
+#: transactions/templates/transactions/bank_details.html:27
+#: transactions/templates/transactions/bitcoin_details.html:27
+msgid "Please make a payemnt using this details"
+msgstr ""
+
+#: transactions/templates/transactions/bank_details.html:33
+#: transactions/templates/transactions/withdrawal_form.html:80
+msgid "Bank Name"
+msgstr ""
+
+#: transactions/templates/transactions/bank_details.html:42
+msgid "Bank Account"
+msgstr ""
+
+#: transactions/templates/transactions/bank_details.html:52
+msgid "Routing Number"
+msgstr ""
+
+#: transactions/templates/transactions/bitcoin_details.html:11
+msgid "Payment Details"
+msgstr ""
+
+#: transactions/templates/transactions/bitcoin_details.html:33
+#: transactions/templates/transactions/withdrawal_form.html:133
+msgid "Wallet Address"
+msgstr ""
+
+#: transactions/templates/transactions/bitcoin_details.html:44
+msgid "Please recheck and confirm this wallet address to avoid deposit error"
+msgstr ""
+
+#: transactions/templates/transactions/deposit_form.html:11
+msgid "Deposit Funds"
+msgstr ""
+
+#: transactions/templates/transactions/deposit_form.html:27
+msgid "Please select required options"
+msgstr ""
+
+#: transactions/templates/transactions/deposit_form.html:36
+#: transactions/templates/transactions/withdrawal_form.html:36
+#: users/templates/registration/view_profile.html:35
+msgid "Fullname"
+msgstr ""
+
+#: transactions/templates/transactions/deposit_form.html:46
+#: transactions/templates/transactions/withdrawal_form.html:46
+msgid "Select Amount"
+msgstr ""
+
+#: transactions/templates/transactions/deposit_form.html:61
+#: transactions/templates/transactions/withdrawal_form.html:61
+msgid "Select payment method"
+msgstr ""
+
+#: transactions/templates/transactions/withdrawal_form.html:26
+#: transactions/templates/transactions/withdrawal_form.html:146
+msgid "Withdraw Fund"
+msgstr ""
+
+#: transactions/templates/transactions/withdrawal_form.html:27
+msgid "Please provide accurate details"
+msgstr ""
+
+#: transactions/templates/transactions/withdrawal_form.html:93
+msgid "Account Number"
+msgstr ""
+
+#: transactions/templates/transactions/withdrawal_form.html:106
+msgid "IBAN Number"
+msgstr ""
+
+#: transactions/templates/transactions/withdrawal_form.html:119
+msgid "Swift Code"
 msgstr ""
 
 #: users/models.py:70
@@ -150,3 +1704,218 @@ msgstr ""
 #: users/models.py:88
 msgid "users"
 msgstr ""
+
+#: users/templates/registration/edit_user.html:26
+msgid "Update Your Profile"
+msgstr ""
+
+#: users/templates/registration/edit_user.html:27
+msgid "Please make neccessary edits"
+msgstr ""
+
+#: users/templates/registration/edit_user.html:36
+msgid "First Name"
+msgstr ""
+
+#: users/templates/registration/edit_user.html:49
+msgid "Last Name"
+msgstr ""
+
+#: users/templates/registration/edit_user.html:75
+#: users/templates/registration/user_create.html:122
+#: users/templates/registration/view_profile.html:45
+msgid "Gender"
+msgstr "性别"
+
+#: users/templates/registration/edit_user.html:88
+msgid "Profile Picture"
+msgstr "个人资料图片"
+
+#: users/templates/registration/edit_user.html:101
+msgid "Update Profile"
+msgstr "更新个人信息"
+
+#: users/templates/registration/login.html:15
+msgid "Login To Your Account"
+msgstr "登录到您的帐户"
+
+#: users/templates/registration/login_form.html:7
+msgid "Login to Continue"
+msgstr "登录以继续"
+
+#: users/templates/registration/login_form.html:15
+msgid "Remember me"
+msgstr "记得我"
+
+#: users/templates/registration/login_form.html:21
+msgid "Forgot Password?"
+msgstr "忘记密码？"
+
+#: users/templates/registration/password_change.html:26
+#: users/templates/registration/password_change.html:76
+#: users/templates/registration/password_change_success.html:26
+msgid "Change Password"
+msgstr "修改密码"
+
+#: users/templates/registration/password_change.html:27
+msgid "Please input your new Password"
+msgstr "请输入新密码"
+
+#: users/templates/registration/password_change.html:37
+msgid "Old Password"
+msgstr "旧密码"
+
+#: users/templates/registration/password_change.html:50
+msgid "New Password"
+msgstr "新密码"
+
+#: users/templates/registration/password_change.html:63
+msgid "Confirm New Password"
+msgstr "确认新密码"
+
+#: users/templates/registration/password_change_success.html:11
+msgid "Password"
+msgstr "密码"
+
+#: users/templates/registration/password_change_success.html:27
+msgid "Successful"
+msgstr "成功的"
+
+#: users/templates/registration/password_change_success.html:34
+msgid "Your password has been successfully updated"
+msgstr "你的密码已被成功更新"
+
+#: users/templates/registration/password_reset_complete.html:8
+msgid "Your password has been Reset."
+msgstr "您的密码已重置。"
+
+#: users/templates/registration/password_reset_complete.html:9
+msgid "Log in using your new password."
+msgstr "使用新密码登录"
+
+#: users/templates/registration/password_reset_confirm.html:9
+msgid "Enter A new Password below"
+msgstr "在下面输入新密码"
+
+#: users/templates/registration/password_reset_confirm.html:15
+msgid "Save new Password"
+msgstr "保存新密码"
+
+#: users/templates/registration/password_reset_confirm.html:18
+msgid "This reset link is no longer valid"
+msgstr "此重置链接不再有效"
+
+#: users/templates/registration/password_reset_confirm.html:19
+msgid "Please request a new reset email"
+msgstr "请请求新的重置电子邮件"
+
+#: users/templates/registration/password_reset_confirm.html:19
+msgid "here."
+msgstr "这里。"
+
+#: users/templates/registration/password_reset_done.html:8
+msgid "Password Reset email sent."
+msgstr "密码重置电子邮件已发送。"
+
+#: users/templates/registration/password_reset_done.html:9
+msgid "Please check your email and password"
+msgstr "请检查您的电子邮件和密码"
+
+#: users/templates/registration/password_reset_form.html:8
+msgid "Receive Password reset Email."
+msgstr "接收密码重置电子邮件。"
+
+#: users/templates/registration/password_reset_form.html:14
+msgid "Reset Password"
+msgstr "重设密码"
+
+#: users/templates/registration/user_activate_failed.html:14
+#: users/templates/registration/user_create.html:17
+#: users/templates/registration/user_create_done.html:14
+msgid "Create Your Account"
+msgstr "创建您的帐户"
+
+#: users/templates/registration/user_activate_failed.html:15
+msgid "Confirmation Email Sent"
+msgstr "确认邮件已发送"
+
+#: users/templates/registration/user_activate_failed.html:28
+#: users/templates/registration/user_create_done.html:28
+msgid "registration"
+msgstr "寄存器"
+
+#: users/templates/registration/user_activate_failed.html:44
+msgid "Your Fonixcoin account activation failed"
+msgstr "您的Fonixcoin帐户激活失败"
+
+#: users/templates/registration/user_activate_failed.html:45
+msgid "Activation link not valid or expired, please restart your registration."
+msgstr "激活链接无效或已过期，请重新注册。"
+
+#: users/templates/registration/user_activated.html:14
+msgid "Activate Your Account"
+msgstr "激活你的帐号"
+
+#: users/templates/registration/user_activated.html:15
+msgid "Account successfully activated"
+msgstr "帐户已成功激活"
+
+#: users/templates/registration/user_activated.html:28
+msgid "Activated"
+msgstr "活性"
+
+#: users/templates/registration/user_activated.html:44
+msgid "Your Fonixcoin account has been successfully activated"
+msgstr "您的Fonixcoin帐户已成功激活"
+
+#: users/templates/registration/user_activated.html:45
+msgid "Please login"
+msgstr "请登录"
+
+#: users/templates/registration/user_activated.html:45
+msgid "HERE"
+msgstr "这里"
+
+# msgid "Register"
+#: users/templates/registration/user_create.html:16
+#: users/templates/registration/user_create.html:30
+msgid "Registeration"
+msgstr "寄存器"
+
+#: users/templates/registration/user_create.html:51
+msgid "Sign Up"
+msgstr "标志向上"
+
+#: users/templates/registration/user_create.html:108
+msgid "Upload Profile Picture"
+msgstr "上载个人资料图片"
+
+#: users/templates/registration/user_create.html:140
+msgid "Have an account already ?"
+msgstr "你是不是已经有一个账号？"
+
+#: users/templates/registration/user_create.html:140
+#, fuzzy
+#| msgid "Login"
+msgid "Login here"
+msgstr "登录"
+
+#: users/templates/registration/user_create_done.html:44
+msgid "Your Fonixcoin account has been successfully created"
+msgstr "您的Fonixcoin帐户已成功创建"
+
+#: users/templates/registration/user_create_done.html:45
+msgid "Please check your email for Confirmation link to activate your account"
+msgstr "请检查您的电子邮件以获取确认链接以激活您的帐户"
+
+#: users/templates/registration/view_profile.html:11
+msgid "View Profile"
+msgstr "查看个人信息"
+
+#: users/templates/registration/view_profile.html:26
+msgid "Profile Details"
+msgstr "个人资料详细信息"
+
+#: users/templates/registration/view_profile.html:27
+msgid "Update your profile"
+msgstr "更新您的个人信息"

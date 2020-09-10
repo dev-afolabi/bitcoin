@@ -1,4 +1,5 @@
 {% extends 'base_layout.html' %}
+{% load i18n %}
 {% block nav-about %}
 active
 {% endblock %}
@@ -14,8 +15,8 @@ active
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>About FonixCoin</h2>
-							<p>Delivering quality</p>
+							<h2>{% trans 'About FonixCoin' %}</h2>
+							<p>{% trans 'Delivering quality' %}</p>
 						</div>
 					</div>
 				</div>
@@ -27,8 +28,8 @@ active
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">About us</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'About us' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -46,7 +47,7 @@ active
 					<div class="blockquote-wrapper">
 						<span class="blockquote-line"></span>
 						<blockquote class="blockquote">
-							<p><i class="icofont icofont-quote-left"></i> Partnering with Market Synergy, corporate accounts and professional traders can take advantage of the fastest trading speeds through institutional-grade connectivity and co-location services with direct access to our digital asset gateway. <i class="icofont icofont-quote-right"></i></p>
+							<p><i class="icofont icofont-quote-left"></i> {% trans 'Partnering with Market Synergy, corporate accounts and professional traders can take advantage of the fastest trading speeds through institutional-grade connectivity and co-location services with direct access to our digital asset gateway.' %} <i class="icofont icofont-quote-right"></i></p>
 							<footer class="blockquote-footer">Walter presavoy, <cite title="Source Title">Florida, USA</cite></footer>
 						</blockquote>
 					</div>
@@ -63,7 +64,7 @@ active
 									<img class="img-fluid" src="{% static 'assets/img/clients/4.png' %}' %}" alt="">
 								</div>
 								<div class="image-two-des">
-									<p>We believe cryptocurrency is the future of money, and that building a robust, trusted, and accessible cryptoeconomy will create a more equitable and open financial system around the world. </p>
+									<p>{% trans 'We believe cryptocurrency is the future of money, and that building a robust, trusted, and accessible cryptoeconomy will create a more equitable and open financial system around the world.' %} </p>
 								</div>
 								<div class="image-two-rem text-right">
 									<a href="#"><i class="icofont icofont-long-arrow-right"></i></a>
@@ -85,8 +86,8 @@ active
 			<div class="row">
 				<div class="col-12 text-center">
 					<div class="section-title">
-						<h5>Bitcoin Legality</h5>
-						<h3>Why Choose <span>FonixCoin</span></h3>
+						<h5>{% trans 'Bitcoin Legality' %}</h5>
+						<h3>{% trans 'Why Choose' %} <span>FonixCoin</span></h3>
 					</div>
 				</div>
 			</div>
@@ -98,8 +99,8 @@ active
 							<i class="icofont icofont-bill"></i>
 						</div>
 						<div class="single-wcus-text">
-							<h5>Easy Trading</h5>
-							<p>FonixCoin offers a methodical approach to ensure profitability. Each trade is calculated through risk management techniques, technical analysis, and deep fundamental research.</p>
+							<h5>{% trans 'Easy Trading' %}</h5>
+							<p>{% trans 'FonixCoin offers a methodical approach to ensure profitability. Each trade is calculated through risk management techniques, technical analysis, and deep fundamental research.' %}</p>
 						</div>
 					</div>
 				</div>
@@ -110,8 +111,8 @@ active
 							<i class="icofont icofont-coins"></i>
 						</div>
 						<div class="single-wcus-text">
-							<h5>Trading Strategy</h5>
-							<p>Master the basics with Fonixcoin's Crypto Guides, where we take an in-depth look at some of the top projects in this space.</p>
+							<h5>{% trans 'Trading Strategy' %}</h5>
+							<p>{% trans "Master the basics with Fonixcoin's Crypto Guides, where we take an in-depth look at some of the top projects in this space." %}</p>
 						</div>
 					</div>
 				</div>
@@ -122,8 +123,8 @@ active
 							<i class="icofont icofont-money"></i>
 						</div>
 						<div class="single-wcus-text">
-							<h5>Money Exchange</h5>
-							<p>Buy and sell popular digital currencies, keep track of them in the one place.</p>
+							<h5>{% trans 'Money Exchange' %}</h5>
+							<p>{% trans 'Buy and sell popular digital currencies, keep track of them in the one place.' %}</p>
 						</div>
 					</div>
 				</div>
@@ -134,8 +135,8 @@ active
 							<i class="icofont icofont-ui-travel"></i>
 						</div>
 						<div class="single-wcus-text">
-							<h5>Security Ensure</h5>
-							<p>Fonixcoin takes a comprehensive approach to protecting your investments. Our team of experts have built in a number of sophisticated measures to prevent the theft of money or information.</p>
+							<h5>{% trans 'Security Ensure' %}</h5>
+							<p>{% trans 'Fonixcoin takes a comprehensive approach to protecting your investments. Our team of experts have built in a number of sophisticated measures to prevent the theft of money or information.' %}</p>
 						</div>
 					</div>
 				</div>
@@ -146,8 +147,8 @@ active
 							<i class="icofont icofont-money-bag"></i>
 						</div>
 						<div class="single-wcus-text">
-							<h5>Cryptocurrency Trading</h5>
-							<p>A cryptocurrency exchange is a service for changing digital currencies, such as Bitcoin, Ethereum, and more.</p>
+							<h5>{% trans 'Cryptocurrency Trading' %}</h5>
+							<p>{% trans 'A cryptocurrency exchange is a service for changing digital currencies, such as Bitcoin, Ethereum, and more.' %}</p>
 						</div>
 					</div>
 				</div>
@@ -158,8 +159,8 @@ active
 							<i class="icofont icofont-briefcase"></i>
 						</div>
 						<div class="single-wcus-text">
-							<h5>Bitcoin Legality</h5>
-							<p>Fonixcoin accepts deposits and provides withdrawals in any of the following crypto assets.</p>
+							<h5>{% trans 'Bitcoin Legality' %}</h5>
+							<p>{% trans 'Fonixcoin accepts deposits and provides withdrawals in any of the following crypto assets.' %}</p>
 						</div>
 					</div>
 				</div>
@@ -176,8 +177,8 @@ active
 			<div class="row">
 				<div class="col-12 text-center">
 					<div class="section-title">
-						<h5>FonixCoin conversation</h5>
-						<h3>Trade Bitcoin <span>With Us</span></h3>
+						<h5>{% trans 'FonixCoin conversation' %}</h5>
+						<h3>{% trans 'Trade Bitcoin' %} <span>{% trans 'With Us' %}</span></h3>
 					</div>
 				</div>
 			</div>
@@ -188,7 +189,6 @@ active
 						<!-- TradingView Widget BEGIN -->
 						<div class="tradingview-widget-container">
 							<div class="tradingview-widget-container__widget"></div>
-							<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Cryptocurrency Markets</span></a> by TradingView</div>
 							<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
 							{
 							"width": "550",
@@ -237,8 +237,8 @@ active
 			<div class="row">
 				<div class="col-12 text-center">
 					<div class="section-title">
-						<h5>quality experts</h5>
-						<h3>Our Team <span>Member</span></h3>
+						<h5>{% trans 'quality experts' %}</h5>
+						<h3>{% trans 'Our Team' %} <span>{% trans 'Members' %}</span></h3>
 					</div>
 				</div>
 			</div>
@@ -253,7 +253,7 @@ active
 							</div>
 							<div class="single-team-meta">
 								<h4>Alissa Alexandra</h4>
-								<span>Fonixcoin, Consultant</span>
+								<span>Fonixcoin, {% trans 'Consultant' %}</span>
 								
 							</div>	
 						</div>							
@@ -267,7 +267,7 @@ active
 							</div>
 							<div class="single-team-meta">
 								<h4>Mark Evelyn</h4>
-								<span>Consultant</span>
+								<span>{% trans 'Consultant' %}</span>
 								
 							</div>	
 						</div>							
@@ -281,7 +281,7 @@ active
 							</div>
 							<div class="single-team-meta">
 								<h4>Maeve Owen</h4>
-								<span>Fonixcoin, Broker</span>
+								<span>Fonixcoin, {% trans 'Broker' %}</span>
 								
 							</div>	
 						</div>							
@@ -295,7 +295,7 @@ active
 							</div>
 							<div class="single-team-meta">
 								<h4>Parbez Lahan Kabeer</h4>
-								<span>Fonixcoin, Broker</span>
+								<span>Fonixcoin, {% trans 'Broker' %}</span>
 								
 							</div>	
 						</div>							
@@ -309,7 +309,7 @@ active
 							</div>
 							<div class="single-team-meta">
 								<h4>Garry Ethan</h4>
-								<span>Cryptocurrency expert</span>
+								<span>{% trans 'Cryptocurrency expert' %}</span>
 								
 							</div>	
 						</div>							
@@ -329,10 +329,10 @@ active
 			<div class="row">
 				<div class="col-12 text-center">
 					<div class="calltoaction-two-wrap mb-4">
-						<h4 class="text-uppercase">Need More Service?</h4>
-						<p>If you have questions, comments or concerns, our local staff is on-hand to answer all your needs.<br>Contact us by email</p>
+						<h4 class="text-uppercase">{% trans 'Need More Service?' %}</h4>
+						<p>{% trans 'If you have questions, comments or concerns, our local staff is on-hand to answer all your needs.' %}<br>{% trans 'Contact us by email' %}</p>
 					</div>
-					<a href="{% url 'contact' %}" class=" wow fadeInDown btn-style btn-border btn-border-3">Contact Us <i class="icofont icofont-hand-right"></i></a>
+					<a href="{% url 'contact' %}" class=" wow fadeInDown btn-style btn-border btn-border-3">{% trans 'Contact Us' %} <i class="icofont icofont-hand-right"></i></a>
 				</div>
 				<!-- end col -->
 				<!-- end col -->

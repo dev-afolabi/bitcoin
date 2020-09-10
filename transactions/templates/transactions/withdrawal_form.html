@@ -1,4 +1,5 @@
 {% extends 'base_dash.html' %}
+{% load i18n %}
 {% load static %}
 {% block content %}
 
@@ -7,11 +8,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Withdraw Funds
+       {% trans Withdraw Funds %}
       </h1>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> {% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">{% trans 'Dashboard' %}</a></li>
         <li class="breadcrumb-item active"></li>
       </ol>
     </section>
@@ -22,8 +23,8 @@
      <!-- Basic Forms -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Withdraw Fund</h3>
-          <h6 class="box-subtitle">Please provide accurate details</h6>
+          <h3 class="box-title">{% trans 'Withdraw Fund' %}</h3>
+          <h6 class="box-subtitle">{% trans 'Please provide accurate details' %}</h6>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -32,17 +33,17 @@
             	<form id="my-form" action="" method="POST">
 					{% csrf_token %}
 					<div class="form-group">
-						<h5>Fullname <span class="text-danger">*</span></h5>
+						<h5>{% trans 'Fullname' %} <span class="text-danger">*</span></h5>
 						<div class="controls">
 							<input type="text" name="text" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.get_full_name }}"> </div>
 					</div>
 					<div class="form-group">
-						<h5>Email<span class="text-danger">*</span></h5>
+						<h5>{% trans 'Email' %}<span class="text-danger">*</span></h5>
 						<div class="controls">
 							<input type="email" name="email" class="form-control" required data-validation-required-message="This field is required" readonly value="{{ user.email }}"> </div>
                     </div>
 					<div class="form-group">
-						<h5>Select Amount <span class="text-danger">*</span></h5>
+						<h5>{% trans 'Select Amount' %} <span class="text-danger">*</span></h5>
 						<div class="controls">
 							{{ form.amount }}
 						</div>
@@ -57,7 +58,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
-								<h5>Select payment method <span class="text-danger">*</span></h5>
+								<h5>{% trans 'Select payment method' %} <span class="text-danger">*</span></h5>
 								{% for radio in form.payment_option %}
 								<fieldset class="controls">
 									{{ radio.tag }}
@@ -76,7 +77,7 @@
 					</div>
 					<div id="bank_transfer">
                     <div class="form-group">
-						<h5>Bank Name <span class="text-danger">*</span></h5>
+						<h5>{% trans 'Bank Name' %} <span class="text-danger">*</span></h5>
 						<div class="controls">
 							{{ form.bank_name }}
 						</div>
@@ -89,7 +90,7 @@
 						{% endif %}
                     </div>
                     <div class="form-group">
-						<h5>Account Number <span class="text-danger">*</span></h5>
+						<h5>{% trans 'Account Number' %} <span class="text-danger">*</span></h5>
 						<div class="controls">
 							{{ form.account_number }}
 						</div>
@@ -102,7 +103,7 @@
 						{% endif %}
                     </div>
                     <div class="form-group">
-						<h5>IBAN Number <span class="text-danger">*</span></h5>
+						<h5>{% trans 'IBAN Number' %} <span class="text-danger">*</span></h5>
 						<div class="controls">
 							{{ form.IBAN_number }}
 						</div>
@@ -115,7 +116,7 @@
 						{% endif %}
                     </div>
                     <div class="form-group">
-						<h5>Swift Code <span class="text-danger">*</span></h5>
+						<h5>{% trans 'Swift Code' %} <span class="text-danger">*</span></h5>
 						<div class="controls">
 							{{ form.swift_code }}
 						</div>
@@ -129,7 +130,7 @@
 					</div>
 					</div>
                     <div id="btc_transfer" class="form-group">
-						<h5>Wallet Address <span class="text-danger">*</span></h5>
+						<h5>{% trans 'Wallet Address' %} <span class="text-danger">*</span></h5>
 						<div class="controls">
 							{{ form.wallet_address }}
 						</div>
@@ -142,7 +143,7 @@
 						{% endif %}
                     </div>
 					<div class="text-xs-right">
-						<button type="submit" class="btn btn-info">Withdraw Fund</button>
+						<button type="submit" class="btn btn-info">{% trans 'Withdraw Fund' %}</button>
 					</div>
 				</form>
             	

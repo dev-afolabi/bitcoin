@@ -1,4 +1,5 @@
 {% extends 'base_dash.html' %}
+{% load i18n %}
 {% load static %}
 {% block content %}
   
@@ -7,12 +8,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
-        <small>Control panel</small>
+        {% trans 'Dashboard' %}
+        <small>{% trans 'Control panel' %}</small>
       </h1>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item active">Dashboard</li>
+        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> {% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active">{% trans 'Dashboard' %}</li>
       </ol>
     </section>
 
@@ -107,7 +108,7 @@
 							<!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
 	<div class="tradingview-widget-container__widget"></div>
-	<div class="tradingview-widget-copyright"><a href="" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis for BTCUSD</span></a></div>
+	<div class="tradingview-widget-copyright"><a href="" rel="noopener" target="_blank"><span class="blue-text">{% trans 'Technical Analysis for' %} BTCUSD</span></a></div>
 	<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
 	{
 	"interval": "1m",
@@ -127,37 +128,37 @@
 				</div>
 				<div class="box">
 					<div class="box-header with-border">
-					  <h4 class="box-title">Wallet Balance</h4>
+					  <h4 class="box-title">{% trans 'Wallet Balance' %}</h4>
 					</div>
 					<div class="box-body">
 						<div class="d-flex justify-content-between bb-1 pb-5">
-							<h5 class="text-fade">Asset</h5>
-							<h5 class="text-fade">Amount</h5>
+							<h5 class="text-fade">{% trans 'Asset' %}</h5>
+							<h5 class="text-fade">{% trans 'Amount' %}</h5>
 						</div>
 						<div class="d-flex justify-content-between pb-5 pt-10">
 							<h4 class="text-white">USDC</h4>
 							<h4 class="text-white">{{ user.balance }}</h4>
 						</div>
 						<div class="d-flex justify-content-between pb-10">
-							<h4 class="text-white">Bonus</h4>
+							<h4 class="text-white">{% trans 'Bonus' %}</h4>
 							<h4 class="text-white">{{ user.bonus }}</h4>
 						</div>
 						<div class="d-flex justify-content-between">
-							<a href="{% url 'deposit' %}"><button type="button" class="btn btn-outline btn-danger btn-lg"><i class="fa fa-arrow-circle-down"></i> DEPOSIT</button></a>
-							<a href="{% url 'withdraw' %}"><button type="button" class="btn btn-outline btn-success btn-lg mt-0"><i class="fa fa-arrow-circle-up"></i> WITHDRAW</button></a>
+							<a href="{% url 'deposit' %}"><button type="button" class="btn btn-outline btn-danger btn-lg"><i class="fa fa-arrow-circle-down"></i> {% trans 'DEPOSIT' %}</button></a>
+							<a href="{% url 'withdraw' %}"><button type="button" class="btn btn-outline btn-success btn-lg mt-0"><i class="fa fa-arrow-circle-up"></i> {% trans 'WITHDRAW' %}</button></a>
 						</div>
 					</div>
 				</div>
 				<div class="box">
 				  <ul class="nav nav-tabs nav-tabs-danger" role="tablist">
 					<li class="nav-item">
-					  <a class="nav-link active font-size-18" data-toggle="tab" href="#market" role="tab">Market</a>
+					  <a class="nav-link active font-size-18" data-toggle="tab" href="#market" role="tab">{% trans 'Market' %}</a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link font-size-18" data-toggle="tab" href="#limit" role="tab">Limit</a>
+					  <a class="nav-link font-size-18" data-toggle="tab" href="#limit" role="tab">{% trans 'Limit' %}</a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link font-size-18" data-toggle="tab" href="#stop" role="tab">Stop</a>
+					  <a class="nav-link font-size-18" data-toggle="tab" href="#stop" role="tab">{% trans 'Stop' %}</a>
 					</li>
 				  </ul>
 
@@ -167,76 +168,76 @@
 					  <form>
 						<div class="input-group mt-15 mb-20">
 							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Amount BTC</span>
+							<span class="input-group-addon">{% trans 'Amount BTC' %}</span>
 						</div>
 						<div class="input-group mb-20">
 							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Price BPL</span>
+							<span class="input-group-addon">{% trans 'Price' %} BPL</span>
 						</div>
 						<div class="input-group mb-20">
 							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Fee (0.5%)</span>
+							<span class="input-group-addon">{% trans 'Fee' %} (0.5%)</span>
 						</div>
 						<div class="input-group mb-20">
 							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Total BPL</span>
+							<span class="input-group-addon">{% trans 'Total' %} BPL</span>
 						</div>
 
 						<div class="d-flex justify-content-between pt-5">
-							<button type="button" class="btn btn-success" disabled>BUY</button>
-							<button type="button" class="btn btn-danger mt-0" disabled>SELL</button>
+							<button type="button" class="btn btn-success" disabled>{% trans 'BUY' %}</button>
+							<button type="button" class="btn btn-danger mt-0" disabled>{% trans 'SELL' %}</button>
 						</div>
 					  </form>
 					</div>
 					<div class="tab-pane fade" id="limit">
-					  <form>
-						<div class="input-group mt-15 mb-20">
-							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Amount BTC</span>
-						</div>
-						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Price BPL</span>
-						</div>
-						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Fee (0.5%)</span>
-						</div>
-						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Total BPL</span>
-						</div>
-
-						<div class="d-flex justify-content-between pt-5">
-							<button type="button" class="btn btn-success" disabled>BUY</button>
-							<button type="button" class="btn btn-danger mt-0" disabled>SELL</button>
-						</div>
-					  </form>
+						<form>
+							<div class="input-group mt-15 mb-20">
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-addon">{% trans 'Amount BTC' %}</span>
+							</div>
+							<div class="input-group mb-20">
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-addon">{% trans 'Price' %} BPL</span>
+							</div>
+							<div class="input-group mb-20">
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-addon">{% trans 'Fee' %} (0.5%)</span>
+							</div>
+							<div class="input-group mb-20">
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-addon">{% trans 'Total' %} BPL</span>
+							</div>
+	
+							<div class="d-flex justify-content-between pt-5">
+								<button type="button" class="btn btn-success" disabled>{% trans 'BUY' %}</button>
+								<button type="button" class="btn btn-danger mt-0" disabled>{% trans 'SELL' %}</button>
+							</div>
+						  </form>
 					</div>
 					<div class="tab-pane fade" id="stop">
-					  <form>
-						<div class="input-group mt-15 mb-20">
-							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Amount BTC</span>
-						</div>
-						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Price BPL</span>
-						</div>
-						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Fee (0.5%)</span>
-						</div>
-						<div class="input-group mb-20">
-							<input type="text" class="form-control" placeholder="">
-							<span class="input-group-addon">Total BPL</span>
-						</div>
-
-						<div class="d-flex justify-content-between pt-5">
-							<button type="button" class="btn btn-success" disabled>BUY</button>
-							<button type="button" class="btn btn-danger mt-0" disabled>SELL</button>
-						</div>
-					  </form>
+						<form>
+							<div class="input-group mt-15 mb-20">
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-addon">{% trans 'Amount BTC' %}</span>
+							</div>
+							<div class="input-group mb-20">
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-addon">{% trans 'Price' %} BPL</span>
+							</div>
+							<div class="input-group mb-20">
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-addon">{% trans 'Fee' %} (0.5%)</span>
+							</div>
+							<div class="input-group mb-20">
+								<input type="text" class="form-control" placeholder="">
+								<span class="input-group-addon">{% trans 'Total' %} BPL</span>
+							</div>
+	
+							<div class="d-flex justify-content-between pt-5">
+								<button type="button" class="btn btn-success" disabled>{% trans 'BUY' %}</button>
+								<button type="button" class="btn btn-danger mt-0" disabled>{% trans 'SELL' %}</button>
+							</div>
+						  </form>
 					</div>
 				  </div>
 				</div>
@@ -252,7 +253,7 @@
 								</div>
 								<div class="box-body py-20 bg-dark">
 									<h3 class="font-weight-600 mt-0">
-									Balance
+									{% trans 'Balance' %}
 									</h3>
 								</div>
 					 		</a>			

@@ -1,4 +1,5 @@
 {% extends 'base_layout.html' %}
+{% load i18n %}
 {% block nav-service %}
 active
 {% endblock %}
@@ -13,8 +14,8 @@ active
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>FonixCoin Services</h2>
-							<p>Our Range of Sevices</p>
+							<h2>{% trans 'FonixCoin Services' %}</h2>
+							<p>{% trans 'Our Range of Sevices' %}</p>
 						</div>
 					</div>
 				</div>
@@ -26,8 +27,8 @@ active
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item active">Servcies</li>
+							<li class="breadcrumb-item"><a href="#">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'Servcies' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -52,11 +53,11 @@ active
 									<i class="fab fa-gg"></i>
 								</div>
 								<div class="single-service-text">
-									<h5>Bitcoin Trading</h5>
+									<h5>{% trans 'Bitcoin Trading' %}</h5>
 								</div>
 							</div>
 							<div class="single-service-dec">
-								<p>Bifonix has consistently taken measures to ensure its platform makes online trading and investing accessible to anyone.
+								<p>{% trans 'Bifonix has consistently taken measures to ensure its platform makes online trading and investing accessible to anyone.' %}
 									<a href="{% url 'bitcoin_trading' %}">[...]</a>
 								</p>
 							</div>	
@@ -75,11 +76,11 @@ active
 									<i class="fa fa-shekel-sign"></i>
 								</div>
 								<div class="single-service-text">
-									<h5>Coin Buy & Sell</h5>
+									<h5>{% trans 'Coin Buy & Sell' %}</h5>
 								</div>
 							</div>
 							<div class="single-service-dec">
-								<p>With FonixCoin, you can easily buy Bitcoin with cash, as well as other cryptocurrencies we offer on the platform.
+								<p>{% trans 'With FonixCoin, you can easily buy Bitcoin with cash, as well as other cryptocurrencies we offer on the platform.' %}
 									<a href="{% url 'coin_buy' %}">[...]</a>
 								</p>
 							</div>	
@@ -98,11 +99,11 @@ active
 									<i class="fab fa-btc"></i>
 								</div>
 								<div class="single-service-text">
-									<h5>Bitcoin & Ethereum</h5>
+									<h5>{% trans 'Bitcoin & Ethereum' %}</h5>
 								</div>
 							</div>
 							<div class="single-service-dec">
-								<p>Bitcoin and Ethereum is an open source network, much more than just a digital currency. At FonixCoin, we not only trade your assets, we secure it as well.
+								<p>{% trans 'Bitcoin and Ethereum is an open source network, much more than just a digital currency. At FonixCoin, we not only trade your assets, we secure it as well.' %}
 									<a href="{% url 'bitcoin_ethereum' %}">[...]</a>
 								</p>
 							</div>	
@@ -121,11 +122,11 @@ active
 									<i class="fa fa-dollar-sign"></i>
 								</div>
 								<div class="single-service-text">
-									<h5>Cryptocurrency Trading</h5>
+									<h5>{% trans 'Cryptocurrency Trading' %}</h5>
 								</div>
 							</div>
 							<div class="single-service-dec">
-								<p>Bank on FonixCoin’s experience as a global fintech leader since the early days of Blockchain to provide you with a complete crypto trading solution.
+								<p>{% trans 'Bank on FonixCoin’s experience as a global fintech leader since the early days of Blockchain to provide you with a complete crypto trading solution.' %}
 									<a href="{% url 'crypto_trading' %}">[...]</a>
 								</p>
 							</div>	
@@ -144,11 +145,11 @@ active
 									<i class="icofont icofont-ui-travel"></i>
 								</div>
 								<div class="single-service-text">
-									<h5>Bitcoin Legality</h5>
+									<h5>{% trans 'Bitcoin Legality' %}</h5>
 								</div>
 							</div>
 							<div class="single-service-dec">
-								<p>BIT Solution Ltd (hereinafter "The Platform Technology") provides access to crypto assets exchange platform technology under the registered trademark "FonixCoin".
+								<p>{% trans 'FONIX Solution Ltd (hereinafter "The Platform Technology") provides access to crypto assets exchange platform technology under the registered trademark "FonixCoin".' %}
 									<a href="{% url 'bitcoin_legality' %}">[...]</a>
 								</p>
 							</div>	
@@ -167,11 +168,11 @@ active
 									<i class="icofont icofont-coins"></i>
 								</div>
 								<div class="single-service-text">
-									<h5>Security Ensure</h5>
+									<h5>{% trans 'Security Ensure' %}</h5>
 								</div>
 							</div>
 							<div class="single-service-dec">
-								<p>FonixCoin takes every necessary precaution to keep its clients’ personal information and funds safe and secure.
+								<p>{% trans 'FonixCoin takes every necessary precaution to keep its clients’ personal information and funds safe and secure.' %}
 									<a href="{% url 'security_ensure' %}">[...]</a>
 								</p>
 							</div>	

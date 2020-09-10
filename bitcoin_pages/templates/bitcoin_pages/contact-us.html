@@ -1,4 +1,5 @@
 {% extends 'base_layout.html' %}
+{% load i18n %}
 {% block nav-contact %}
 active
 {% endblock %}
@@ -14,8 +15,8 @@ active
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>Get In Touch</h2>
-							<p>Send us a message</p>
+							<h2>{% trans 'Get In Touch' %}</h2>
+							<p>{% trans 'Send us a message' %}</p>
 						</div>
 					</div>
 				</div>
@@ -27,8 +28,8 @@ active
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">Contact Us</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'Contact Us' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -44,8 +45,8 @@ active
 			<div class="row">
 				<div class="col-12 text-center">
 					<div class="section-title">
-						<h5>response with in minute</h5>
-						<h3>Contact <span>FonixCoin</span></h3>
+						<h5>{% trans 'response with in minute' %}</h5>
+						<h3>{% trans 'Contact' %} <span>FonixCoin</span></h3>
 					</div>
 				</div>
 			</div>
@@ -57,11 +58,11 @@ active
 							<i class="far fa-envelope-open"></i>
 						</div>
 						<div class="single-address-dec">
-							<h4>Write a mail</h4>
-							<p>Email: support@fonixcoin.com</p>
+							<h4>{% trans 'Write a mail' %}</h4>
+							<p>{% trans 'Email' %}: support@fonixcoin.com</p>
 						</div>
 						<div class="single-address-link">
-							<a href="#">quick Send</a>
+							<a href="#">{% trans 'quick Send' %}</a>
 						</div>
 					</div>
 				</div>
@@ -72,9 +73,9 @@ active
 							<i class="icofont icofont-phone-circle"></i>
 						</div>
 						<div class="single-address-dec">
-							<h4>Give a call</h4>
-							<p>Phone: +1-470-673-1900</p>
-							<p>Phone: </p>
+							<h4>{% trans 'Give a call' %}</h4>
+							<p>{% trans 'Phone' %}: +1-470-673-1900</p>
+							<p>{% trans 'Phone' %}: </p>
 						</div>
 						<div class="single-address-link">
 							<a href="#">quick call</a>
@@ -88,11 +89,11 @@ active
 							<i class="far fa-address-card"></i>
 						</div>
 						<div class="single-address-dec">
-							<h4>Visit our location</h4>
-							<p>Address: 10004, Battery Park, New York, USA </p>
+							<h4>{% trans 'Visit our location' %}</h4>
+							<p>{% trans 'Address' %}: 10004, Battery Park, New York, USA </p>
 						</div>
 						<div class="single-address-link">
-							<a href="#">find Direction</a>
+							<a href="#">{% trans 'find Direction' %}</a>
 						</div>
 					</div>
 				</div>
@@ -103,12 +104,12 @@ active
 							<i class="fab fa-rocketchat"></i>
 						</div>
 						<div class="single-address-dec">
-							<h4>Lets's have a chat</h4>
-							<p>Telephone: +1-470-673-1900</p>
+							<h4>{% trans "Lets's have a chat" %}</h4>
+							<p>{% trans 'Telephone' %}: +1-470-673-1900</p>
 	
 						</div>
 						<div class="single-address-link">
-							<a href="#">click here</a>
+							<a href="#">{% trans 'click here' %}</a>
 						</div>
 					</div>
 				</div>
@@ -119,7 +120,7 @@ active
 			<div class="row">
 				<div class="col-12 text-center">
 					<div class="section-title-2">
-						<h3>Send Us Message</h3>
+						<h3>{% trans 'Send Us Message' %}</h3>
 					</div>
 				</div>
 				<div class="col-lg-7 mx-auto">
@@ -128,7 +129,7 @@ active
 							<form method="post">
 								{% csrf_token %}
 								{{ form|crispy }}
-								<button type="submit" class="btn btn-primary">Send</button>
+								<button type="submit" class="btn btn-primary">{% trans 'Send' %}</button>
 							  </form>							
 						</div>
 					</div>

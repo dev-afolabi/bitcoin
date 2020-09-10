@@ -1,5 +1,6 @@
 {% extends 'base_layout.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %} Security ensure {% endblock %}
 {% block content %}
 
@@ -10,8 +11,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="single-page-title">
-							<h2>Account Security</h2>
-							<p>Never lose a Trade</p>
+							<h2>{% trans 'Account Security' %}</h2>
+							<p>{% trans 'Never lose a Trade' %}</p>
 						</div>
 					</div>
 				</div>
@@ -23,8 +24,8 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-							<li class="breadcrumb-item active">Account Security</li>
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">{% trans 'Home' %}</a></li>
+							<li class="breadcrumb-item active">{% trans 'Account Security' %}</li>
 						</ol>
 					</div>
 				</div>
@@ -40,19 +41,19 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-5 pr-lg-5 pr-md-5 pr-sm-2 pr-2">
 					<div class="widget cat_wid mb-5">
-						<h3 class="widget-title">Service List</h3>
+						<h3 class="widget-title">{% trans 'Service List' %}</h3>
 						<!-- end widget tittle-->
 						<div class="widget-inner mt-5">
 							<div class="category-menu">
 								<ul>
-									<li><a href="{% url 'bitcoin_ethereum' %}">Bitcoin & Ethereum <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'crypto_trading' %}">Cryptocurrency Trading <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'bitcoin_trading' %}">Bitcoin Trading <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'coin_buy' %}">Coin Buy & Sell <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#" class="active">Account Security <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="{% url 'bitcoin_legality' %}">Bitcoin Legality <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#">Trading Strategy <i class="float-right icofont icofont-thin-right"></i></a></li>
-									<li><a href="#">Money Exchange <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_ethereum' %}">{% trans 'Bitcoin & Ethereum' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'crypto_trading' %}">{% trans 'Cryptocurrency Trading' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_trading' %}">{% trans 'Bitcoin Trading' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'coin_buy' %}">{% trans 'Coin Buy & Sell' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#" class="active">{% trans 'Account Security' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="{% url 'bitcoin_legality' %}">{% trans 'Bitcoin Legality' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#">{% trans 'Trading Strategy' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
+									<li><a href="#">{% trans 'Money Exchange' %} <i class="float-right icofont icofont-thin-right"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -114,17 +115,17 @@
 					<!-- end image tab -->
 					<div class="row mt-4">
 						<div class="col-12 ser-page-into">
-							<h4>Service Overview</h4>
-							<p>Security of user information and funds is our first priority. Learn more about our security features and integrations.The Fonixcoin REST and Websocket APIs are designed to facilitate access to all features of the Bitfinex platform, allowing full integration with traders’ own products and platforms.</p>
+							<h4>{% trans 'Service Overview' %}</h4>
+							<p>{% trans 'Security of user information and funds is our first priority. Learn more about our security features and integrations.The Fonixcoin REST and Websocket APIs are designed to facilitate access to all features of the Bitfinex platform, allowing full integration with traders’ own products and platforms.' %}</p>
 						</div>
 						<!-- end col -->
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12 mb-lg-0 mb-md-0 mb-4 pl-4 ser-page-into">
 								<ul>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Safe and secure -</strong> 2-factor authentication, advanced encryption technology, cold storage – we give you peace of mind when it comes to security.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Robot friendly API -</strong> Make the most of your trading with our leading API and it's low latency data and execution feeds.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Information Security -</strong> All sensitive account information is encrypted at rest at both the system and data level. Access is strictly controlled and monitored.</li>
-									<li><i class="icofont icofont-ui-press"></i> <strong>Platform Security -</strong> Our servers reside in secure cages under 24/7 surveillance by armed guards and video monitors.</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Safe and secure' %} -</strong>{% trans '2-factor authentication, advanced encryption technology, cold storage – we give you peace of mind when it comes to security.' %}</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Robot friendly API' %} -</strong> {% trans "Make the most of your trading with our leading API and it's low latency data and execution feeds." %}</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Information Security' %} -</strong>{% trans 'All sensitive account information is encrypted at rest at both the system and data level. Access is strictly controlled and monitored.' %}</li>
+									<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Platform Security' %} -</strong>{% trans 'Our servers reside in secure cages under 24/7 surveillance by armed guards and video monitors.' %}</li>
 								</ul>
 							</div>
 							<!-- end col -->
@@ -155,16 +156,16 @@
 						<div class="row">
 							<div class="col-12">
 								<ul class="nav nav-tabs" role="tablist">
-									<li class="nav-item"><a class="nav-link active" href="#" data-target="#srone" data-toggle="tab">Description</a></li>
-									<li class="nav-item"><a class="nav-link" href="#" data-target="#srtwo" data-toggle="tab">Experinece</a></li>
-									<li class="nav-item"><a class="nav-link" href="#" data-target="#srthree" data-toggle="tab">Values</a></li>
+									<li class="nav-item"><a class="nav-link active" href="#" data-target="#srone" data-toggle="tab">{% trans 'Description' %}</a></li>
+									<li class="nav-item"><a class="nav-link" href="#" data-target="#srtwo" data-toggle="tab">{% trans 'Experinece' %}</a></li>
+									<li class="nav-item"><a class="nav-link" href="#" data-target="#srthree" data-toggle="tab">{% trans 'Values' %}</a></li>
 								</ul>
 								<!-- Tab panes -->
 								<div class="tab-content">
 									<div class="tab-pane animated fadeInRight active show" id="srone">
 										<div class="row">
 											<div class="col-lg-5 col-md-5 col-12 mb-lg-0 mb-md-0 mb-sm-3 mb-3">
-												<p>We have an expert team dedicated to testing our own systems via every imaginable attack vector. Additionally, we run a bug bounty program to leverage the expertise of the broader security research community.</p>										
+												<p>{% trans 'We have an expert team dedicated to testing our own systems via every imaginable attack vector. Additionally, we run a bug bounty program to leverage the expertise of the broader security research community.' %}</p>										
 											</div>
 											<div class="col-lg-7 col-md-7 col-12 mt-4">
 												<img class="img-fluid" src="{% static 'assets/img/blog/2.jpg' %}" alt="">
@@ -177,15 +178,15 @@
 												<img class="img-fluid" src="{% static 'assets/img/blog/1.jpg' %}" alt="">
 											</div>
 											<div class="col-lg-5 col-md-5 col-12">
-												<p>Fonixcoin takes a comprehensive approach to protecting your investments. Our team of experts have built in a number of sophisticated measures to prevent the theft of money or information.</p>										
+												<p>{% trans 'Fonixcoin takes a comprehensive approach to protecting your investments. Our team of experts have built in a number of sophisticated measures to prevent the theft of money or information.' %}</p>										
 											</div>
 										</div>
 									</div>
 									<div class="tab-pane animated fadeInRight" id="srthree">
-										<p class="mb-3">We’ve assembled a global team of top security professionals who take a risk-based approach to ensuring our clients’ assets are protected at the highest levels while maintaining exceptional performance and an unparalleled client experience.</p>
+										<p class="mb-3">{% trans 'We’ve assembled a global team of top security professionals who take a risk-based approach to ensuring our clients’ assets are protected at the highest levels while maintaining exceptional performance and an unparalleled client experience.' %}</p>
 										<ul>
-											<li><i class="icofont icofont-ui-press"></i> <strong>Email confirmation -</strong> Email confirmations for withdrawals with self-serve account lock.</li>
-											<li><i class="icofont icofont-ui-press"></i> <strong>Global time lock -</strong> Global settings time lock for extreme security when you're away.</li>
+											<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Email confirmation' %} -</strong> {% trans 'Email confirmations for withdrawals with self-serve account lock.' %}</li>
+											<li><i class="icofont icofont-ui-press"></i> <strong>{% trans 'Global time lock' %} -</strong> {% trans "Global settings time lock for extreme security when you're away." %}</li>
 										</ul>
 									 </div>
 								</div>

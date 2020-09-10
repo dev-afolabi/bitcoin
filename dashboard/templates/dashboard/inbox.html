@@ -1,5 +1,6 @@
 {% extends 'base_dash.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
   
   <!-- Content Wrapper. Contains page content -->
@@ -7,11 +8,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Mailbox
+        {% trans 'Mailbox' %}
       </h1>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item active">Mailbox</li>
+        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> {% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active">{% trans 'Mailbox' %}</li>
       </ol>
     </section>
 
@@ -19,11 +20,11 @@
     <section class="content">
       <div class="row">
         <div class="col-lg-3 col-12">
-          <a href="{% url 'compose' %}" class="btn btn-success btn-block btn-shadow margin-bottom">Compose</a>
+          <a href="{% url 'compose' %}" class="btn btn-success btn-block btn-shadow margin-bottom">{% trans 'Compose' %}</a>
 
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Folders</h3>
+              <h3 class="box-title">{% trans 'Folders' %}</h3>
 
               <div class="box-tools">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -32,11 +33,11 @@
             </div>
             <div class="box-body no-padding mailbox-nav">
               <ul class="nav nav-pills flex-column">
-                <li class="nav-item"><a class="nav-link active" href="javascript:void(0)"><i class="ion ion-ios-email-outline"></i> Inbox
+                <li class="nav-item"><a class="nav-link active" href="javascript:void(0)"><i class="ion ion-ios-email-outline"></i> {% trans 'Inbox' %}
                   <span class="label label-success pull-right"></span></a></li>
                 
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="ion ion-email-unread"></i> Drafts</a></li>
-                <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="ion ion-star"></i>  Starred </a>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="ion ion-email-unread"></i> {% trans 'Drafts' %}</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:void(0)"><i class="ion ion-star"></i>  {% trans 'Starred' %} </a>
                 </li>
               </ul>
             </div>
@@ -48,7 +49,7 @@
         <div class="col-lg-9 col-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Inbox</h3>
+              <h3 class="box-title">{% trans 'Inbox' %}</h3>
 
               
               <!-- /.box-tools -->
@@ -79,7 +80,7 @@
             </tr>
             {% endfor %}
             {% else %}
-            <p class="text-center"> You do not have any new message </p>
+            <p class="text-center"> {% trans 'You do not have any new message' %} </p>
             {% endif %}
               
 					  
@@ -96,14 +97,6 @@
               <div class="mailbox-controls">
                
                 <!-- /.btn-group -->
-                <div class="pull-right">
-                  1-50/200
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
-                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
-                  </div>
-                  <!-- /.btn-group -->
-                </div>
                 <!-- /.pull-right -->
               </div>
             </div>
