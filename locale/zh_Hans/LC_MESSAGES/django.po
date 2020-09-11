@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-11 11:49+0100\n"
+"POT-Creation-Date: 2020-09-11 20:45+0100\n"
 "PO-Revision-Date: 2019-11-05 00:38+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django/MIME-"
@@ -23,18 +23,6 @@ msgstr "英语"
 #: bitcoin/settings.py:168
 msgid "Chinese"
 msgstr "中文"
-
-#: bitcoin/settings.py:169
-msgid "French"
-msgstr "法文"
-
-#: bitcoin/settings.py:170
-msgid "Spanish"
-msgstr "西班牙文"
-
-#: bitcoin/settings.py:171
-msgid "German"
-msgstr "德语"
 
 #: bitcoin_pages/forms.py:5
 msgid "Your Fullname"
@@ -1728,17 +1716,30 @@ msgid "Please make a payemnt using this details"
 msgstr "请使用此详细信息付款"
 
 #: transactions/templates/transactions/bank_details.html:33
+msgid "Recipient Name"
+msgstr "收件人姓名"
+
+#: transactions/templates/transactions/bank_details.html:42
 #: transactions/templates/transactions/withdrawal_form.html:80
 msgid "Bank Name"
 msgstr "银行名称"
 
-#: transactions/templates/transactions/bank_details.html:42
-msgid "Bank Account"
+#: transactions/templates/transactions/bank_details.html:51
+#, fuzzy
+#| msgid "Swift Code"
+msgid "Sort Code"
+msgstr "排序码"
+
+#: transactions/templates/transactions/bank_details.html:60
+#: transactions/templates/transactions/withdrawal_form.html:93
+msgid "Account Number"
 msgstr "账号"
 
-#: transactions/templates/transactions/bank_details.html:52
-msgid "Routing Number"
-msgstr "路由号码"
+#: transactions/templates/transactions/bank_details.html:70
+#, fuzzy
+#| msgid "Experience"
+msgid "Reference"
+msgstr "经验"
 
 #: transactions/templates/transactions/bitcoin_details.html:11
 msgid "Payment Details"
@@ -1785,10 +1786,6 @@ msgstr "提款"
 #: transactions/templates/transactions/withdrawal_form.html:27
 msgid "Please provide accurate details"
 msgstr ""
-
-#: transactions/templates/transactions/withdrawal_form.html:93
-msgid "Account Number"
-msgstr "账号"
 
 #: transactions/templates/transactions/withdrawal_form.html:106
 msgid "IBAN Number"
@@ -2024,6 +2021,21 @@ msgstr "个人资料详细信息"
 #: users/templates/registration/view_profile.html:27
 msgid "Update your profile"
 msgstr "更新您的个人信息"
+
+#~ msgid "French"
+#~ msgstr "法文"
+
+#~ msgid "Spanish"
+#~ msgstr "西班牙文"
+
+#~ msgid "German"
+#~ msgstr "德语"
+
+#~ msgid "Bank Account"
+#~ msgstr "账号"
+
+#~ msgid "Routing Number"
+#~ msgstr "路由号码"
 
 #, fuzzy
 #~| msgid "Get started"

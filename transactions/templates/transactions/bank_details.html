@@ -30,6 +30,15 @@
         <div class="box-body">
           <div class="row">
             <div class="col">
+              <h3>{% trans 'Recipient Name' %}:</h3>
+            </div>
+            <div class="col-8 align-left">
+              <h3>{{ details.recipient_name }}</h3>
+            </div>
+            <!-- /.col -->
+          </div>
+          <div class="row">
+            <div class="col">
               <h3>{% trans 'Bank Name' %}:</h3>
             </div>
             <div class="col-8 align-left">
@@ -39,7 +48,16 @@
           </div>
           <div class="row">
             <div class="col">
-              <h3>{% trans 'Bank Account' %}:</h3>
+              <h3>{% trans 'Sort Code' %}:</h3>
+            </div>
+            <div class="col-8 align-left">
+              <h3>{{ details.sort_name }}</h3>
+            </div>
+            <!-- /.col -->
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3>{% trans 'Account Number' %}:</h3>
             </div>
             <div class="col-8 align-left">
               <h3>{{ details.account_number }}</h3>
@@ -49,10 +67,10 @@
           <!-- /.row -->
           <div class="row">
             <div class="col">
-              <h3>{% trans 'Routing Number' %}:</h3>
+              <h3>{% trans 'Reference' %}:</h3>
             </div>
             <div class="col-8 align-left">
-              <h3>{{ details.routing_number }}</h3>
+              <h3>{{ details.reference }}</h3>
             </div>
             <!-- /.col -->
           </div>
