@@ -168,7 +168,7 @@
                             <h6>+1-470-673-1900</h6>
                         </div>
 						<div class="header-info-box">
-                            <a href="#" class="quote-btn">{% trans "Get Started" %} <i class="icofont icofont-caret-right"></i></a>
+                            <a href="#" class="quote-btn">{% trans "Get started" %} <i class="icofont icofont-caret-right"></i></a>
                         </div>
 					</div>
 					<!-- end col -->
@@ -186,7 +186,7 @@
 							<nav class="navbar navbar-expand-lg justify-content-left">
 								<ul class="navbar-nav">
 									<li><a href="{% url 'index' %}" class="{% block nav-home %}{% endblock %} nav-link">{% trans "Home" %}</a></li>
-									<li class="dropdown"><a href="{% url 'services' %}" class="{% block nav-service %}{% endblock %} nav-link">Services</a>
+									<li class="dropdown"><a href="{% url 'services' %}" class="{% block nav-service %}{% endblock %} nav-link">{% trans 'Services' %}</a>
 										<ul class="dropdown-menu">
 											<li><a href="{% url 'services' %}">{% trans "All Our Services" %}</a></li>
 											<li><a href="{% url 'bitcoin_trading' %}">{% trans "Bitcoin Trading" %}</a></li>
@@ -205,7 +205,7 @@
 						<div class="col-lg-3 d-none d-lg-block d-md-none text-right pr-0">
 							<form class="navbar-form">
 								<div class="form-group">
-									<input class="form-control" name="search" value="Search here..." type="text">
+									<input class="form-control" name="search" value="{% trans 'Search here' %}..." type="text">
 									<button type="submit" class="btn"><i class="fa fa-search-plus"></i></button>
 								</div>
 							</form>
