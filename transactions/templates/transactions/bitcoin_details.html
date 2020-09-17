@@ -37,13 +37,14 @@
             <div class="row">
                 <div class="col d-flex justify-content-center">
 
-                    <p class="text-break">{{ details.btc_address }}</p>
+                    <p style="font-size: medium;" class="text-break">{{ details.btc_address }}</p>
                 </div>
-                <div class="col d-flex justify-content-center">
-
-                  <p class="text-break" style="color: red;">{% trans 'Please recheck and confirm this wallet address to avoid deposit error' %}</p>
-              </div>
             </div>
+            <div class="row">
+              <div class="col d-flex justify-content-center">
+                <p class="text-break" style="color: red;">{% trans 'Please recheck and confirm this wallet address to avoid deposit error' %}</p>
+              </div>
+          </div>
             <!-- /.row -->
         </div>
         <!-- /.box-body -->

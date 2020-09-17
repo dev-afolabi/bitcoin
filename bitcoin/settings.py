@@ -167,8 +167,8 @@ LANGUAGES = [
     ['en', _('English')],
     ['zh-hans', _('Chinese')],
     # ['fr', _('French')],
-    # ['es', _('Spanish')],
-    # ['de', _('German')],
+    ['es', _('Spanish')],
+    ['de', _('German')],
 ]
 
 

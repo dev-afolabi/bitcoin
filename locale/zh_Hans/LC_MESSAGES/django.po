@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-11 20:45+0100\n"
+"POT-Creation-Date: 2020-09-17 17:04+0100\n"
 "PO-Revision-Date: 2019-11-05 00:38+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django/MIME-"
@@ -23,6 +23,14 @@ msgstr "英语"
 #: bitcoin/settings.py:168
 msgid "Chinese"
 msgstr "中文"
+
+#: bitcoin/settings.py:170
+msgid "Spanish"
+msgstr "西班牙文"
+
+#: bitcoin/settings.py:171
+msgid "German"
+msgstr "德语"
 
 #: bitcoin_pages/forms.py:5
 msgid "Your Fullname"
@@ -669,12 +677,12 @@ msgstr "硬币买卖"
 msgid ""
 "FonixCoin offers order books with top tier liquidity, allowing users to "
 "easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other "
-"digital assets with minimal slippage.Bitfinex also boasts a suite of order "
+"digital assets with minimal slippage.FonixCoin also boasts a suite of order "
 "types to help traders take advantage of every situation."
 msgstr ""
 "FonixCoin提供具有顶级流动性的订单簿，允许用户以最小的滑点轻松交换比特币，以太"
-"坊，EOS，Litecoin，Ripple，NEO和许多其他数字资产.Bitfinex还拥有一套订单类型，"
-"可帮助交易者利用各种情况。"
+"坊，EOS，Litecoin，Ripple，NEO和许多其他数字资产.FonixCoin还拥有一套订单类"
+"型，可帮助交易者利用各种情况。"
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:127
 msgid "Professional connectivity"
@@ -1312,7 +1320,7 @@ msgid ""
 "platforms."
 msgstr ""
 "用户信息和资金的安全是我们的首要任务。了解有关我们安全功能和集成的更多信息。"
-"FonixcoinREST和Websocket API旨在促进对Bitfinex平台的所有功能的访问，从而允许"
+"FonixcoinREST和Websocket API旨在促进对FonixCoin平台的所有功能的访问，从而允许"
 "与交易者自己的产品和平台完全集成。"
 
 #: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:125
@@ -1750,7 +1758,7 @@ msgstr "付款详情"
 msgid "Wallet Address"
 msgstr "钱包地址"
 
-#: transactions/templates/transactions/bitcoin_details.html:44
+#: transactions/templates/transactions/bitcoin_details.html:45
 msgid "Please recheck and confirm this wallet address to avoid deposit error"
 msgstr "请重新检查并确认此钱包地址，以免存入错误"
 
@@ -1778,6 +1786,7 @@ msgstr "选择金额"
 msgid "Select payment method"
 msgstr "付款方法"
 
+#: transactions/templates/transactions/withdrawal_form.html:11
 #: transactions/templates/transactions/withdrawal_form.html:26
 #: transactions/templates/transactions/withdrawal_form.html:146
 msgid "Withdraw Fund"
@@ -2024,12 +2033,6 @@ msgstr "更新您的个人信息"
 
 #~ msgid "French"
 #~ msgstr "法文"
-
-#~ msgid "Spanish"
-#~ msgstr "西班牙文"
-
-#~ msgid "German"
-#~ msgstr "德语"
 
 #~ msgid "Bank Account"
 #~ msgstr "账号"
