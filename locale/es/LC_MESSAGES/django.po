@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-17 14:24+0100\n"
+"POT-Creation-Date: 2020-09-19 12:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,10 @@ msgstr "Inglés"
 #: bitcoin/settings.py:168
 msgid "Chinese"
 msgstr "Chino"
+
+#: bitcoin/settings.py:169
+msgid "French"
+msgstr "francés"
 
 #: bitcoin/settings.py:170
 msgid "Spanish"
@@ -876,6 +880,7 @@ msgid "Visit our location"
 msgstr "Visite nuestra ubicación"
 
 #: bitcoin_pages/templates/bitcoin_pages/contact-us.html:93
+#: templates/base_layout.html:314
 msgid "Address"
 msgstr "dirección"
 
@@ -1848,6 +1853,10 @@ msgstr "Comercio de Bitcoin"
 #: templates/base_layout.html:275
 msgid "latest Post"
 msgstr "ultima publicación"
+
+#: templates/base_layout.html:305
+msgid "Stay With Us"
+msgstr "Quedate con nosotras"
 
 #: templates/base_layout.html:323
 msgid "Phone Number"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-17 17:04+0100\n"
+"POT-Creation-Date: 2020-09-19 12:18+0100\n"
 "PO-Revision-Date: 2019-11-05 00:38+0000\n"
 "Last-Translator: Ramiro Morales\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/django/django/MIME-"
@@ -23,6 +23,10 @@ msgstr "英语"
 #: bitcoin/settings.py:168
 msgid "Chinese"
 msgstr "中文"
+
+#: bitcoin/settings.py:169
+msgid "French"
+msgstr "法文"
 
 #: bitcoin/settings.py:170
 msgid "Spanish"
@@ -805,6 +809,7 @@ msgid "Visit our location"
 msgstr "访问我们的位置"
 
 #: bitcoin_pages/templates/bitcoin_pages/contact-us.html:93
+#: templates/base_layout.html:314
 msgid "Address"
 msgstr "地址"
 
@@ -1703,6 +1708,10 @@ msgstr "比特币交易"
 msgid "latest Post"
 msgstr "最新的帖子"
 
+#: templates/base_layout.html:305
+msgid "Stay With Us"
+msgstr "和我们在一起"
+
 #: templates/base_layout.html:323
 msgid "Phone Number"
 msgstr "电话号码"
@@ -2030,9 +2039,6 @@ msgstr "个人资料详细信息"
 #: users/templates/registration/view_profile.html:27
 msgid "Update your profile"
 msgstr "更新您的个人信息"
-
-#~ msgid "French"
-#~ msgstr "法文"
 
 #~ msgid "Bank Account"
 #~ msgstr "账号"

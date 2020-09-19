@@ -166,7 +166,7 @@ USE_TZ = True
 LANGUAGES = [
     ['en', _('English')],
     ['zh-hans', _('Chinese')],
-    # ['fr', _('French')],
+    ['fr', _('French')],
     ['es', _('Spanish')],
     ['de', _('German')],
 ]
