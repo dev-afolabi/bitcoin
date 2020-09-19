@@ -8,6 +8,7 @@ from django import forms
 User = settings.AUTH_USER_MODEL
 
 AMOUNT_CHOICES = (
+    ("$300", "$300"),
     ("$500", "$500"),
     ("$750", "$750"),
     ("$1000", "$1000"),

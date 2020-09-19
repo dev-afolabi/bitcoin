@@ -55,8 +55,8 @@ msgid "Your Message"
 msgstr "Votre message"
 
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:18
-msgid "About FonixCoin"
-msgstr "À propos de FonixCoin"
+msgid "About TraderMines"
+msgstr "À propos de TraderMines"
 
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:19
 msgid "Delivering quality"
@@ -141,11 +141,11 @@ msgstr "Trading facile"
 
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:103
 msgid ""
-"FonixCoin offers a methodical approach to ensure profitability. Each trade "
+"TraderMines offers a methodical approach to ensure profitability. Each trade "
 "is calculated through risk management techniques, technical analysis, and "
 "deep fundamental research."
 msgstr ""
-"FonixCoin propose une approche méthodique pour assurer la rentabilité. "
+"TraderMines propose une approche méthodique pour assurer la rentabilité. "
 "Chaque transaction est calculée grâce à des techniques de gestion des "
 "risques, une analyse technique et une recherche fondamentale approfondie."
 
@@ -163,10 +163,10 @@ msgstr "Stratégie de trading"
 
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:115
 msgid ""
-"Master the basics with Fonixcoin's Crypto Guides, where we take an in-depth "
+"Master the basics with TraderMines's Crypto Guides, where we take an in-depth "
 "look at some of the top projects in this space."
 msgstr ""
-"Maîtrisez les bases avec les guides cryptographiques de Fonixcoin, où nous "
+"Maîtrisez les bases avec les guides cryptographiques de TraderMines, où nous "
 "examinons en profondeur certains des meilleurs projets de cet espace."
 
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:126
@@ -195,11 +195,11 @@ msgstr "Assurer la sécurité"
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:139
 #: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:181
 msgid ""
-"Fonixcoin takes a comprehensive approach to protecting your investments. Our "
+"TraderMines takes a comprehensive approach to protecting your investments. Our "
 "team of experts have built in a number of sophisticated measures to prevent "
 "the theft of money or information."
 msgstr ""
-"Fonixcoin adopte une approche globale pour protéger vos investissements. "
+"TraderMines adopte une approche globale pour protéger vos investissements. "
 "Notre équipe d'experts a intégré un certain nombre de mesures sophistiquées "
 "pour empêcher le vol d'argent ou d'informations."
 
@@ -229,16 +229,16 @@ msgstr ""
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:163
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:126
 msgid ""
-"Fonixcoin accepts deposits and provides withdrawals in any of the following "
+"TraderMines accepts deposits and provides withdrawals in any of the following "
 "crypto assets."
 msgstr ""
-"Fonixcoin accepte les dépôts et effectue des retraits dans l'un des actifs "
+"TraderMines accepte les dépôts et effectue des retraits dans l'un des actifs "
 "cryptographiques suivants."
 
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:180
 #: bitcoin_pages/templates/bitcoin_pages/index.html:524
-msgid "FonixCoin conversation"
-msgstr "Conversation FonixCoin"
+msgid "TraderMines conversation"
+msgstr "Conversation TraderMines"
 
 #: bitcoin_pages/templates/bitcoin_pages/about-us.html:181
 #: bitcoin_pages/templates/bitcoin_pages/index.html:525
@@ -508,10 +508,10 @@ msgstr "Acheter et vendre"
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_and_ethereum.html:188
 msgid ""
 "You can also buy and sell BTC for other cryptocurrencies alongside more "
-"traditional currencies at exchanges like Fonixcoin."
+"traditional currencies at exchanges like TraderMines."
 msgstr ""
 "Vous pouvez également acheter et vendre du BTC pour d'autres crypto-monnaies "
-"aux côtés de devises plus traditionnelles sur des bourses comme Fonixcoin."
+"aux côtés de devises plus traditionnelles sur des bourses comme TraderMines."
 
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:28
 msgid "Legality"
@@ -526,12 +526,12 @@ msgstr "Aperçu du service"
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:119
 msgid ""
 "As far as The Platform Technology acts solely as an intermediary bringing "
-"together buyers and sellers nothing on the Fonixcoin platform can be ensured "
+"together buyers and sellers nothing on the TraderMines platform can be ensured "
 "to contain no errors, mistakes, mispresentations or failures etc."
 msgstr ""
 "Dans la mesure où The Platform Technology agit uniquement en tant "
 "qu'intermédiaire réunissant acheteurs et vendeurs, rien sur la plate-forme "
-"Fonixcoin ne peut être garanti pour ne contenir aucune erreur, erreur, "
+"TraderMines ne peut être garanti pour ne contenir aucune erreur, erreur, "
 "fausse déclaration ou échec, etc."
 
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:125
@@ -542,11 +542,11 @@ msgstr "Restriction de service"
 msgid ""
 "You shall not use our Services and immediately cease using those if you are "
 "a resident or become a resident at any time of the state or region, where "
-"Fonixcoin is not authorized to act."
+"TraderMines is not authorized to act."
 msgstr ""
 "Vous ne devez pas utiliser nos services et cesser immédiatement de les "
 "utiliser si vous êtes un résident ou devenez résident à tout moment de "
-"l'état ou de la région où Fonixcoin n'est pas autorisé à agir."
+"l'état ou de la région où TraderMines n'est pas autorisé à agir."
 
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:126
 msgid "Crypto coins and tokens Policy"
@@ -558,23 +558,23 @@ msgstr "Générale"
 
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:127
 msgid ""
-"Any individual (the \"user\"), who opens an account with Fonixcoin "
+"Any individual (the \"user\"), who opens an account with TraderMines "
 "understands and accepts that crypto assets do not necessarily have a "
 "specific form of protection or regulation by any governmental body."
 msgstr ""
-"Tout individu (l'utilisateur) qui ouvre un compte avec Fonixcoin comprend et "
+"Tout individu (l'utilisateur) qui ouvre un compte avec TraderMines comprend et "
 "accepte que les actifs cryptographiques ne bénéficient pas nécessairement "
 "d'une forme spécifique de protection ou de réglementation par un organisme "
 "gouvernemental."
 
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_legality.html:167
 msgid ""
-"However, Fonixcoin reserves the right to reject any deposits and suspend "
+"However, TraderMines reserves the right to reject any deposits and suspend "
 "withdrawals which its compliance and risk management service provider has "
 "decided to be the result of detecting of suspicious activity such as "
 "criminal activity or any other infringement of its compliance guidelines."
 msgstr ""
-"Cependant, Fonixcoin se réserve le droit de rejeter tout dépôt et de "
+"Cependant, TraderMines se réserve le droit de rejeter tout dépôt et de "
 "suspendre les retraits que son fournisseur de services de conformité et de "
 "gestion des risques a décidé de résulter de la détection d'une activité "
 "suspecte telle qu'une activité criminelle ou toute autre infraction à ses "
@@ -697,9 +697,9 @@ msgstr ""
 "demande."
 
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:188
-msgid "FonixCoin makes it simple and safe to buy, sell, and hold BTC."
+msgid "TraderMines makes it simple and safe to buy, sell, and hold BTC."
 msgstr ""
-"FonixCoin simplifie et sécurise l'achat, la vente et la détention de BTC."
+"TraderMines simplifie et sécurise l'achat, la vente et la détention de BTC."
 
 #: bitcoin_pages/templates/bitcoin_pages/bitcoin_trading.html:190
 msgid "Convert"
@@ -740,15 +740,15 @@ msgstr "Achat et vente de coins"
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:121
 msgid ""
-"FonixCoin offers order books with top tier liquidity, allowing users to "
+"TraderMines offers order books with top tier liquidity, allowing users to "
 "easily exchange Bitcoin, Ethereum, EOS, Litecoin, Ripple, NEO and many other "
-"digital assets with minimal slippage.FonixCoin also boasts a suite of order "
+"digital assets with minimal slippage.TraderMines also boasts a suite of order "
 "types to help traders take advantage of every situation."
 msgstr ""
-"FonixCoin propose des carnets de commandes avec une liquidité de premier "
+"TraderMines propose des carnets de commandes avec une liquidité de premier "
 "ordre, permettant aux utilisateurs d'échanger facilement Bitcoin, Ethereum, "
 "EOS, Litecoin, Ripple, NEO et de nombreux autres actifs numériques avec un "
-"glissement minimal.FonixCoin propose également une suite de types d'ordres "
+"glissement minimal.TraderMines propose également une suite de types d'ordres "
 "pour aider les traders à tirer parti de chaque situation ."
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:127
@@ -771,10 +771,10 @@ msgstr ""
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:128
 msgid ""
-"FonixCoin facilitates a graphical trading experience with advanced charting "
+"TraderMines facilitates a graphical trading experience with advanced charting "
 "functionality."
 msgstr ""
-"FonixCoin facilite une expérience de trading graphique avec des "
+"TraderMines facilite une expérience de trading graphique avec des "
 "fonctionnalités graphiques avancées."
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:129
@@ -783,10 +783,10 @@ msgstr "Comptes d'entreprise"
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:129
 msgid ""
-"FonixCoin has a bespoke offering expertly tailored to meet the specific "
+"TraderMines has a bespoke offering expertly tailored to meet the specific "
 "needs of professional and institutional traders."
 msgstr ""
-"FonixCoin propose une offre sur mesure spécialement conçue pour répondre aux "
+"TraderMines propose une offre sur mesure spécialement conçue pour répondre aux "
 "besoins spécifiques des traders professionnels et institutionnels."
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:130
@@ -795,32 +795,32 @@ msgstr "Rapports améliorés"
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:130
 msgid ""
-"FonixCoin’s enhanced reporting framework would benefit both traders and "
+"TraderMines’s enhanced reporting framework would benefit both traders and "
 "developers."
 msgstr ""
-"Le cadre de reporting amélioré de FonixCoin profiterait à la fois aux "
+"Le cadre de reporting amélioré de TraderMines profiterait à la fois aux "
 "commerçants et aux développeurs."
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:170
 msgid ""
-"FonixCoin allows users to trade with up to 5x leverage by receiving funding "
+"TraderMines allows users to trade with up to 5x leverage by receiving funding "
 "from the peer to peer margin funding platform. Users can enter an order to "
 "borrow the desired amount of funding at the rate and duration of their "
 "choice."
 msgstr ""
-"FonixCoin permet aux utilisateurs de négocier avec un effet de levier "
+"TraderMines permet aux utilisateurs de négocier avec un effet de levier "
 "jusqu'à 5x en recevant un financement de la plate-forme de financement de "
 "marge peer to peer. Les utilisateurs peuvent saisir un ordre d'emprunter le "
 "montant de financement souhaité au taux et à la durée de leur choix."
 
 #: bitcoin_pages/templates/bitcoin_pages/coin_buy_and_sell.html:183
 msgid ""
-"The FonixCoin margin funding market provides a secure way to earn interest "
+"The TraderMines margin funding market provides a secure way to earn interest "
 "on fiat and digital assets by providing funding to traders wanting to trade "
 "with leverage. Users can offer funding across a wide range of currencies & "
 "assets, at the rate and duration of their choice."
 msgstr ""
-"Le marché du financement de marge FonixCoin offre un moyen sécurisé de "
+"Le marché du financement de marge TraderMines offre un moyen sécurisé de "
 "gagner des intérêts sur les actifs fiat et numériques en fournissant un "
 "financement aux traders souhaitant négocier avec effet de levier. Les "
 "utilisateurs peuvent proposer un financement sur un large éventail de "
@@ -920,13 +920,13 @@ msgstr "Échangez votre bitcoin en toute simplicité."
 msgid ""
 "A cryptocurrency exchange is a service for changing digital currencies, such "
 "as Bitcoin, Ethereum, and more, to fiat (paper) currencies or for other "
-"digital currencies. At Fonixcoin, you can exchange your fiat currency, such "
+"digital currencies. At TraderMines, you can exchange your fiat currency, such "
 "as dollars or Euro, for several cryptocurrencies. You can also exchange your "
 "Bitcoin for fiat."
 msgstr ""
 "Un échange de crypto-monnaie est un service permettant de changer des "
 "devises numériques, telles que Bitcoin, Ethereum, etc., en devises fiat "
-"(papier) ou pour d'autres devises numériques. Chez Fonixcoin, vous pouvez "
+"(papier) ou pour d'autres devises numériques. Chez TraderMines, vous pouvez "
 "échanger votre monnaie fiduciaire, comme le dollar ou l'euro, contre "
 "plusieurs crypto-monnaies. Vous pouvez également échanger votre Bitcoin "
 "contre des fiat."
@@ -960,11 +960,11 @@ msgstr ""
 
 #: bitcoin_pages/templates/bitcoin_pages/crypto_trading.html:156
 msgid ""
-"With Fonixcoin, you can skip complex processes like mining and just buy and "
+"With TraderMines, you can skip complex processes like mining and just buy and "
 "trade cryptocurrency securely with your credit or debit card. Let’s get "
 "started!"
 msgstr ""
-"Avec Fonixcoin, vous pouvez ignorer des processus complexes tels que "
+"Avec TraderMines, vous pouvez ignorer des processus complexes tels que "
 "l'exploitation minière et simplement acheter et échanger de la crypto-"
 "monnaie en toute sécurité avec votre carte de crédit ou de débit. Commençons!"
 
@@ -979,11 +979,11 @@ msgstr "acheter et vendre des bitcoins"
 #: bitcoin_pages/templates/bitcoin_pages/index.html:21
 msgid ""
 "We put the power in your hands, to buy, sell and trade digital currency. We "
-"are FonixCoin, consistently rated the best and most secure cryptocurrency "
+"are TraderMines, consistently rated the best and most secure cryptocurrency "
 "exchange."
 msgstr ""
 "Nous mettons le pouvoir entre vos mains pour acheter, vendre et échanger des "
-"devises numériques. Nous sommes FonixCoin, toujours noté comme l'échange de "
+"devises numériques. Nous sommes TraderMines, toujours noté comme l'échange de "
 "crypto-monnaie le meilleur et le plus sécurisé."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:23
@@ -1050,16 +1050,16 @@ msgstr "Caractéristiques"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:105
 msgid ""
-"FonixCoin has consistently taken measures to makes online trading and "
+"TraderMines has consistently taken measures to makes online trading and "
 "investing accessible"
 msgstr ""
-"FonixCoin a constamment pris des mesures pour rendre le trading et "
+"TraderMines a constamment pris des mesures pour rendre le trading et "
 "l'investissement en ligne accessibles"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:126
-msgid "With FonixCoin, you can easily buy Bitcoin with cash"
+msgid "With TraderMines, you can easily buy Bitcoin with cash"
 msgstr ""
-"Avec FonixCoin, vous pouvez facilement acheter du Bitcoin avec de l'argent"
+"Avec TraderMines, vous pouvez facilement acheter du Bitcoin avec de l'argent"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:147
 msgid "Bitcoin and Ethereum is much more than just a digital currency."
@@ -1071,9 +1071,9 @@ msgstr ""
 "Nous prenons toutes les précautions nécessaires pour assurer votre sécurité."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:189
-msgid "Bank on FonixCoin’s experience as a global fintech leader."
+msgid "Bank on TraderMines’s experience as a global fintech leader."
 msgstr ""
-"Misez sur l’expérience de FonixCoin en tant que leader mondial des "
+"Misez sur l’expérience de TraderMines en tant que leader mondial des "
 "technologies financières."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:210
@@ -1104,21 +1104,6 @@ msgstr ""
 msgid "What is a Cryptocurrency Exchange?"
 msgstr "Qu'est-ce qu'un échange de crypto-monnaie?"
 
-#: bitcoin_pages/templates/bitcoin_pages/index.html:252
-msgid ""
-"A cryptocurrency exchange is a service for changing digital currencies, such "
-"as Bitcoin, Ethereum, and more, to fiat (paper) currencies or for other "
-"digital currencies. At FonixCoin, you can exchange your fiat currency, such "
-"as dollars or Euro, for several cryptocurrencies. You can also exchange your "
-"Bitcoin for fiat."
-msgstr ""
-"Un échange de crypto-monnaie est un service permettant de changer des "
-"devises numériques, telles que Bitcoin, Ethereum, etc., en devises fiat "
-"(papier) ou pour d'autres devises numériques. Chez FonixCoin, vous pouvez "
-"échanger votre monnaie fiduciaire, comme le dollar ou l'euro, contre "
-"plusieurs crypto-monnaies. Vous pouvez également échanger votre Bitcoin "
-"contre des fiat."
-
 #: bitcoin_pages/templates/bitcoin_pages/index.html:260
 msgid "Why must I provide my personal details?"
 msgstr "Pourquoi dois-je fournir mes données personnelles?"
@@ -1126,7 +1111,7 @@ msgstr "Pourquoi dois-je fournir mes données personnelles?"
 #: bitcoin_pages/templates/bitcoin_pages/index.html:263
 msgid ""
 "Before creating your first order, we need to know a bit about you. As a "
-"financial service, FonixCoin is committed to the highest security and "
+"financial service, TraderMines is committed to the highest security and "
 "privacy standards. This also helps us keep your account safe, fight fraud, "
 "and more. The process is called verification and is something everyone must "
 "go through before buying cryptocurrency anywhere. After submitting your "
@@ -1134,7 +1119,7 @@ msgid ""
 "everything looks good. This usually happens within the hour."
 msgstr ""
 "Avant de créer votre première commande, nous devons en savoir un peu plus "
-"sur vous. En tant que service financier, FonixCoin s'engage à respecter les "
+"sur vous. En tant que service financier, TraderMines s'engage à respecter les "
 "normes de sécurité et de confidentialité les plus élevées. Cela nous aide "
 "également à protéger votre compte, à lutter contre la fraude, etc. Le "
 "processus est appelé vérification et est quelque chose que tout le monde "
@@ -1144,17 +1129,17 @@ msgstr ""
 "généralement dans l'heure."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:271
-msgid "How long does it take for FonixCoin to send my bitcoins once I’ve paid?"
+msgid "How long does it take for TraderMines to send my bitcoins once I’ve paid?"
 msgstr ""
-"Combien de temps faut-il à FonixCoin pour envoyer mes bitcoins une fois que "
+"Combien de temps faut-il à TraderMines pour envoyer mes bitcoins une fois que "
 "j'ai payé?"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:274
 msgid ""
-"FonixCoin sends the coins immediately after both your payment and wallet "
+"TraderMines sends the coins immediately after both your payment and wallet "
 "address have been confirmed."
 msgstr ""
-"FonixCoin envoie les pièces immédiatement après confirmation de votre "
+"TraderMines envoie les pièces immédiatement après confirmation de votre "
 "paiement et de votre adresse de portefeuille."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:282
@@ -1163,22 +1148,22 @@ msgstr "Où puis-je obtenir un portefeuille Bitcoin / Ethereum?"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:285
 msgid ""
-"FonixCoin is not a wallet provider - we simply send your coins to the wallet "
+"TraderMines is not a wallet provider - we simply send your coins to the wallet "
 "of your choice."
 msgstr ""
-"FonixCoin n'est pas un fournisseur de portefeuille - nous envoyons "
+"TraderMines n'est pas un fournisseur de portefeuille - nous envoyons "
 "simplement vos pièces dans le portefeuille de votre choix."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:293
-msgid "What methods of payment does FonixCoin offer?"
-msgstr "Quels modes de paiement propose FonixCoin?"
+msgid "What methods of payment does TraderMines offer?"
+msgstr "Quels modes de paiement propose TraderMines?"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:296
 msgid ""
-"At FonixCoin you can currently buy bitcoin and other cryptocurrencies with "
+"At TraderMines you can currently buy bitcoin and other cryptocurrencies with "
 "bank wire transfer."
 msgstr ""
-"Chez FonixCoin, vous pouvez actuellement acheter des bitcoins et d'autres "
+"Chez TraderMines, vous pouvez actuellement acheter des bitcoins et d'autres "
 "crypto-monnaies par virement bancaire."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:308
@@ -1206,10 +1191,10 @@ msgstr ""
 #: bitcoin_pages/templates/bitcoin_pages/index.html:356
 msgid ""
 "Our terminal is built on the best technology and lets you trade effortlessly "
-"any of the FonixCoin currency pair."
+"any of the TraderMines currency pair."
 msgstr ""
 "Notre terminal est construit sur la meilleure technologie et vous permet de "
-"négocier sans effort n'importe quelle paire de devises FonixCoin."
+"négocier sans effort n'importe quelle paire de devises TraderMines."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:368
 msgid ""
@@ -1221,10 +1206,10 @@ msgstr ""
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:380
 msgid ""
-"FonixCoin offers order books with top tier liquidity, allowing users to "
+"TraderMines offers order books with top tier liquidity, allowing users to "
 "easily exchange Bitcoin, and many other digital assets with minimal slippage"
 msgstr ""
-"FonixCoin propose des carnets de commandes avec une liquidité de premier "
+"TraderMines propose des carnets de commandes avec une liquidité de premier "
 "ordre, permettant aux utilisateurs d'échanger facilement Bitcoin et de "
 "nombreux autres actifs numériques avec un glissement minimal"
 
@@ -1264,39 +1249,39 @@ msgstr "Prestations de service"
 #: bitcoin_pages/templates/bitcoin_pages/index.html:443
 #: bitcoin_pages/templates/bitcoin_pages/services.html:60
 msgid ""
-"FonixCoin has consistently taken measures to ensure its platform makes "
+"TraderMines has consistently taken measures to ensure its platform makes "
 "online trading and investing accessible to anyone."
 msgstr ""
-"FonixCoin a constamment pris des mesures pour s'assurer que sa plate-forme "
+"TraderMines a constamment pris des mesures pour s'assurer que sa plate-forme "
 "rend le commerce et l'investissement en ligne accessibles à tous."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:462
 #: bitcoin_pages/templates/bitcoin_pages/services.html:83
 msgid ""
-"With FonixCoin, you can easily buy Bitcoin with cash, as well as other "
+"With TraderMines, you can easily buy Bitcoin with cash, as well as other "
 "cryptocurrencies we offer on the platform."
 msgstr ""
-"Avec FonixCoin, vous pouvez facilement acheter du Bitcoin avec de l'argent, "
+"Avec TraderMines, vous pouvez facilement acheter du Bitcoin avec de l'argent, "
 "ainsi que d'autres crypto-monnaies que nous proposons sur la plateforme."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:481
 #: bitcoin_pages/templates/bitcoin_pages/services.html:106
 msgid ""
 "Bitcoin and Ethereum is an open source network, much more than just a "
-"digital currency. At FonixCoin, we not only trade your assets, we secure it "
+"digital currency. At TraderMines, we not only trade your assets, we secure it "
 "as well."
 msgstr ""
 "Bitcoin and Ethereum est un réseau open source, bien plus qu'une simple "
-"monnaie numérique. Chez FonixCoin, nous n'échangeons pas seulement vos "
+"monnaie numérique. Chez TraderMines, nous n'échangeons pas seulement vos "
 "actifs, nous les sécurisons également."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:500
 #: bitcoin_pages/templates/bitcoin_pages/services.html:129
 msgid ""
-"Bank on FonixCoin’s experience as a global fintech leader since the early "
+"Bank on TraderMines’s experience as a global fintech leader since the early "
 "days of Blockchain to provide you with a complete crypto trading solution."
 msgstr ""
-"Misez sur l'expérience de FonixCoin en tant que leader mondial de la fintech "
+"Misez sur l'expérience de TraderMines en tant que leader mondial de la fintech "
 "depuis les débuts de la Blockchain pour vous fournir une solution complète "
 "de crypto trading."
 
@@ -1318,11 +1303,11 @@ msgstr "Processus"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:584
 msgid ""
-"FonixCoin implements reliable strategies by providing our users with state-"
+"TraderMines implements reliable strategies by providing our users with state-"
 "of-the-art trading tools, innovative technology and unparalleled levels of "
 "customer service."
 msgstr ""
-"FonixCoin met en œuvre des stratégies fiables en fournissant à nos "
+"TraderMines met en œuvre des stratégies fiables en fournissant à nos "
 "utilisateurs des outils de trading à la pointe de la technologie, une "
 "technologie innovante et des niveaux de service client inégalés."
 
@@ -1332,11 +1317,11 @@ msgstr "Planification de groupe"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:596
 msgid ""
-"Never trade crypto alone. FonixCoin is much more than just a place to trade. "
+"Never trade crypto alone. TraderMines is much more than just a place to trade. "
 "Use award-winning social trading features to connect with over 10 million "
 "users worldwide."
 msgstr ""
-"N'échangez jamais de crypto seul FonixCoin est bien plus qu'un simple lieu "
+"N'échangez jamais de crypto seul TraderMines est bien plus qu'un simple lieu "
 "de commerce. Utilisez les fonctionnalités de trading social primées pour "
 "vous connecter à plus de 10 millions d'utilisateurs dans le monde."
 
@@ -1368,37 +1353,37 @@ msgstr "Retour d'information"
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:640
 msgid ""
-"It's been a pleasure trading with FonixCoin. Great platform for starting "
+"It's been a pleasure trading with TraderMines. Great platform for starting "
 "traders. Great selsection and transparent fee system."
 msgstr ""
-"Ce fut un plaisir d'échanger avec FonixCoin. Excellente plateforme pour les "
+"Ce fut un plaisir d'échanger avec TraderMines. Excellente plateforme pour les "
 "traders débutants. Grande sélection et système de frais transparent."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:652
 msgid ""
-"So easy and fun as i ahvent had to do much. FonixCoin has been making my "
+"So easy and fun as i ahvent had to do much. TraderMines has been making my "
 "trading experience enjoyable and secure."
 msgstr ""
-"Tellement facile et amusant que j'ai dû faire beaucoup. FonixCoin a rendu "
+"Tellement facile et amusant que j'ai dû faire beaucoup. TraderMines a rendu "
 "mon expérience de trading agréable et sécurisée."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:664
 msgid ""
-"FonixCoin is a fantastic trading platform, both from an ease of use and "
-"technical perspective. I'm very satisfied with the service they FonixCoin "
+"TraderMines is a fantastic trading platform, both from an ease of use and "
+"technical perspective. I'm very satisfied with the service they TraderMines "
 "provide. keep it up."
 msgstr ""
-"FonixCoin est une plate-forme de trading fantastique, à la fois du point de "
+"TraderMines est une plate-forme de trading fantastique, à la fois du point de "
 "vue de la facilité d'utilisation et du point de vue technique. Je suis très "
-"satisfait du service fourni par FonixCoin. continuez."
+"satisfait du service fourni par TraderMines. continuez."
 
 #: bitcoin_pages/templates/bitcoin_pages/index.html:676
 msgid ""
-"FonixCoin has made cryptocurrency trading so easy that i rarely have to do "
+"TraderMines has made cryptocurrency trading so easy that i rarely have to do "
 "anything complex, i just watch and see my asset grow. Quite remarkable i "
 "must say."
 msgstr ""
-"FonixCoin a rendu le trading de crypto-monnaie si facile que je n'ai que "
+"TraderMines a rendu le trading de crypto-monnaie si facile que je n'ai que "
 "rarement à faire quelque chose de complexe, je regarde juste et vois mon "
 "actif grandir. Tout à fait remarquable je dois dire."
 
@@ -1442,15 +1427,15 @@ msgstr "Ne perdez jamais un métier"
 #: bitcoin_pages/templates/bitcoin_pages/security_ensure.html:119
 msgid ""
 "Security of user information and funds is our first priority. Learn more "
-"about our security features and integrations.The Fonixcoin REST and "
+"about our security features and integrations.The TraderMines REST and "
 "Websocket APIs are designed to facilitate access to all features of the "
-"FonixCoin platform, allowing full integration with traders’ own products and "
+"TraderMines platform, allowing full integration with traders’ own products and "
 "platforms."
 msgstr ""
 "La sécurité des informations des utilisateurs et des fonds est notre "
 "première priorité. En savoir plus sur nos fonctionnalités de sécurité et nos "
-"intégrations.Les API REST et Websocket de Fonixcoin sont conçues pour "
-"faciliter l'accès à toutes les fonctionnalités de la plate-forme FonixCoin, "
+"intégrations.Les API REST et Websocket de TraderMines sont conçues pour "
+"faciliter l'accès à toutes les fonctionnalités de la plate-forme TraderMines, "
 "permettant une intégration complète avec les propres produits et plates-"
 "formes des traders."
 
@@ -1546,8 +1531,8 @@ msgstr ""
 "lorsque vous êtes absent."
 
 #: bitcoin_pages/templates/bitcoin_pages/services.html:17
-msgid "FonixCoin Services"
-msgstr "Services FonixCoin"
+msgid "TraderMines Services"
+msgstr "Services TraderMines"
 
 #: bitcoin_pages/templates/bitcoin_pages/services.html:18
 msgid "Our Range of Sevices"
@@ -1557,18 +1542,18 @@ msgstr "Notre gamme de services"
 msgid ""
 "FONIX Solution Ltd (hereinafter \"The Platform Technology\") provides access "
 "to crypto assets exchange platform technology under the registered trademark "
-"\"FonixCoin\"."
+"\"TraderMines\"."
 msgstr ""
 "FONIX Solution Ltd (ci-après The Platform Technology) donne accès à la "
 "technologie de plate-forme d'échange d'actifs cryptographiques sous la "
-"marque déposée FonixCoin."
+"marque déposée TraderMines."
 
 #: bitcoin_pages/templates/bitcoin_pages/services.html:175
 msgid ""
-"FonixCoin takes every necessary precaution to keep its clients’ personal "
+"TraderMines takes every necessary precaution to keep its clients’ personal "
 "information and funds safe and secure."
 msgstr ""
-"FonixCoin prend toutes les précautions nécessaires pour conserver les "
+"TraderMines prend toutes les précautions nécessaires pour conserver les "
 "informations personnelles et les fonds de ses clients en toute sécurité."
 
 #: dashboard/templates/base_dash.html:87 dashboard/templates/base_dash.html:229
@@ -2111,8 +2096,8 @@ msgid "registration"
 msgstr "s'inscrire"
 
 #: users/templates/registration/user_activate_failed.html:44
-msgid "Your Fonixcoin account activation failed"
-msgstr "L'activation de votre compte Fonixcoin a échoué"
+msgid "Your TraderMines account activation failed"
+msgstr "L'activation de votre compte TraderMines a échoué"
 
 #: users/templates/registration/user_activate_failed.html:45
 msgid "Activation link not valid or expired, please restart your registration."
@@ -2133,8 +2118,8 @@ msgid "Activated"
 msgstr "activé"
 
 #: users/templates/registration/user_activated.html:44
-msgid "Your Fonixcoin account has been successfully activated"
-msgstr "Votre compte Fonixcoin a été activé avec succès"
+msgid "Your TraderMines account has been successfully activated"
+msgstr "Votre compte TraderMines a été activé avec succès"
 
 #: users/templates/registration/user_activated.html:45
 msgid "Please login"
@@ -2166,8 +2151,8 @@ msgid "Login here"
 msgstr "Connectez-vous ici"
 
 #: users/templates/registration/user_create_done.html:44
-msgid "Your Fonixcoin account has been successfully created"
-msgstr "Votre compte Fonixcoin a été créé avec succès"
+msgid "Your TraderMines account has been successfully created"
+msgstr "Votre compte TraderMines a été créé avec succès"
 
 #: users/templates/registration/user_create_done.html:45
 msgid "Please check your email for Confirmation link to activate your account"
