@@ -37,7 +37,7 @@ SECRET_KEY = config("MY_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','ec2-18-191-221-107.us-east-2.compute.amazonaws.com','.tradermines.com','www.tradermines.com']
+ALLOWED_HOSTS = ['127.0.0.1','ec2-18-216-244-143.us-east-2.compute.amazonaws.com','.tradermines.com','www.tradermines.com']
 
 AUTH_USER_MODEL = 'users.User'
 
