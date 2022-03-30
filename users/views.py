@@ -23,7 +23,7 @@ from django.contrib.auth.decorators import login_required
 from django import forms
 
 # Create your views here.
-user_creation_message = "Welcome to Bitfonix,we're happy to have you here"
+user_creation_message = "Welcome to Tradermines, we're happy to have you here"
 
 User = get_user_model()
 
@@ -37,7 +37,7 @@ def signup(request):
             user.is_active = False
             user.save()
             current_site = get_current_site(request)
-            subject = "Activate your Bitfonix Account"
+            subject = "Activate your Tradermines Account"
             if request.is_secure():
                 protocol = 'https'
             else:
