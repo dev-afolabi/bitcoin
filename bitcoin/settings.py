@@ -36,7 +36,7 @@ SECRET_KEY = config("MY_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','.tradermines.com','www.tradermines.com']
+ALLOWED_HOSTS = ['127.0.0.1','.trader-mines.com','www.trader-mines.com']
 
 AUTH_USER_MODEL = 'users.User'
 
