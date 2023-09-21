@@ -31,7 +31,7 @@ load_dotenv(dotenv_path)
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("MY_SECRET_KEY")
+SECRET_KEY = "dsfgrytui754543567890ioujhgfdrw3454678976543wrdfcxdsew43546578980976543"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -80,7 +80,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'bitcoin.urls'
 
 
-EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.privateemail.com'
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
