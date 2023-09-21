@@ -36,7 +36,7 @@ SECRET_KEY = config("MY_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','.trader-mines.com','www.trader-mines.com']
+ALLOWED_HOSTS = ['127.0.0.1','.trader-mines.com','www.trader-mines.com','.herokuapp.com']
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'bitcoin_pages',
     'users',
@@ -122,8 +123,6 @@ DATABASES = {
 }
 db_from_env = dj_database_url.config(conn_max_age=500)
 
-
-
 DATABASES['default'].update(db_from_env)
 
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
@@ -176,7 +175,7 @@ LOCALE_PATHS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-
+WHITENOISE_USE_FINDERS = True
 
 staticfiles_storage = 'whitenoise.storage.compressedmanifeststaticfilesstorage'
 
